@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Eldritch Invocations (SGEH 2024)</name>
+		<description>Additional Eldritch Invocation options from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="warlock-invocations.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/warlock-invocations.xml" />
+		</update>
+	</info>
+
+	<element name="Pact of the Trigger" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<description>
+			<p>You can take a Magic action to draw upon the powers of your patron and create a hex gun in your empty hand. Each time you create it, choose either Revolver Form or Sniper Form (detailed below). You can use your hex gun as a Spellcasting Focus for your Warlock spells. Your hex gun disappears if it is more than 5 feet away from you for 1 minute. It also disappears if you use this feature again, if you dismiss it (no action required), or if you die.</p>
+			<p class="indent"><strong><em>Cantrips.</em></strong> When you cast cantrips with your hex gun, it channels them as bullets (these still count as spells). Instead of increasing the damage of the cantrip when you reach certain levels, you can cast the cantrip additional times as part of the same action (except for Eldritch Blast, which is cast as normal). To be cast in this way, the cantrip must deal damage, must make a spell attack or require a saving throw, and must have a range other than Self. When you cast a cantrip in this manner, you cast it 2 times at level 5, 3 times at level 11, and 4 times at level 17. The cantrip can deal its damage more than once, but any other effects can't be applied again this turn.</p>
+			<p class="indent"><strong><em>Revolver Form.</em></strong> While holding your hex gun, you know the Shocking Grasp cantrip. In addition, being within 5 feet of a hostile creature doesn't impose Disadvantage on your ranged spell attack rolls cast through the hex gun.</p>
+			<p class="indent"><strong><em>Sniper Form.</em></strong> While holding your hex gun, you know the Ray of Frost cantrip. In addition, your ranged spell attack rolls cast through the hex gun have their range doubled and ignore Half Cover.</p>
+		</description>
+		<sheet alt="Pact of the Trigger" action="Action">
+			<description>Create a hex gun (Spellcasting Focus) in Revolver or Sniper Form. Channel qualifying damaging cantrips (not Eldritch Blast) as bullets, casting them {{pact trigger:casts}}x per action (damage repeats, non-damaging effects only 1/turn).&#13;
+			• Revolver Form: Know Shocking Grasp; no Disadvantage on ranged spell attacks within 5 ft of hostiles.&#13;
+			• Sniper Form: Know Ray of Frost; ranged spell attacks have double range and ignore Half Cover.</description>
+		</sheet>
+		<rules>
+			<stat name="pact trigger:casts" value="1" bonus="base" />
+			<stat name="pact trigger:casts" value="2" bonus="base" level="5" />
+			<stat name="pact trigger:casts" value="3" bonus="base" level="11" />
+			<stat name="pact trigger:casts" value="4" bonus="base" level="17" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHOCKING_GRASP" spellcasting="Warlock" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_RAY_OF_FROST" spellcasting="Warlock" />
+		</rules>
+	</element>
+
+	<element name="Bullet Hell" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_BULLET_HELL">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:5],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 5+ Warlock, Pact of the Trigger Invocation (Revolver Form)</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 5+ Warlock, Pact of the Trigger Invocation (Revolver Form)</em></p>
+			<p>As a Bonus Action while holding your hex gun and you have one free hand, you temporarily duplicate your hex gun to unleash a flurry of bullets. Each creature in a 15-foot Cone must succeed a Dexterity saving throw against your spell save DC or take 2d10 Force damage. This damage increases to 3d10 at level 11 and 4d10 at level 17.</p>
+			<p class="indent">You can use this invocation a number of times equal to twice your Charisma modifier (minimum of twice), and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="{{bullet hell:usage}}/Long Rest">
+			<description>While holding Revolver hex gun with 1 free hand, creatures in a 15-ft Cone make a DC{{warlock:spellcasting:dc}} Dex save or take {{bullet hell:dice}}d10 Force damage.</description>
+		</sheet>
+		<rules>
+			<stat name="bullet hell:half" value="1" bonus="base" />
+			<stat name="bullet hell:half" value="charisma:modifier" bonus="base" />
+			<stat name="bullet hell:usage" value="bullet hell:half" />
+			<stat name="bullet hell:usage" value="bullet hell:half" />
+			<stat name="bullet hell:dice" value="2" bonus="base" />
+			<stat name="bullet hell:dice" value="3" bonus="base" level="11" />
+			<stat name="bullet hell:dice" value="4" bonus="base" level="17" />
+		</rules>
+	</element>
+
+	<element name="Crippling Shot" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_CRIPPLING_SHOT">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:2],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 2+ Warlock, Pact of the Trigger Invocation (Revolver Form)</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 2+ Warlock, Pact of the Trigger Invocation (Revolver Form)</em></p>
+			<p>Once on each of your turns when you damage a creature with an attack made using your hex gun, you can force it to make a Strength saving throw against your spell save DC. On a failed save, the target has the Prone condition and its Speed is reduced to 0 until the start of your next turn.</p>
+			<p class="indent">You can use this invocation a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet usage="1/Turn — {{crippling shot:usage}}/Long Rest">
+			<description>When damaging a creature with Revolver hex gun, force a DC{{warlock:spellcasting:dc}} Str save or it falls Prone and Speed becomes 0 until start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="crippling shot:usage" value="1" bonus="base" />
+			<stat name="crippling shot:usage" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Dead Eye" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_DEAD_EYE">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:9],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 9+ Warlock, Pact of the Trigger Invocation (Sniper Form)</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 9+ Warlock, Pact of the Trigger Invocation (Sniper Form)</em></p>
+			<p>If you haven't moved this turn, you can take aim as a Bonus Action, reducing your Speed to 0 and granting you Advantage on attacks you make using your hex gun until the end of your turn.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>If you haven't moved this turn, reduce your Speed to 0 to gain Advantage on attacks with Sniper hex gun until the end of your turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Headshots" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_HEADSHOTS">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:9],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 9+ Warlock, Pact of the Trigger Invocation (Sniper Form)</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 9+ Warlock, Pact of the Trigger Invocation (Sniper Form)</em></p>
+			<p>As a Bonus Action, you can enhance your focus to see the weak spots of your foes. For the next minute, attack rolls you make using your hex gun score a Critical Hit on a roll of 19 or 20 on the d20. Once you use this invocation, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Short Rest">
+			<description>For 1 min, attack rolls with Sniper hex gun score a Critical Hit on a 19-20.</description>
+		</sheet>
+	</element>
+
+	<element name="Quickstep" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_QUICKSTEP">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:5],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 5+ Warlock, Pact of the Trigger Invocation</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 5+ Warlock, Pact of the Trigger Invocation</em></p>
+			<p>Your reflexes are honed. When a creature makes a melee attack roll against you, if your Speed isn't 0, you can take a Reaction to move 5 feet away from the creature without triggering Opportunity Attacks, causing the attack to miss if you leave its reach.</p>
+			<p class="indent">You can use this invocation a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="{{quickstep:usage}}/Long Rest">
+			<description>When targeted by a melee attack (if Speed &gt; 0), move 5 ft away without Opportunity Attacks; the attack misses if you leave its reach.</description>
+		</sheet>
+		<rules>
+			<stat name="quickstep:usage" value="1" bonus="base" />
+			<stat name="quickstep:usage" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Reckless Fire" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_RECKLESS_FIRE">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:2],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 2+ Warlock, Pact of the Trigger Invocation</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 2+ Warlock, Pact of the Trigger Invocation</em></p>
+			<p>Your shots are a rain of lead. When you roll a 1, 2, or 3 on a damage die for a cantrip you cast with your hex gun, you can reroll the die and must use the new roll, even if the new roll is a 1, 2 or 3.</p>
+		</description>
+		<sheet>
+			<description>When rolling 1, 2, or 3 on a damage die for a cantrip cast with your hex gun, you can reroll it and must use the new roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Repeating Cantrips" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_REPEATING_CANTRIPS">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:2],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 2+ Warlock, Pact of the Trigger Invocation</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 2+ Warlock, Pact of the Trigger Invocation</em></p>
+			<p>When you cast a cantrip with your hex gun, its non-damaging effects (such as the Speed reduction of Ray Of Frost) can apply multiple times but not more than once per creature on a turn.</p>
+		</description>
+		<sheet>
+			<description>Non-damaging effects of cantrips cast with your hex gun can apply multiple times per turn (max 1/turn per creature).</description>
+		</sheet>
+	</element>
+
+	<element name="Ricochet" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_RICOCHET">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:9],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 9+ Warlock, Pact of the Trigger Invocation</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 9+ Warlock, Pact of the Trigger Invocation</em></p>
+			<p>As a Bonus Action, you enhance your hex gun until the end of your turn. When you hit a creature with an attack roll from a cantrip cast with your hex gun, you can immediately cause the cantrip to wound a second creature within 30 feet of the original target. The second target takes damage (of the type of the cantrip) equal to your Charisma modifier (minimum of 1).</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>Until end of turn, when hitting with a cantrip attack via hex gun, deal {{ricochet:damage}} damage (same type) to a second creature within 30 ft of the original target.</description>
+		</sheet>
+		<rules>
+			<stat name="ricochet:damage" value="1" bonus="base" />
+			<stat name="ricochet:damage" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Riposte" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_RIPOSTE">
+		<supports>PHB24 Eldritch Invocation,Eldritch Invocation</supports>
+		<requirements>[level:warlock:5],ID_LT_SGEH24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_TRIGGER</requirements>
+		<prerequisite>Level 5+ Warlock, Pact of the Trigger Invocation (Revolver Form)</prerequisite>
+		<description>
+			<p><em>Prerequisite: Level 5+ Warlock, Pact of the Trigger Invocation (Revolver Form)</em></p>
+			<p>When a creature makes a melee attack roll against you while you are holding your hex gun, you can fire a special bullet to counter the attack. Make a melee or ranged spell attack against the attacker. On a hit, the target takes 1d10 Force damage, the attack misses, and it has the Stunned condition until the end of its current turn.</p>
+			<p class="indent">Once you use this invocation to damage an enemy, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short Rest">
+			<description>When targeted by a melee attack while holding Revolver hex gun, make a melee or ranged spell attack against the attacker. Hit: 1d10 Force damage, attack misses, and attacker is Stunned until end of its turn (expends use on hit).</description>
+		</sheet>
+	</element>
+
+</elements>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Lunar Warden</name>
+		<description>The Lunar Warden subclass for the Ranger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="ranger-lunarwarden.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/ranger-lunarwarden.xml" />
+		</update>
+	</info>
+
+	<element name="Lunar Warden" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_RANGER_LUNAR_WARDEN">
+		<supports>Ranger Subclass</supports>
+		<description>
+			<p>Lunar Wardens hold a deep fascination for the enigmatic powers of the moons, forming a profound bond with the ever-changing celestial bodies and drawing upon their forms to enhance their abilities. This ancient elven tradition has persisted through the ages, renewing its knowledge with each new moon that manifested itself. These wardens of old learned to harness these new lunar powers, consolidating their wisdom and passing it down through generations. Today, this conclave of stout defenders has become exceedingly rare, with only a sparse few members residing within the city-state's walls. While some whisper that members of this conclave can cleanse the moons of their corruption, the turmoil within Luyarnha suggests otherwise.</p>
+			<p class="indent">By embracing the lunar energies, these Rangers undergo a transformation that melds their very essence with that of the moons, adopting aspects of their celestial beauty and might. As their bond with the moons deepens, Lunar Wardens attune themselves to the celestial bodies' forms, allowing them to channel lunar energies in extraordinary ways—mending grievous wounds using the power of a blood moon or burning asunder their foes with the blazing intensity of a scorching moon. When in perfect harmony with the eldritch body looming above, their abilities swell to incredible heights, transforming them into exceptional nocturnal hunters, whereas others would instead seek refuge from the dreadful moons.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_ASTRAL_AFFINITY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_MOON_CONDUIT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_LUNAR_GUIDANCE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_ADDITIONAL_MOON_CONDUITS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_CELESTIAL_TIDE" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_ASTRAL_AFFINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_MOON_CONDUIT" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_LUNAR_GUIDANCE" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_ADDITIONAL_MOON_CONDUITS" level="11" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_CELESTIAL_TIDE" level="15" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Astral Affinity" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_ASTRAL_AFFINITY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_ASTRAL_AFFINITY</requirements>
+		<description>
+			<p>You gain the ability to harness the energy of the moon and have the following benefits.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You gain Darkvision with a range of 60 feet. If you already have Darkvision, its range increases by 30 feet.</p>
+			<p class="indent"><strong><em>Light.</em></strong> You know the Light cantrip.</p>
+			<p class="indent"><strong><em>Lunar Resilience.</em></strong> You have Advantage on saving throws against effects directly caused by Eldritch Moons. For example, you would have Advantage on a saving throw caused by staring directly at the Vacuous Moon, but if a monster has additional powers due to an Eldritch Moon, you wouldn't gain Advantage on saving throws you make against those powers.</p>
+		</description>
+		<sheet alt="Astral Affinity">
+			<description>If you already had Darkvision, its range increases by 30 ft instead of gaining 60 ft. You have Advantage on saving throws against effects directly caused by Eldritch Moons.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_LESSER_DARKVISION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LIGHT" spellcasting="Ranger" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Moon Conduit" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_MOON_CONDUIT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_MOON_CONDUIT</requirements>
+		<description>
+			<p>You have learned to harness the energy from the ever-shifting moons of the world. You have a number of Conduit Points equal to your Wisdom modifier (minimum of 1). You can expend 1 Conduit Point to channel a Moon Conduit from one of the Eldritch Moons. You can only channel one conduit per turn. You know the conduits in the List of Moon Conduits section below.</p>
+			<p class="indent">You regain all expended Conduit Points when you finish a Long Rest. Starting at Ranger level 7, you regain all expended Conduit Points when you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> If you channel a Moon Conduit that belongs to the Eldritch Moon currently looming over the world, the conduit is more powerful, detailed in the Lunar Alignment section of each conduit.</p>
+			<h5>List of Moon Conduits</h5>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_BLOOD_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_HOWLING_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SHATTERED_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SCORCHING_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_VACUOUS_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_GLOWERING_MOON" />
+			</div>
+		</description>
+		<sheet alt="Moon Conduit" usage="{{moon conduit:usage}}/Long Rest">
+			<description>You can expend 1 Conduit Point (1/turn) to channel a Moon Conduit. If it matches the looming Eldritch Moon, it gains its Lunar Alignment effect.</description>
+			<description level="7" usage="{{moon conduit:usage}}/Short Rest">You can expend 1 Conduit Point (1/turn) to channel a Moon Conduit. If it matches the looming Eldritch Moon, it gains its Lunar Alignment effect. Each time you channel a Moon Conduit, gain a lunar shard for 1 min (until expended or channeling another) to gain Advantage on a D20 Test.</description>
+		</sheet>
+		<rules>
+			<stat name="moon conduit:usage" value="1" bonus="base" />
+			<stat name="moon conduit:usage" value="wisdom:modifier" bonus="base" />
+
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_BLOOD_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_HOWLING_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SHATTERED_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SCORCHING_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_VACUOUS_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_GLOWERING_MOON" />
+		</rules>
+	</element>
+
+	<!-- Level 3 Moon Conduits -->
+	<element name="Blood Moon of Rebirth" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_BLOOD_MOON">
+		<compendium display="false" />
+		<description>
+			<p>As a Bonus Action, you beckon the powers of a black goat. You and another creature of your choice that you can see within 60 feet of you regain a number of Hit Points equal to your Ranger level.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> When you channel this conduit, you can affect yourself and any number of creatures of your choice within 60 feet of you that you can see, which regain a number of Hit Points equal 1d4 x your Ranger level. This healing also regrows any missing limbs, as per the Regenerate spell.</p>
+		</description>
+		<sheet alt="Blood Moon of Rebirth (Conduit)" action="Bonus Action" usage="1 Conduit Point">
+			<description>You and 1 creature within 60 ft regain {{level:ranger}} HP.&#13;
+			Lunar Alignment: Affect yourself and any number of creatures within 60 ft, healing 1d4 x {{level:ranger}} HP and regrowing missing limbs (as Regenerate).</description>
+		</sheet>
+	</element>
+
+	<element name="Howling Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_HOWLING_MOON">
+		<compendium display="false" />
+		<description>
+			<p>You harness the beast within you as a Bonus Action. For the next minute, you grow fur, fangs, and devastating claws. You can roll 1d8 plus your Wisdom modifier in place of the normal damage of your Unarmed Strike. You can use your Dexterity modifier instead of your Strength modifier for the attack and damage rolls of your Unarmed Strikes.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> The damage die increases from 1d8 to 1d12, and you have Advantage on an attack roll with your claws against a creature if at least one of your allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.</p>
+		</description>
+		<sheet alt="Howling Moon (Conduit)" action="Bonus Action" usage="1 Conduit Point">
+			<description>For 1 min, Unarmed Strikes deal 1d8+{{wisdom:modifier}} and can use Dex instead of Str for attack/damage.&#13;
+			Lunar Alignment: Damage die becomes 1d12, and gain Advantage on claw attacks if an non-Incapacitated ally is within 5 ft of the target.</description>
+		</sheet>
+	</element>
+
+	<element name="Shattered Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SHATTERED_MOON">
+		<compendium display="false" />
+		<description>
+			<p>You beckon the shattered powers of the moon, attempting to break the magic in front of you. When you or a creature you can see within 30 feet of yourself makes a saving throw against a spell or magical effect, you can take a Reaction to dampen the magic, granting Advantage on the saving throw.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> When this conduit gives a creature Advantage on a saving throw, it can reroll one of the dice once. Alternatively, you can take a Reaction to cast Counterspell. When you cast it with this conduit, the target automatically fails its saving throw if it is casting a spell of level 5 or lower, and it automatically succeeds on its save if it is casting a spell of level 6 or higher.</p>
+		</description>
+		<sheet alt="Shattered Moon (Conduit)" action="Reaction" usage="1 Conduit Point">
+			<description>Grant Advantage on a save vs a spell/magical effect for you or a creature within 30 ft.&#13;
+			Lunar Alignment: The creature can reroll one of the dice once. Alternatively, cast Counterspell as a Reaction (target auto-fails if casting level 5 or lower, auto-succeeds if 6+).</description>
+		</sheet>
+	</element>
+
+	<element name="Scorching Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SCORCHING_MOON">
+		<compendium display="false" />
+		<description>
+			<p>You wreathe yourself in flames to scorch your foes. When you take the Attack action on your turn and hit, you can channel this conduit to force the target to make a Strength saving throw against your spell save DC. On a failed save, the target takes a number of d4s of Fire damage equal to your Wisdom modifier (minimum 1). In addition, it either has the Prone condition or is pushed 15 feet straight away from you (your choice).</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> A creature automatically fails its saving throw against this conduit, the Fire damage it takes becomes d10s instead of d4s, and this damage ignores Resistance to Fire damage.</p>
+		</description>
+		<sheet alt="Scorching Moon (Conduit)" usage="1 Conduit Point">
+			<description>On Attack action hit, force a DC{{ranger:spellcasting:dc}} Str save or take {{scorching moon:dice}}d4 Fire damage and fall Prone or be pushed 15 ft away.&#13;
+			Lunar Alignment: Target auto-fails save, damage becomes {{scorching moon:dice}}d10 Fire (ignores Fire Resistance).</description>
+		</sheet>
+		<rules>
+			<stat name="scorching moon:dice" value="1" bonus="base" />
+			<stat name="scorching moon:dice" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Vacuous Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_VACUOUS_MOON">
+		<compendium display="false" />
+		<description>
+			<p>You step through the void. When you take damage from a ranged attack from a creature you can see within 60 feet of you, you can take a Reaction to teleport to an empty space you can see within 10 feet of the attacker.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> When you channel this conduit, you can take the Reaction if the attacker is within 300 feet of yourself, you can teleport to an empty space you can see within 30 feet of the attacker, and immediately after you teleport, you can make one weapon attack against the attacker if it is within your reach or range.</p>
+		</description>
+		<sheet alt="Vacuous Moon (Conduit)" action="Reaction" usage="1 Conduit Point">
+			<description>When taking damage from a ranged attack within 60 ft, teleport to a space within 10 ft of the attacker.&#13;
+			Lunar Alignment: Range increases to 300 ft, teleport within 30 ft of attacker, and immediately make one weapon attack against the attacker (if in reach/range).</description>
+		</sheet>
+	</element>
+
+	<element name="Glowering Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_GLOWERING_MOON">
+		<compendium display="false" />
+		<description>
+			<p>You subjugate your foes to the crushing woe of hopelessness. You can cast the Bane spell at level 2 without expending a spell slot. If a target is in direct moonlight, it has Disadvantage on the saving throw.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> Creatures in direct moonlight automatically fail the saving throw, and a creature under the effect of the spell takes Psychic damage equal to your Ranger level at the start of each of its turns. If a creature remains under the effect of the spell for its entire duration, the creature has the Unconscious condition. The condition ends if it takes any damage or if another creature uses an action to shake it out of its stupor.</p>
+		</description>
+		<sheet alt="Glowering Moon (Conduit)" usage="1 Conduit Point">
+			<description>Cast Bane at 2nd level without a spell slot (targets in direct moonlight have Disadvantage on save).&#13;
+			Lunar Alignment: Targets in direct moonlight auto-fail save; affected creatures take {{level:ranger}} Psychic damage at start of their turns. If affected for full duration, falls Unconscious (damage or action to shake awake ends).</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANE" />
+		</rules>
+	</element>
+
+	<element name="Level 7: Lunar Guidance" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_LUNAR_GUIDANCE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_LUNAR_GUIDANCE</requirements>
+		<description>
+			<p>The moon strengthens your body in more ways than one. You gain Resistance to Radiant damage. If you already have Resistance to that damage type, you gain Resistance to your choice of Cold or Necrotic damage instead.</p>
+			<p class="indent">In addition, each time you channel a Moon Conduit, a shard of the lunar energy remains within your body for 1 minute or until you expend it or channel another Moon Conduit. You can expend this energy to gain Advantage on a D20 Test.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Archetype Feature" name="Lunar Guidance Resistance" supports="Lunar Guidance Resistance" default="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_GUIDANCE_RADIANT" />
+		</rules>
+	</element>
+	<element name="Radiant Resistance" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_GUIDANCE_RADIANT">
+		<supports>Lunar Guidance Resistance</supports>
+		<compendium display="false" />
+		<description>
+			<p>You gain Resistance to Radiant damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+		</rules>
+	</element>
+	<element name="Cold Resistance" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_GUIDANCE_COLD">
+		<supports>Lunar Guidance Resistance</supports>
+		<compendium display="false" />
+		<description>
+			<p>You gain Resistance to Cold damage (if you already had Radiant Resistance).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+		</rules>
+	</element>
+	<element name="Necrotic Resistance" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_GUIDANCE_NECROTIC">
+		<supports>Lunar Guidance Resistance</supports>
+		<compendium display="false" />
+		<description>
+			<p>You gain Resistance to Necrotic damage (if you already had Radiant Resistance).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+		</rules>
+	</element>
+
+	<element name="Level 11: Additional Moon Conduits" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_ADDITIONAL_MOON_CONDUITS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_ADDITIONAL_MOON_CONDUITS</requirements>
+		<description>
+			<p>You learn to channel additional Moon Conduits that draw from the powers of Eldritch Moons oft unseen.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_GLACIAL_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SLUMBERING_MOON" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_KRAKENLIGHT" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_CREEPING_TARLIGHT" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SANGUINE_ECLIPSE" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_GLACIAL_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SLUMBERING_MOON" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_KRAKENLIGHT" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_CREEPING_TARLIGHT" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SANGUINE_ECLIPSE" />
+		</rules>
+	</element>
+
+	<!-- Level 11 Moon Conduits -->
+	<element name="Glacial Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_GLACIAL_MOON">
+		<compendium display="false" />
+		<description>
+			<p>As a Bonus Action, you cover your body in a frozen armor and gain Temporary Hit Points. If a creature hits you with a melee attack while you have these Temporary Hit Points, the creature takes Cold damage. To determine the Temporary Hit Points and Cold damage dealt, roll a number of d4s equal to your Wisdom modifier (minimum 1 die) and add them together.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> When you channel this conduit, you don't roll for the Temporary Hit Points and Cold damage dealt; instead, choose the maximum you could roll. This damage ignores Resistance to Cold damage.</p>
+		</description>
+		<sheet alt="Glacial Moon (Conduit)" action="Bonus Action" usage="1 Conduit Point">
+			<description>Gain {{glacial moon:dice}}d4 THP; creatures hitting you in melee while you have these THP take {{glacial moon:dice}}d4 Cold damage.&#13;
+			Lunar Alignment: Gain maximum THP and deal maximum Cold damage ({{glacial moon:max}}), ignoring Cold Resistance.</description>
+		</sheet>
+		<rules>
+			<stat name="glacial moon:dice" value="1" bonus="base" />
+			<stat name="glacial moon:dice" value="wisdom:modifier" bonus="base" />
+			<stat name="glacial moon:max" value="glacial moon:dice" />
+			<stat name="glacial moon:max" value="glacial moon:dice" />
+			<stat name="glacial moon:max" value="glacial moon:dice" />
+			<stat name="glacial moon:max" value="glacial moon:dice" />
+		</rules>
+	</element>
+
+	<element name="Slumbering Moon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SLUMBERING_MOON">
+		<compendium display="false" />
+		<description>
+			<p>You can warp your body through eldritch means. You can cast Misty Step without expending a spell slot.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> You can cast Dimension Door as a Bonus Action without expending a spell slot.</p>
+		</description>
+		<sheet alt="Slumbering Moon (Conduit)" action="Bonus Action" usage="1 Conduit Point">
+			<description>Cast Misty Step without a spell slot.&#13;
+			Lunar Alignment: Cast Dimension Door as a Bonus Action without a spell slot.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISTY_STEP" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIMENSION_DOOR" />
+		</rules>
+	</element>
+
+	<element name="Krakenlight" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_KRAKENLIGHT">
+		<compendium display="false" />
+		<description>
+			<p>You create a bioluminescent lure before you. As a Magic action, you can create a light above your head that emits Dim Light in a 10-foot Emanation originating from you. Hostile creatures within 30 feet of you that see the lure must make a Wisdom saving throw against your spell save DC or have the Charmed condition. While Charmed, a creature has the Incapacitated condition, and while it isn't in the light, it is compelled to move toward the lure with its movement at the start of each of its turns. The effect lasts for 1 minute or until the creature takes damage.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> The range at which creatures that can see the lure must make the saving throw increases to 60 feet, creatures have Disadvantage on the saving throw, and the first time a Charmed creature takes damage, the effect doesn't end.</p>
+		</description>
+		<sheet alt="Krakenlight (Conduit)" action="Action" usage="1 Conduit Point">
+			<description>Emit 10-ft Dim Light; hostile creatures within 30 ft seeing it make a DC{{ranger:spellcasting:dc}} Wis save or are Charmed (Incapacitated, move toward light at start of turns) for 1 min or until damaged.&#13;
+			Lunar Alignment: Range 60 ft, targets have Disadvantage on save, and first damage taken doesn't end the effect.</description>
+		</sheet>
+	</element>
+
+	<element name="Creeping Tarlight" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_CREEPING_TARLIGHT">
+		<compendium display="false" />
+		<description>
+			<p>You can weave the tar lurking in the shadows to slow your foes. As a Magic action, you can choose up to three creatures that you can see within 30 feet of yourself. Each creature must make a Dexterity saving throw against your spell save DC. Creatures in Darkness have Disadvantage on this saving throw. On a failed save, a target is covered by tar as long as you maintain Concentration, up to 1 minute. While covered in tar, a target's Speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can't take Reactions. An affected creature repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> When you channel this conduit, you can choose up to six creatures that must make the save. While covered in tar, a creature is instead affected by the Slow spell. This effect lasts 1 minute and doesn't require Concentration.</p>
+		</description>
+		<sheet alt="Creeping Tarlight (Conduit)" action="Action" usage="1 Conduit Point">
+			<description>Up to 3 creatures within 30 ft make a DC{{ranger:spellcasting:dc}} Dex save (Disadvantage if in Darkness) or be covered in tar (Conc., 1 min; Speed halved, -2 AC/Dex saves, no Reactions; save ends at end of turns).&#13;
+			Lunar Alignment: Up to 6 creatures; instead affected by Slow for 1 min (no Concentration).</description>
+		</sheet>
+	</element>
+
+	<element name="Sanguine Eclipse" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_CONDUIT_SANGUINE_ECLIPSE">
+		<compendium display="false" />
+		<description>
+			<p>You cause your foes to turn against each other. As a Magic action, you can choose a creature that you can see within 30 feet of yourself. The target must make an Intelligence saving throw. On a failed save, it regards another creature of your choice that you can see within 90 feet of yourself as its mortal enemy until the end of your next turn. The target spends its turns attempting to kill its mortal enemy, disregarding all other creatures. The effect ends early if the target's quarry dies. Creatures that are immune to the Charmed condition are immune to this effect.</p>
+			<p class="indent"><strong><em>Lunar Alignment.</em></strong> The effect lasts for 1 minute. An affected creature repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+		</description>
+		<sheet alt="Sanguine Eclipse (Conduit)" action="Action" usage="1 Conduit Point">
+			<description>Target within 30 ft (non-immune to Charmed) makes a DC{{ranger:spellcasting:dc}} Int save or regards another chosen creature within 90 ft as its mortal enemy until end of your next turn.&#13;
+			Lunar Alignment: Lasts 1 min (save ends at end of turns).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 15: Celestial Tide" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LUNAR_WARDEN_CELESTIAL_TIDE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_CELESTIAL_TIDE</requirements>
+		<description>
+			<p>You can beckon the moon closer to you, using its enormous mass to shift the tides of battle. As a Magic action, you can cast the Reverse Gravity spell without expending a spell slot or using Material components, and the area of the spell is illuminated by Bright Light from the direct moonlight.</p>
+			<p class="indent">When the spell ends, the lunar energy disperses and flows towards you, refreshing your lunar powers. You regain all expended Conduit Points.</p>
+			<p class="indent">Once you use this feature, you can't do so again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Celestial Tide" action="Action" usage="1/Long Rest">
+			<description>Cast Reverse Gravity without a spell slot or Material components (area is Bright Light from direct moonlight). When the spell ends, regain all expended Conduit Points.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_REVERSE_GRAVITY" />
+		</rules>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Astral Affinity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_ASTRAL_AFFINITY" />
+	<element name="Moon Conduit Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_MOON_CONDUIT" />
+	<element name="Lunar Guidance Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_LUNAR_GUIDANCE" />
+	<element name="Additional Moon Conduits Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_ADDITIONAL_MOON_CONDUITS" />
+	<element name="Celestial Tide Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LUNAR_WARDEN_CELESTIAL_TIDE" />
+
+</elements>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Accursed</name>
+		<description>The Accursed species from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.1.0">
+			<file name="species-accursed.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-accursed.xml" />
+		</update>
+	</info>
+	
+	<element name="Accursed" type="Race" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACE_ACCURSED">
+		<description>
+			<p>The city of Luyarnha has never experienced the threat of devils, as if fiends fear coming near the city walls. This absence extends to those of infernal descent; tieflings born in the gothic city are severed from their devilish origins, their blood becoming tied to something far more sinister.</p>
+			<p class="indent">Called “accursed” due to their monstrous appearance, they are feared by most, and their powers envied by nearly as many, letting their jealousy morph into hatred; an accursed existence indeed. These beings possess a fraction of the power of their dark mother’s boundless reproduction and are incapable of creating life, though they can create figments of it, with the most powerful capable of creating ephemeral copies of themselves to fight in battle. These tieflings never stay in the city for long, vanishing shortly after reaching adulthood.</p>
+			<p class="indent"><strong><em>Appearance.</em></strong> Accursed vastly differ from their tiefling cousins. Instead of a pair of horns, they have dozens protruding from their skull, akin to a never-ending cancerous growth. Their monstrous shape is furthered by the eye-like protrusions that cover the horns, although they are nothing more than bony sprouts waiting to burgeon. Their skin is thick, covered in bestial fur, and their muscular limbs are grossly misshaped. The human part of their heritage has nearly vanished.</p>
+			<h5>ACCURSED TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Aberration</li>
+				<li><strong>Size:</strong> Medium (about 4–7 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet, Climb Speed equal to your Speed</li>
+			</ul>
+			<p>As an Accursed, you have these special traits.</p>
+			<p class="indent"><strong><em>Blood Moon’s Call.</em></strong> If a Blood Moon is out while you are asleep, you have a dream. In this dream, the Black Goat places a compulsion within your mind, ordering you to carry out some activity as a torrent of images and sensations. When you awaken, you are affected by the <i>Suggestion</i> spell (save DC 16) and must carry out the order. On a successful save, you resist the spell.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You have Darkvision with a range of 60 feet.</p>
+			<p class="indent"><strong><em>Eldritch Endurance.</em></strong> You have Resistance to Necrotic damage.</p>
+			<p class="indent"><strong><em>Legacy of a Thousand Young.</em></strong> You are the recipient of a legacy that grants you supernatural abilities. You gain the level 1 benefit of the table below. When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.</p>
+			<p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the species).</p>
+			<table>
+				<thead>
+					<tr><td>Level 1</td><td>Level 3</td><td>Level 5</td></tr>
+				</thead>
+				<tr><td>You know the <i>Spare the Dying</i> cantrip</td><td><i>False Life</i></td><td><i>Mirror Image</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Accursed)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_ABERRATION" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="innate speed" bonus="base" />
+
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Accursed)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language (Accursed)" supports="Custom Race Language" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" number="3" />
+
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_BLOOD_MOONS_CALL" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" requirements="!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_DARKVISION" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_ELDRITCH_ENDURANCE" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_OF_A_THOUSAND_YOUNG" />
+		</rules>
+	</element>
+
+	<element name="Blood Moon’s Call" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_BLOOD_MOONS_CALL">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_BLOOD_MOONS_CALL</requirements>
+		<description>
+			<p>If a Blood Moon is out while you are asleep, you have a dream. In this dream, the Black Goat places a compulsion within your mind, ordering you to carry out some activity as a torrent of images and sensations. When you awaken, you are affected by the <i>Suggestion</i> spell (save DC 16) and must carry out the order. On a successful save, you resist the spell.</p>
+		</description>
+		<sheet>
+			<description>If a Blood Moon is out while you are asleep, you have a dream from the Black Goat. When you awaken, you are affected by the Suggestion spell (save DC 16) and must carry out the order unless you succeed on the save.</description>
+		</sheet>
+	</element>
+
+	<element name="Eldritch Endurance" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_ELDRITCH_ENDURANCE">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_ELDRITCH_ENDURANCE</requirements>
+		<description>
+			<p>You have Resistance to Necrotic damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+		</rules>
+	</element>
+
+	<element name="Legacy of a Thousand Young" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_OF_A_THOUSAND_YOUNG">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_LEGACY_OF_A_THOUSAND_YOUNG</requirements>
+		<description>
+			<p>You are the recipient of a legacy that grants you supernatural abilities. You gain the level 1 benefit of the table below. When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.</p>
+			<p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the species).</p>
+			<table>
+				<thead>
+					<tr><td>Level 1</td><td>Level 3</td><td>Level 5</td></tr>
+				</thead>
+				<tr><td>You know the <i>Spare the Dying</i> cantrip</td><td><i>False Life</i></td><td><i>Mirror Image</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Legacy of a Thousand Young)" supports="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_INTELLIGENCE|ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_WISDOM|ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Intelligence" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Intelligence is your spellcasting ability for the spells you cast with the Legacy of a Thousand Young trait.</p>
+		</description>
+		<sheet alt="Legacy of a Thousand Young">
+			<description>You know the Spare the Dying cantrip. Intelligence is your spellcasting ability for it.</description>
+			<description level="3">You know the Spare the Dying cantrip, and you can cast the False Life spell once per Long Rest. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Spare the Dying cantrip, and you can cast the False Life and Mirror Image spells once each per Long Rest. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPARE_THE_DYING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FALSE_LIFE" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIRROR_IMAGE" level="5" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Wisdom is your spellcasting ability for the spells you cast with the Legacy of a Thousand Young trait.</p>
+		</description>
+		<sheet alt="Legacy of a Thousand Young">
+			<description>You know the Spare the Dying cantrip. Wisdom is your spellcasting ability for it.</description>
+			<description level="3">You know the Spare the Dying cantrip, and you can cast the False Life spell once per Long Rest. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Spare the Dying cantrip, and you can cast the False Life and Mirror Image spells once each per Long Rest. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPARE_THE_DYING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FALSE_LIFE" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIRROR_IMAGE" level="5" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_ACCURSED_LEGACY_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Charisma is your spellcasting ability for the spells you cast with the Legacy of a Thousand Young trait.</p>
+		</description>
+		<sheet alt="Legacy of a Thousand Young">
+			<description>You know the Spare the Dying cantrip. Charisma is your spellcasting ability for it.</description>
+			<description level="3">You know the Spare the Dying cantrip, and you can cast the False Life spell once per Long Rest. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Spare the Dying cantrip, and you can cast the False Life and Mirror Image spells once each per Long Rest. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPARE_THE_DYING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FALSE_LIFE" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIRROR_IMAGE" level="5" />
+		</rules>
+	</element>
+
+
+	<!-- Racial Trait Replacement Grants -->
+	<element name="Blood Moon’s Call Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_BLOOD_MOONS_CALL" />
+	<element name="Darkvision Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_DARKVISION" />
+	<element name="Eldritch Endurance Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_ELDRITCH_ENDURANCE" />
+	<element name="Legacy of a Thousand Young Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_ACCURSED_LEGACY_OF_A_THOUSAND_YOUNG" />
+
+</elements>

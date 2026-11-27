@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Absolute Chapter</name>
+		<description>The Absolute Chapter subclass for the Jaeger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="jaeger-absolute.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-absolute.xml" />
+		</update>
+	</info>
+
+	<element name="Absolute Chapter" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_JAEGER_ABSOLUTE_CHAPTER">
+		<supports>Jaeger Chapter</supports>
+		<description>
+			<p>Jaegers of the Absolute Chapter aim for the perfect hunt: to kill their prey without suffering a single hit. Quick hands, quick feet, and quick minds, they never stay still—always one step ahead, always striking with lethal accuracy. They are masters of their craft, refining the core techniques of a jaeger to absolute perfection.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_COUNTER_STRIKE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_UNENCUMBERED_MOVEMENT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_ENCIRCLING_STRIKE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_MOBILE_PURSUER" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_THE_HUNT" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_COUNTER_STRIKE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_UNENCUMBERED_MOVEMENT" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_ENCIRCLING_STRIKE" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_MOBILE_PURSUER" level="14" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_THE_HUNT" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Counter Strike" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_COUNTER_STRIKE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_COUNTER_STRIKE</requirements>
+		<description>
+			<p>When you use the Weapon Parry Adrenaline Art, if you completely block the incoming attacking, you can make a single weapon attack using the weapon used to block against the attacker if they are in the Reach or range of the weapon.</p>
+			<p class="indent">Whenever you expend an Adrenaline Point on an Adrenaline Art, you gain Advantage on your next weapon attack roll before the end of your next turn.</p>
+		</description>
+		<sheet alt="Counter Strike">
+			<description>When you completely block an attack using Weapon Parry, you can make one attack with that weapon against the attacker (if in reach/range). Whenever you spend an Adrenaline Point on an Adrenaline Art, you gain Advantage on your next weapon attack roll before the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Unencumbered Movement" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_UNENCUMBERED_MOVEMENT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_UNENCUMBERED_MOVEMENT</requirements>
+		<description>
+			<p>While you are wearing light armor or no armor, your Speed increases by 10 feet, and the distance you can move when using the Dodge Step Adrenaline Art increases by 5 feet.</p>
+		</description>
+		<sheet alt="Unencumbered Movement">
+			<description>While wearing light armor or no armor, your Speed increases by 10 feet, and your Dodge Step distance increases by 5 feet.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="10" equipped="[armor:none]" />
+			<stat name="innate speed" value="10" equipped="[armor:light]" />
+		</rules>
+	</element>
+
+	<element name="Level 7: Encircling Strike" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_ENCIRCLING_STRIKE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_ENCIRCLING_STRIKE</requirements>
+		<description>
+			<p>Once per turn, if you move to the opposite side of a creature from where you started your turn, or are directly on the opposite side of a creature from an allied creature of yours, you deal extra damage to the target equal to your Momentum die the first time you hit it with a melee weapon attack.</p>
+		</description>
+		<sheet alt="Encircling Strike" usage="1/Turn">
+			<description>If you move to the opposite side of a creature from where you started your turn, or are directly opposite an ally across a creature, you deal extra damage equal to your Momentum die on your first melee weapon hit against it.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Mobile Pursuer" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_MOBILE_PURSUER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_MOBILE_PURSUER</requirements>
+		<description>
+			<p>When you move as part of your Hunter's Pursuit or Dodge Step, you ignore Difficult Terrain, can pass through hostile creatures, and don't need to spend extra movement to climb or swim.</p>
+		</description>
+		<sheet alt="Mobile Pursuer">
+			<description>When moving via Hunter's Pursuit or Dodge Step, you ignore Difficult Terrain, can pass through hostile creatures, and don't spend extra movement to climb or swim.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 17: The Hunt" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ABSOLUTE_THE_HUNT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_THE_HUNT</requirements>
+		<description>
+			<p>You can declare a hunt (no action required). For 1 minute, you gain the following benefits:</p>
+			<ul>
+				<li>You are under the effect of Freedom of Movement</li>
+				<li>Each time you expend an Adrenaline Point, you gain 2 Momentum dice instead of 1.</li>
+				<li>If you start your turn with no Adrenaline Points, you regain 1 Adrenaline Point.</li>
+			</ul>
+			<p class="indent">This effect ends early if you become Incapacitated, or end it early as a Bonus Action. Once you use this feature, you can't use it again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="The Hunt" usage="1/Long Rest">
+			<description>Declare a hunt (no action) for 1 min (ends if Incapacitated or via Bonus Action):&#13;
+			• You are under the effect of Freedom of Movement.&#13;
+			• Spending an Adrenaline Point grants 2 Momentum dice instead of 1.&#13;
+			• Starting your turn with 0 Adrenaline Points restores 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Counter Strike Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_COUNTER_STRIKE" />
+	<element name="Unencumbered Movement Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_UNENCUMBERED_MOVEMENT" />
+	<element name="Encircling Strike Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_ENCIRCLING_STRIKE" />
+	<element name="Mobile Pursuer Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_MOBILE_PURSUER" />
+	<element name="The Hunt Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ABSOLUTE_THE_HUNT" />
+
+</elements>

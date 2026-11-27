@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Weapons</name>
+		<description>Weapons and ammunition from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<update version="0.0.1">
+			<file name="items-weapons.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-weapons.xml" />
+		</update>
+	</info>
+
+	<!-- Martial Melee Weapons -->
+	<element name="Cleaver" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_CLEAVER">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_HEAVY, ID_INTERNAL_WEAPON_PROPERTY_VERSATILE, ID_WOTC_PHB24_WEAPON_PROPERTY_GRAZE</supports>
+		<description>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Graze.</b> If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="slashing">1d8</set>
+			<set name="versatile">1d12</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="cost" currency="gp">15</set>
+			<set name="slot">onehand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_CLEAVER</set>
+		</setters>
+	</element>
+
+	<element name="Scythe" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_SCYTHE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_REACH, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED, ID_WOTC_PHB24_WEAPON_PROPERTY_CLEAVE</supports>
+		<description>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Cleave.</b> If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="slashing">1d10</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="cost" currency="gp">20</set>
+			<set name="slot">twohand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_SCYTHE</set>
+		</setters>
+	</element>
+
+	<!-- Simple Ranged Weapons -->
+	<element name="Blunderbuss" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_BLUNDERBUSS">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION, ID_LT_SGEH24_WEAPON_PROPERTY_BARREL, ID_LT_SGEH24_WEAPON_PROPERTY_BLARING, ID_LT_SGEH24_WEAPON_PROPERTY_SPREAD_FIRE, ID_LT_SGEH24_WEAPON_PROPERTY_TWINNED_BARREL, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED, ID_WOTC_PHB24_WEAPON_PROPERTY_TOPPLE</supports>
+		<description>
+			<p><b>Barrel:</b> 2</p>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Topple.</b> If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="piercing">2d4</set>
+			<set name="range">20; Bullet</set>
+			<set name="weight" lb="10">10 lb.</set>
+			<set name="cost" currency="gp">30</set>
+			<set name="slot">twohand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_BLUNDERBUSS</set>
+		</setters>
+	</element>
+
+	<element name="Flintlock" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_FLINTLOCK">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION, ID_LT_SGEH24_WEAPON_PROPERTY_BARREL, ID_LT_SGEH24_WEAPON_PROPERTY_BLARING, ID_INTERNAL_WEAPON_PROPERTY_LIGHT, ID_WOTC_PHB24_WEAPON_PROPERTY_SAP</supports>
+		<description>
+			<p><b>Barrel:</b> 1</p>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Sap.</b> If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="piercing">1d8</set>
+			<set name="range">100/320; Bullet</set>
+			<set name="weight" lb="3">3 lb.</set>
+			<set name="cost" currency="gp">10</set>
+			<set name="slot">onehand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_FLINTLOCK</set>
+		</setters>
+	</element>
+
+	<!-- Martial Ranged Weapons -->
+	<element name="Cannon" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_CANNON">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED, ID_INTERNAL_DAMAGE_TYPE_BLUDGEONING, ID_LT_SGEH24_WEAPON_PROPERTY_ARTILLERY, ID_LT_SGEH24_WEAPON_PROPERTY_BOOMING, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED, ID_WOTC_PHB24_WEAPON_PROPERTY_PUSH</supports>
+		<description>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Push.</b> If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="bludgeoning">3d10</set>
+			<set name="range">120/240; Cannonball</set>
+			<set name="weight" lb="90">90 lb.</set>
+			<set name="cost" currency="gp">500</set>
+			<set name="slot">twohand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_CANNON</set>
+		</setters>
+	</element>
+
+	<element name="Pistol" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PISTOL">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION, ID_LT_SGEH24_WEAPON_PROPERTY_BARREL, ID_LT_SGEH24_WEAPON_PROPERTY_BLARING, ID_LT_SGEH24_WEAPON_PROPERTY_FAN_FIRE, ID_WOTC_PHB24_WEAPON_PROPERTY_VEX</supports>
+		<description>
+			<p><b>Barrel:</b> 6</p>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Vex.</b> If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="piercing">1d6</set>
+			<set name="range">40/120; Bullet</set>
+			<set name="weight" lb="3">3 lb.</set>
+			<set name="cost" currency="gp">15</set>
+			<set name="slot">onehand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_PISTOL</set>
+		</setters>
+	</element>
+
+	<element name="Rifle" type="Weapon" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_RIFLE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_AMMUNITION, ID_LT_SGEH24_WEAPON_PROPERTY_BARREL, ID_LT_SGEH24_WEAPON_PROPERTY_BLARING, ID_LT_SGEH24_WEAPON_PROPERTY_STEADY, ID_LT_SGEH24_WEAPON_PROPERTY_TWINNED_BARREL, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED, ID_WOTC_PHB24_WEAPON_PROPERTY_SLOW</supports>
+		<description>
+			<p><b>Barrel:</b> 2</p>
+			<div class="sidebar" style="margin-top:10px">
+				<h5>MASTERY</h5>
+				<p><b>Slow.</b> If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.</p>
+			</div>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="damage" type="piercing">1d10</set>
+			<set name="range">120/240; Bullet</set>
+			<set name="weight" lb="8">8 lb.</set>
+			<set name="cost" currency="gp">25</set>
+			<set name="slot">twohand</set>
+			<set name="proficiency">ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_RIFLE</set>
+		</setters>
+	</element>
+
+	<!-- Additional Ammunition Types (Mundane) -->
+	<element name="Explosive Bullet" type="Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ITEM_EXPLOSIVE_BULLET">
+		<description>
+			<p><em>Ammunition (Bullet), Mundane</em></p>
+			<p>A creature hit by this ammunition takes the weapon’s normal damage, and each creature within 5 feet of it must succeed on a Dexterity saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus) or take 1d8 Fire damage. On a miss, the ammunition fails to detonate.</p>
+			<p class="indent">Once it hits a target, the ammunition is destroyed.</p>
+		</description>
+		<setters>
+			<set name="category">Ammunition</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">—</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Explosive Cannonball" type="Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ITEM_EXPLOSIVE_CANNONBALL">
+		<description>
+			<p><em>Ammunition (Cannonball), Mundane</em></p>
+			<p>A creature hit by this ammunition takes the weapon’s normal damage, and each creature within 10 feet of it must succeed on a Dexterity saving throw (DC 8 plus your Strength modifier and your Proficiency Bonus) or take 2d8 Fire damage. On a miss, the ammunition fails to detonate.</p>
+			<p class="indent">Once it hits a target, the ammunition is destroyed.</p>
+		</description>
+		<setters>
+			<set name="category">Ammunition</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">—</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Scatter Bullet" type="Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ITEM_SCATTER_BULLET">
+		<description>
+			<p><em>Ammunition (Bullet), Mundane</em></p>
+			<p>When you make an attack using a weapon with the Spread Fire property, you can choose to use this ammunition. If you do, ignore the Spread Fire property and instead make an attack roll. On a hit, the target takes the weapon’s normal damage, and the bullet explodes, sending shrapnel flying in a 15-foot Cone originating from the target and extending away from you. Each creature in the area must make a Dexterity saving throw (DC equals 8 plus your Dexterity modifier plus your Proficiency Bonus). On a failed save, a creature takes damage equal to your weapon damage.</p>
+			<p class="indent">Once it hits a target, the ammunition is destroyed.</p>
+		</description>
+		<setters>
+			<set name="category">Ammunition</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">—</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+    <!-- Weapon Properties -->
+	<element name="Artillery" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_ARTILLERY">
+		<description>
+			<p>You must use Strength instead of Dexterity for the attack rolls and damage rolls of a weapon with the Artillery property, and you can use the weapon to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Weapons with the Artillery property must be reloaded with an action. After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.</p>
+		</description>
+	</element>
+
+	<element name="Barrel" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_BARREL">
+		<description>
+			<p>A Barrel weapon can be fired a number of times equal to the number of bullets its barrel can hold (written as Barrel X) before it must be reloaded. It can be reloaded as either an action or instead of an attack as part of the Attack action. If the weapon also has the Light property, it can also be reloaded as a Bonus Action. You must have one free hand to reload the weapon.</p>
+		</description>
+	</element>
+
+	<element name="Blaring" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_BLARING">
+		<description>
+			<p>Firing a Blaring weapon makes a thunderous crack. The sound can be heard from up to 100 feet away. Making a ranged attack using a weapon with this property makes it hard to go undetected; you have Disadvantage on Dexterity (Stealth) checks made as part of the Hide action until the start of your next turn. In addition, if a creature is within the area of the sound blast, it has Advantage on Wisdom (Perception) checks made against you as part of the Search action.</p>
+		</description>
+	</element>
+
+	<element name="Booming" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_BOOMING">
+		<description>
+			<p>The deflagration from firing a Booming weapon makes a stupendous booming sound. The sound can be heard from up to 500 feet away. Making a ranged attack using a weapon with this property makes it impossible to go undetected; you automatically fail Dexterity (Stealth) checks made as part of the Hide action until the start of your next turn. In addition, if a creature is within the area of the sound blast, it automatically succeeds on Wisdom (Perception) checks made against you as part of the Search action.</p>
+		</description>
+	</element>
+
+	<element name="Fan Fire" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_FAN_FIRE">
+		<description>
+			<p>You can quickly fire this weapon by slamming the hammer repeatedly. As an action, you fire a number of bullets in a row equal to your Dexterity modifier (minimum of 2, up to the entirety of the barrel). Each attack after the first suffers a cumulative −3 penalty to the attack roll. You cannot add any modifier to the damage roll of these attacks beyond the first (such as the bonus from your Dexterity modifier or a magic weapon's bonus to damage rolls). When you take this action, your Speed becomes 0 until the end of your turn, and attacks you make using the long range of the weapon automatically miss.</p>
+			<p class="indent">If you roll a 1 on any of the attack rolls, the weapon jams and can't be used again until it is repaired. You can take an action to make a DC 15 Dexterity (Sleight of Hand) check, repairing the weapon on a success. Alternatively, you can spend 1 hour mending it to automatically succeed on the check. If your check fails, the weapon is broken and must be mended in a specialist's store at a quarter of the cost of the firearm.</p>
+		</description>
+	</element>
+
+	<element name="Spread Fire" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_SPREAD_FIRE">
+		<description>
+			<p>A weapon that has the Spread Fire property can't make a normal attack. It instead sprays a Cone with a length equal to its range (for example, a Blunderbuss with a range of 20 feet will fire in a 20-foot Cone). Each creature in the area must succeed on a Dexterity saving throw (DC equals 8 plus your Dexterity modifier and your Proficiency Bonus) or take the weapon’s normal damage.</p>
+		</description>
+	</element>
+
+	<element name="Steady" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_STEADY">
+		<description>
+			<p>A weapon with this property can be stabilized for greater accuracy. As a Bonus Action, you give yourself a bonus to your next attack roll with this weapon this turn equal to your Proficiency Bonus, and attacking at the weapon’s long range doesn't impose Disadvantage on the attack roll. You can take this Bonus Action only if you haven't moved during your turn, and after you take the Bonus Action, your Speed is halved until the end of your turn.</p>
+		</description>
+	</element>
+
+	<element name="Twinned Barrel" type="Weapon Property" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_WEAPON_PROPERTY_TWINNED_BARREL">
+		<description>
+			<p>A Twinned Barrel weapon has two barrels that can each hold a Firearm Bullet and can both be loaded as part of reloading the weapon. You can fire both barrels of a Twinned Barrel weapon as part of an attack, instead of each barrel individually. Doing so empties both barrels of the weapon (as per the Barrel property) and increases the damage die of the weapon on a hit (from d4 to d6 to d8 to d10 to d12).</p>
+		</description>
+	</element>
+
+    <!-- Weapon Mastery Properties -->
+	<element name="Cleaver (Graze)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_CLEAVER_GRAZE">
+		<supports>Weapon Mastery, Martial, Melee</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_CLEAVER</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.</p>
+		</description>
+		<sheet>
+			<description>If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.</description>
+		</sheet>
+	</element>
+
+	<element name="Scythe (Cleave)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_SCYTHE_CLEAVE">
+		<supports>Weapon Mastery, Martial, Melee</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_SCYTHE</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative.</description>
+		</sheet>
+	</element>
+
+	<element name="Blunderbuss (Topple)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_BLUNDERBUSS_TOPPLE">
+		<supports>Weapon Mastery, Simple, Ranged</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_BLUNDERBUSS</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.</p>
+		</description>
+		<sheet>
+			<description>If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 + the ability modifier used to make the attack roll and your PB). On a failed save, the creature has the Prone condition.</description>
+		</sheet>
+	</element>
+
+	<element name="Flintlock (Sap)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_FLINTLOCK_SAP">
+		<supports>Weapon Mastery, Simple, Ranged</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_FLINTLOCK</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.</p>
+		</description>
+		<sheet>
+			<description>If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Cannon (Push)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_CANNON_PUSH">
+		<supports>Weapon Mastery, Martial, Ranged</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_CANNON</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.</p>
+		</description>
+		<sheet>
+			<description>If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.</description>
+		</sheet>
+	</element>
+
+	<element name="Pistol (Vex)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_PISTOL_VEX">
+		<supports>Weapon Mastery, Martial, Ranged</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_PISTOL</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>
+		</description>
+		<sheet>
+			<description>If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Rifle (Slow)" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_MASTERY_PROPERTY_RIFLE_SLOW">
+		<supports>Weapon Mastery, Martial, Ranged</supports>
+		<requirements>ID_LT_SGEH24_PROFICIENCY_WEAPON_PROFICIENCY_RIFLE</requirements>
+		<compendium display="false" />
+		<description>
+			<p>If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.</p>
+		</description>
+		<sheet>
+			<description>If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.</description>
+		</sheet>
+	</element>
+
+    
+</elements>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Path of the Earthbreaker</name>
+		<description>The Path of the Earthbreaker subclass from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="barbarian-earthbreaker.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/barbarian-earthbreaker.xml" />
+		</update>
+	</info>
+
+	<element name="Path of the Earthbreaker" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_BARBARIAN_EARTHBREAKER">
+		<supports>Barbarian Subclass</supports>
+		<description>
+			<p>In a time long past, the power to command gravity was stolen and disseminated throughout the destitute underbelly of Luyarnha, much like the mythical theft of fire from the heavens. Within the ranks of the Forsaken, many have embraced the spatial magic as a tool of mass destruction, unleashing it upon beasts and mortals with a ruthlessness particular to those who have nothing to lose. Among them, the Earthbreakers stand imperious; Barbarians with a natural affinity for the void, capable of leveling buildings in their rage, are coveted prizes. Many factions seek to bend the wills of these living titans to their own ends, and if such control proves impossible, death is an all too frequent outcome.</p>
+			<p class="indent">Whether from innate talent, intense training, or cursed rituals, all Earthbreakers share the same path of destruction: crushing their foes and grinding them to dust. Earthbreakers thrive in the middle of the battlefield, where they break their enemies, drag their face on the pavement, and leave behind naught but a mess of blood and brain. It is pointless to hide from them, for they are capable of shattering the very foundations of the world to unearth their quarry. The power to reshape the world—to bend and break it at a whim—is one many desire, yet few master it like Earthbreakers do.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_OVERWHELMING_POWER" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_GRAVITATIONAL_RAGE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_RUINATION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_IMPERIOUS_GRAVITY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_UNYIELDING" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_WORLD_BREAKER" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_OVERWHELMING_POWER" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_GRAVITATIONAL_RAGE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_RUINATION" level="6" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_IMPERIOUS_GRAVITY" level="6" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_UNYIELDING" level="10" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_WORLD_BREAKER" level="14" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Overwhelming Power" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_OVERWHELMING_POWER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_OVERWHELMING_POWER</requirements>
+		<description>
+			<p>You have learned to channel destructive energy through your fists and other body parts. When you hit with an Unarmed Strike, you can deal Bludgeoning damage equal to 1d8 plus your Strength modifier, instead of the Bludgeoning damage normal for an Unarmed Strike. This die increases at Barbarian levels 6 (1d10), 10 (1d12), and 14 (2d6). When you make an Unarmed Strike against a creature on your turn, you can take a Bonus Action to make another Unarmed Strike against the same creature.</p>
+			<p class="indent">Your sheer power puts a massive strain on most weapons, shattering them. When you hit with a melee attack with a nonmagical weapon, the weapon breaks in your hand and can't be used to make attacks until it is repaired. In addition, the range of thrown weapons is doubled for you. If you hit with a ranged attack with a thrown weapon, you can use the damage die above in place of the weapon's usual damage dice.</p>
+		</description>
+		<sheet alt="Overwhelming Power">
+			<description>Your Unarmed Strikes deal 1d8+{{strength:modifier}} Bludgeoning damage. After making an Unarmed Strike on your turn, you can use a Bonus Action to make another against the same creature. Nonmagical melee weapons break on hit until repaired. Thrown weapon range is doubled and can use your Unarmed Strike damage die.</description>
+			<description level="6">Your Unarmed Strikes deal 1d10+{{strength:modifier}} Bludgeoning damage. After making an Unarmed Strike on your turn, you can use a Bonus Action to make another against the same creature. Nonmagical melee weapons break on hit until repaired. Thrown weapon range is doubled and can use your Unarmed Strike damage die.</description>
+			<description level="10">Your Unarmed Strikes deal 1d12+{{strength:modifier}} Bludgeoning damage. After making an Unarmed Strike on your turn, you can use a Bonus Action to make another against the same creature. Nonmagical melee weapons break on hit until repaired. Thrown weapon range is doubled and can use your Unarmed Strike damage die.</description>
+			<description level="14">Your Unarmed Strikes deal 2d6+{{strength:modifier}} Bludgeoning damage. After making an Unarmed Strike on your turn, you can use a Bonus Action to make another against the same creature. Nonmagical melee weapons break on hit until repaired. Thrown weapon range is doubled and can use your Unarmed Strike damage die.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Gravitational Rage" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_GRAVITATIONAL_RAGE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_GRAVITATIONAL_RAGE</requirements>
+		<description>
+			<p>Once per turn while your Rage is active, when you deal damage to a creature with an Unarmed Strike, you can choose one of the following effects. These effects use your Earthbreaker save DC.</p>
+			<p class="indent"><strong><em>Earthbreaker Save DC.</em></strong> If a feature of this subclass requires a saving throw, the DC equals 8 plus your Strength modifier and Proficiency Bonus.</p>
+			<p class="indent"><strong><em>Burying Hands.</em></strong> The target must succeed on a Strength saving throw or have its Speed reduced to 0 until the start of your next turn, as you partially bury it in the ground. If the target fails the saving throw by 5 or more, it also has the Prone condition. If the target isn't on the ground when it fails this save, it immediately falls instead, even if it can hover.</p>
+			<p class="indent"><strong><em>Bulldozing Punch.</em></strong> You push the target 10 feet away from you or upward (your choice). If the target is pushed into an obstacle or another creature, the target takes Bludgeoning damage equal to your Strength modifier (minimum of 1). A target with a Strength score equal to or greater than yours makes a Strength saving throw, avoiding the effects on a success. A target that is pushed upward makes a DC 10 Dexterity saving throw, avoiding any damage from the fall on a success.</p>
+		</description>
+		<sheet alt="Gravitational Rage" usage="1/Turn">
+			<description>While Rage is active, when dealing damage with an Unarmed Strike (DC{{earthbreaker:dc}}):&#13;
+			• Burying Hands: Target makes a Str save or Speed becomes 0 until start of your next turn (Prone if failing by 5+; airborne creatures fall even if hovering).&#13;
+			• Bulldozing Punch: Push target 10 ft away or upward (Str save to avoid if target Str &gt;= yours). Collision deals {{bulldozing punch:damage}} Bludgeoning damage. Pushed upward: DC 10 Dex save to avoid fall damage.</description>
+		</sheet>
+		<rules>
+			<stat name="earthbreaker:dc" value="8" bonus="base" />
+			<stat name="earthbreaker:dc" value="proficiency" bonus="proficiency" />
+			<stat name="earthbreaker:dc" value="strength:modifier" bonus="ability" />
+			<stat name="bulldozing punch:damage" value="1" bonus="base" />
+			<stat name="bulldozing punch:damage" value="strength:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 6: Ruination" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_RUINATION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_RUINATION</requirements>
+		<description>
+			<p>The strength you wield is capable of toppling the arcane rules of the world. When you hit a physical barrier created by a spell with an Unarmed Strike, such as the effect of a Wall of Force or Forcecage spell, or any other wall spell (such as Wall of Fire, Gravity Wall, or Prismatic Wall), you can make a Strength check (DC equals 10 plus the spell's level), rupturing the arcane and dispelling the spell on a success.</p>
+		</description>
+		<sheet alt="Ruination">
+			<description>When you hit a spell barrier (Wall of Force, Forcecage, wall spells, etc.) with an Unarmed Strike, you can make a Strength check (DC 10 + spell level) to dispel it.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Imperious Gravity" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_IMPERIOUS_GRAVITY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_IMPERIOUS_GRAVITY</requirements>
+		<description>
+			<p>You increase your mastery over gravity. On each of your turns while your Rage is active, you can take a Bonus Action to create one of the following effects, using your Earthbreaker save DC. The range of these effects, and the distance they move creatures, doubles when you reach Barbarian level 14.</p>
+			<p class="indent"><strong><em>Attractive Field.</em></strong> You unleash a gravitational wave in a 15-foot Cone. Each creature in the Cone must succeed on a Strength saving throw or be pulled up to 10 feet toward you.</p>
+			<p class="indent"><strong><em>Repulsive Field.</em></strong> You condense a bubble of gravity around yourself. The next time a creature would hit you with an attack, the bubble bursts in a roaring explosion. Each creature in a 10-foot Emanation originating from you must succeed on a Strength saving throw or be pushed up to 10 feet away from you. If this pushes the attacker beyond its reach of you, or if the attack was ranged, the attack misses you. If the bubble doesn't burst by the start of your next turn, it harmlessly dissipates.</p>
+			<p class="indent"><strong><em>Stomp.</em></strong> You stomp the ground, causing a destructive quake in a 10-foot-long, 5-foot-wide Line on the ground originating from you. Each creature in the Line must make a Dexterity saving throw. On a failed save, a target takes 1d4 Bludgeoning damage and has Disadvantage on the next Strength saving throw it makes before the start of your next turn as it is thrown off balance. Additionally, the ground in that area becomes Difficult Terrain until cleared. Each 5-foot-square portion of the area requires 1 minute to clear by hand.</p>
+		</description>
+		<sheet alt="Imperious Gravity" action="Bonus Action">
+			<description>While Rage is active, create one effect (DC{{earthbreaker:dc}}):&#13;
+			• Attractive Field: 15-ft Cone, Str save or pulled up to 10 ft toward you.&#13;
+			• Repulsive Field: Bubble until start of next turn; when next hit, 10-ft Emanation Str save or pushed 10 ft away (attack misses if ranged or pushed out of reach).&#13;
+			• Stomp: 10-ft x 5-ft Line, Dex save or 1d4 Bludgeoning and Disadvantage on next Str save before start of your next turn; area becomes Difficult Terrain.</description>
+			<description level="14">While Rage is active, create one effect (DC{{earthbreaker:dc}}):&#13;
+			• Attractive Field: 30-ft Cone, Str save or pulled up to 20 ft toward you.&#13;
+			• Repulsive Field: Bubble until start of next turn; when next hit, 20-ft Emanation Str save or pushed 20 ft away (attack misses if ranged or pushed out of reach).&#13;
+			• Stomp: 20-ft x 5-ft Line, Dex save or 1d4 Bludgeoning and Disadvantage on next Str save before start of your next turn; area becomes Difficult Terrain.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 10: Unyielding" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_UNYIELDING">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_UNYIELDING</requirements>
+		<description>
+			<p>Your Unarmed Strikes deal double damage to objects and structures, and you can ignore Difficult Terrain.</p>
+			<p class="indent">In addition, your crushing power seeps into all the aspects of your life. You can add your Constitution modifier (minimum 1) to any Acrobatics, Intimidation, Perception, Stealth, or Survival checks that you make.</p>
+		</description>
+		<sheet alt="Unyielding">
+			<description>Your Unarmed Strikes deal double damage to objects and structures, and you ignore Difficult Terrain. You add +{{unyielding:bonus}} to Acrobatics, Intimidation, Perception, Stealth, and Survival checks.</description>
+		</sheet>
+		<rules>
+			<stat name="unyielding:bonus" value="1" bonus="base" />
+			<stat name="unyielding:bonus" value="constitution:modifier" bonus="base" />
+			<stat name="acrobatics:misc" value="unyielding:bonus" />
+			<stat name="intimidation:misc" value="unyielding:bonus" />
+			<stat name="perception:misc" value="unyielding:bonus" />
+			<stat name="stealth:misc" value="unyielding:bonus" />
+			<stat name="survival:misc" value="unyielding:bonus" />
+		</rules>
+	</element>
+
+	<element name="Level 14: World Breaker" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_EARTHBREAKER_WORLD_BREAKER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_WORLD_BREAKER</requirements>
+		<description>
+			<p>Your blows can level the world. Once on each of your turns while your Rage is active, when you make a melee attack, you can fracture the world. On a hit, the target takes an extra 3d12 Bludgeoning damage and is pushed up to 30 feet straight away from you. In addition, hit or miss, the ground in a 90-foot Cone in front of you breaks, as per the Earthquake spell (DC equals your Earthbreaker save DC). You create only 1 fissure in the area, it doesn't require Concentration, and it lasts until the start of your next turn.</p>
+			<p class="indent">You can use this feature a number of times equal to your Strength modifier (minimum of once). You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="World Breaker" usage="{{world breaker:usage}}/Long Rest">
+			<description>Once per turn while Rage is active when making a melee attack: On a hit, deal +3d12 Bludgeoning damage and push target up to 30 ft away. Hit or miss, ground in a 90-ft Cone breaks as per Earthquake (DC{{earthbreaker:dc}}, 1 fissure, no Concentration, lasts until start of your next turn). Regain 1 use on a Short Rest.</description>
+		</sheet>
+		<rules>
+			<stat name="world breaker:usage" value="1" bonus="base" />
+			<stat name="world breaker:usage" value="strength:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Overwhelming Power Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_OVERWHELMING_POWER" />
+	<element name="Gravitational Rage Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_GRAVITATIONAL_RAGE" />
+	<element name="Ruination Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_RUINATION" />
+	<element name="Imperious Gravity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_IMPERIOUS_GRAVITY" />
+	<element name="Unyielding Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_UNYIELDING" />
+	<element name="World Breaker Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_EARTHBREAKER_WORLD_BREAKER" />
+
+</elements>

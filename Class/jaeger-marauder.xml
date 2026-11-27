@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Marauder Chapter</name>
+		<description>The Marauder Chapter subclass for the Jaeger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="jaeger-marauder.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-marauder.xml" />
+		</update>
+	</info>
+
+	<element name="Marauder Chapter" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_JAEGER_MARAUDER_CHAPTER">
+		<supports>Jaeger Chapter</supports>
+		<description>
+			<p>A jaeger of the Marauder Chapter embodies raw slaughter. Vengeance, wrath, and death, all rolled into one swing that never ceases, endlessly cleaving through monsters, leaving a bloody wake of destruction. Each marauder is a symbol of the Chapter's determination and savagery, striking fear into the hearts of their enemies with their every swing. They are unstoppable warriors, driven by a thirst for vengeance and the need to protect humanity from the monstrous hordes.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_PATH_OF_GORE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_MARAUDER_MOMENTUM" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_UNBREAKABLE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_LEAP_ATTACK" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_FELL_THE_LEVIATHAN" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_TITANIC_STRENGTH" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_PATH_OF_GORE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_MARAUDER_MOMENTUM" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_UNBREAKABLE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_LEAP_ATTACK" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_FELL_THE_LEVIATHAN" level="14" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_TITANIC_STRENGTH" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Path of Gore" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_PATH_OF_GORE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_PATH_OF_GORE</requirements>
+		<description>
+			<p>You learn the Great Cleave Finisher. This does not count against your Finishers known.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_GREAT_CLEAVE" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_GREAT_CLEAVE" />
+		</rules>
+	</element>
+
+	<element name="Great Cleave" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_GREAT_CLEAVE">
+		<compendium display="false" />
+		<description>
+			<p><em>Finisher, special</em></p>
+			<p>When you hit a creature with an attack using a weapon with the Two-Handed Property, you can expend all of your Momentum dice. When you do so, the attack deals extra damage equal to 1 Momentum die to the target, and you cleave a number of adjacent targets within Reach equal to the number of dice expended. Make a melee weapon attack against each creature targeted. You regain 1 Adrenaline Point for each creature this reduces to 0 Hit Points, up to your maximum number of Adrenaline Points.</p>
+		</description>
+		<sheet alt="Great Cleave (Finisher)" usage="All Momentum Dice">
+			<description>When hitting with a Two-Handed weapon, expend all Momentum dice to deal +1 Momentum die damage to the target and make a melee weapon attack against a number of adjacent targets in Reach equal to the dice expended. Regain 1 Adrenaline Point per creature reduced to 0 HP.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Marauder Momentum" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_MARAUDER_MOMENTUM">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_MARAUDER_MOMENTUM</requirements>
+		<description>
+			<p>While you are wielding a melee weapon with the two-handed property, the size of your Momentum die is increased by one step (from a d6 to a d8, to a d10 at 11th level, and to a d12 at 17th level).</p>
+		</description>
+		<sheet alt="Marauder Momentum">
+			<description>While wielding a melee weapon with the Two-Handed property, your Momentum die becomes 1d{{marauder momentum:dice}}.</description>
+		</sheet>
+		<rules>
+			<stat name="marauder momentum:dice" value="8" bonus="base" />
+			<stat name="marauder momentum:dice" value="10" bonus="base" level="11" />
+			<stat name="marauder momentum:dice" value="12" bonus="base" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Unbreakable" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_UNBREAKABLE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_UNBREAKABLE</requirements>
+		<description>
+			<p>You wade through your enemies relying on your toughness and grit. Your Hit Point Maximum increases by 3, and it increases by 1 whenever you gain another Jaeger level.</p>
+			<p class="indent">While you are wearing Medium Armor, you can add your Constitution modifier (to a maximum of +2) instead of your Dexterity modifier to determine your Armor Class.</p>
+		</description>
+		<sheet alt="Unbreakable">
+			<description>While wearing Medium Armor, you can add your Constitution modifier (max +2) instead of your Dexterity modifier to determine your AC.</description>
+		</sheet>
+		<rules>
+			<stat name="hp" value="level:jaeger" />
+		</rules>
+	</element>
+
+	<element name="Level 7: Leap Attack" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_LEAP_ATTACK">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_LEAP_ATTACK</requirements>
+		<description>
+			<p>Once per turn, if you move more than 15 feet toward a creature (or fall 10 feet or more) immediately before making a weapon attack against them, you deal extra damage on a hit equal to your Momentum die.</p>
+			<p class="indent">When falling, you can make this attack prior to hitting the ground if there is a target creature in range where you would fall. On a hit, any damage you would take as a result of falling is reduced by half, and you do not fall Prone from the fall.</p>
+		</description>
+		<sheet alt="Leap Attack" usage="1/Turn">
+			<description>If you move more than 15 ft toward a creature (or fall 10+ ft) before attacking it, deal extra damage equal to your Momentum die on a hit. If falling, you can attack before landing; on a hit, falling damage is halved and you don't fall Prone.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Fell the Leviathan" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_FELL_THE_LEVIATHAN">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_FELL_THE_LEVIATHAN</requirements>
+		<description>
+			<p>Whenever you use a Finisher, the target must succeed on a Strength saving throw (DC = 8 + your Strength modifier + your proficiency bonus) or be knocked Prone. Creatures that are Large or larger have Disadvantage on this saving throw.</p>
+		</description>
+		<sheet alt="Fell the Leviathan">
+			<description>Whenever you use a Finisher, the target must make a DC{{fell the leviathan:dc}} Str save (Large+ creatures have Disadvantage) or be knocked Prone.</description>
+		</sheet>
+		<rules>
+			<stat name="fell the leviathan:dc" value="8" bonus="base" />
+			<stat name="fell the leviathan:dc" value="proficiency" bonus="proficiency" />
+			<stat name="fell the leviathan:dc" value="strength:modifier" bonus="ability" />
+		</rules>
+	</element>
+
+	<element name="Level 17: Titanic Strength" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_MARAUDER_TITANIC_STRENGTH">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_TITANIC_STRENGTH</requirements>
+		<description>
+			<p>Your strength is so great that you can wield a two-handed weapon in one hand, and can use Two-Weapon Fighting even when the weapons you are wielding aren't Light (including using two-handed weapons).</p>
+			<p class="indent">If you use two hands to wield a two-handed weapon, your attacks with it deal extra damage equal to half your Strength modifier (rounded up) on a hit.</p>
+			<p class="indent">Additionally, when you use a Finisher, you can double the number of Momentum dice you have (to no more than your maximum Momentum dice + 1). Once you've doubled your dice, you can't do so again until you complete a Long Rest.</p>
+		</description>
+		<sheet alt="Titanic Strength" usage="1/Long Rest">
+			<description>You can wield Two-Handed weapons in one hand and use Two-Weapon Fighting with non-Light weapons (including Two-Handed). Wielding a Two-Handed weapon with two hands deals +{{strength:modifier:half:up}} damage on a hit.&#13;
+			Once per Long Rest when using a Finisher, you can double your current Momentum dice (up to max Momentum dice + 1).</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Path of Gore Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_PATH_OF_GORE" />
+	<element name="Marauder Momentum Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_MARAUDER_MOMENTUM" />
+	<element name="Unbreakable Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_UNBREAKABLE" />
+	<element name="Leap Attack Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_LEAP_ATTACK" />
+	<element name="Fell the Leviathan Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_FELL_THE_LEVIATHAN" />
+	<element name="Titanic Strength Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_MARAUDER_TITANIC_STRENGTH" />
+
+</elements>

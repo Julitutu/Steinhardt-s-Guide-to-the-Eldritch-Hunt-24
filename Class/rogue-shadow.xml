@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Shadow</name>
+		<description>The Shadow subclass for the Rogue from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="rogue-shadow.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/rogue-shadow.xml" />
+		</update>
+	</info>
+
+	<element name="Shadow" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_ROGUE_SHADOW">
+		<supports>Rogue Subclass</supports>
+		<description>
+			<p>The origin of the Shadows is shrouded in mystery. Some say that it was first created by a group of nobles who stole a tome of forbidden magic from an errant cursedblood scholar, while others believe that the tome was granted to them by an entity that resides deep in the cosmos in exchange for an unspoken vow.</p>
+			<p class="indent">Regardless of their organization's origins, today, Shadows are a closely guarded secret of the Silverblood Royalty, a tool meant for discreet political assassinations and silent espionage. Mere legends to the common folk, these Rogues blend into the darkness, vanishing from sight, only to reappear unseen calling forth their dreadful rifles to dispatch their foes with deadly precision.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_UMBRAL_WEAPON" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_SHADOW_MOVEMENT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_TENEBROUS_BODY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_GRIM_CURSE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_VEIL_OF_SHADOWS" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_UMBRAL_WEAPON" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_SHADOW_MOVEMENT" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_TENEBROUS_BODY" level="9" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_GRIM_CURSE" level="13" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_VEIL_OF_SHADOWS" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Umbral Weapon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_UMBRAL_WEAPON">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_UMBRAL_WEAPON</requirements>
+		<description>
+			<p>You gain proficiency with Firearms. In addition, you learn a grim ritual that creates a shadowy bond between yourself and one Rifle. You perform the ritual over the course of 1 hour, which can be done during a Short Rest. The Rifle must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and bond with it.</p>
+			<p class="indent">Once you have bonded a Rifle to yourself, you can't be disarmed of it unless you have the Incapacitated condition. If it is on the same plane of existence, you can summon the Rifle (no action required) on your turn, causing it to teleport instantly to your hand. Your bonded weapon keeps its original properties with the following alterations when you use it: it doesn't have the Barrel property, it doesn't require ammunition, and it doesn't make sound when fired.</p>
+			<p class="indent">You can only have one bonded weapon. If you attempt to bond with a second weapon, your bond with the first one ends.</p>
+		</description>
+		<sheet alt="Umbral Weapon">
+			<description>Spend 1 hr (can be during Short Rest) to bond with 1 Rifle (max 1). Can't be disarmed unless Incapacitated; summon to hand on your turn (no action) if on same plane. Removes Barrel property, requires no ammunition, and makes no sound when fired.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_FIREARMS" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Shadow Movement" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_SHADOW_MOVEMENT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_SHADOW_MOVEMENT</requirements>
+		<description>
+			<p>You can become one with the shadows. While you are in Darkness, you can take the Hide action as a Bonus Action, shape-shifting into a shadowy, amorphous version of yourself. While in this form, you have Advantage on Dexterity (Stealth) checks, you can move through a space as narrow as 1 inch without squeezing, you have a Climb Speed equal to your Speed, and you have the Incapacitated condition. This transformation ends after 1 minute, if you enter Dim Light or Bright Light, or if you take damage.</p>
+			<p class="indent">You can also leave the form on your turn (no action required). If you do so and are in Darkness, you can make one attack with your umbral weapon. For this attack, the weapon's damage die is 1d4 instead of its normal damage die. If the attack misses, your location isn't revealed.</p>
+			<p class="indent">When you reach Rogue level 9, this transformation lasts up to 1 hour.</p>
+		</description>
+		<sheet alt="Shadow Movement" action="Bonus Action">
+			<description>While in Darkness, Hide as a Bonus Action to morph for {{shadow movement:duration}} (ends in Dim/Bright Light or on taking damage): Advantage on Stealth, move through 1-inch spaces without squeezing, Climb Speed = Speed, Incapacitated.&#13;
+			Leave form on your turn (no action): if in Darkness, make 1 umbral weapon attack (damage die becomes 1d4; miss doesn't reveal location).</description>
+		</sheet>
+		<rules>
+			<stat name="shadow movement:duration" value="1 minute" inline="true" />
+			<stat name="shadow movement:duration" value="1 hour" inline="true" level="9" />
+		</rules>
+	</element>
+
+	<element name="Level 9: Tenebrous Body" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_TENEBROUS_BODY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_TENEBROUS_BODY</requirements>
+		<description>
+			<p>Your eyes are adapted to tenebrosity. You can see normally in Dim Light and Darkness—both magical and nonmagical—within 120 feet of yourself.</p>
+		</description>
+		<sheet alt="Tenebrous Body">
+			<description>You can see normally in Dim Light and Darkness (magical and nonmagical) within 120 feet of yourself.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 13: Grim Curse" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_GRIM_CURSE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_GRIM_CURSE</requirements>
+		<description>
+			<p>You can animate the shadows of your foes, turning them against each other. Whenever a target makes a saving throw against one of your Cunning Strike effects while both you and the target are in Darkness, the target must subtract 1d6 from its saving throw.</p>
+			<p class="indent">In addition, you gain the following Cunning Strike option.</p>
+			<p class="indent"><strong><em>Restrain (Cost: 2d6).</em></strong> The target must succeed on a Strength saving throw, or it has the Restrained condition until the end of its next turn.</p>
+		</description>
+		<sheet alt="Grim Curse">
+			<description>When a target makes a save against your Cunning Strike while both you and it are in Darkness, it subtracts 1d6 from the save.</description>
+		</sheet>
+	</element>
+	<element name="Restrain (Cost: 2d6)" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_GRIM_CURSE_RESTRAIN">
+		<supports>SGEH24 Cunning Strike Restrain</supports>
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_GRIM_CURSE_RESTRAIN</requirements>
+		<compendium display="false" />
+		<description>
+			<p>The target must succeed on a Strength saving throw, or it has the Restrained condition until the end of its next turn.</p>
+		</description>
+		<sheet alt="Restrain (2d6)">
+			<description>Target must succeed on a DC{{cunning strike:dc}} Strength saving throw or have the Restrained condition until the end of its next turn.</description>
+		</sheet>
+	</element>
+	<append id="ID_WOTC_PHB24_CLASS_FEATURE_ROGUE_CUNNING_STRIKE">
+		<rules>
+			<select type="Archetype Feature" name="Restrain" supports="SGEH24 Cunning Strike Restrain" default="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_GRIM_CURSE_RESTRAIN" requirements="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_GRIM_CURSE" />
+		</rules>
+	</append>
+
+	<element name="Level 17: Veil of Shadows" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SHADOW_VEIL_OF_SHADOWS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_VEIL_OF_SHADOWS</requirements>
+		<description>
+			<p>The shadows beckon you. You can radiate an ominous aura of Darkness in a 10-foot Emanation that originates from you. You can activate or extinguish this aura at will (no action required). The aura is inactive while you have the Unconscious condition or are in an area of direct sunlight.</p>
+			<p class="indent">In addition, as part of the Reaction when you use your Uncanny Dodge feature, you can teleport to an unoccupied space you can see within 30 feet of yourself that is in Dim Light or Darkness.</p>
+		</description>
+		<sheet alt="Veil of Shadows">
+			<description>At will (no action), emit a 10-ft Emanation of Darkness (inactive if Unconscious or in direct sunlight). When using Uncanny Dodge, you can teleport to an unoccupied space you can see within 30 ft in Dim Light or Darkness.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Umbral Weapon Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_UMBRAL_WEAPON" />
+	<element name="Shadow Movement Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_SHADOW_MOVEMENT" />
+	<element name="Tenebrous Body Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_TENEBROUS_BODY" />
+	<element name="Grim Curse Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_GRIM_CURSE" />
+	<element name="Grim Curse: Restrain Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_GRIM_CURSE_RESTRAIN" />
+	<element name="Veil of Shadows Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SHADOW_VEIL_OF_SHADOWS" />
+
+</elements>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<update version="0.1.0">
+			<file name="source-SGEH24.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/source-SGEH24.xml" />
+		</update>
+	</info>	
+	<element name="Steinhardt's Guide to the Eldritch Hunt (2024)" type="Source" source="Core" id="ID_SGTTEH_SOURCE_STEINHARDTS_GUIDE_TO_THE_ELDRITCH_HUNT">
+		<description>
+			<![CDATA[<p><strong>Join the hunt and uncover the eldritch truth in this nightmarish supplement for 5e.</strong></p>
+			<p> The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown.</p>]]>
+		</description>
+		<setters>
+			<set name="abbreviation">SGEH</set>
+			<set name="image">https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/main/Cover.webp</set>
+			<set name="url">https://monkeydm.shop/collections/steinhardts-guide-to-the-eldritch-hunt-all</set>
+			<set name="author" abbreviation="MON" url="https://www.monkeydm.com">MonkeyDM</set>
+			<set name="release">20231119</set>
+			<set name="third-party">true</set>
+		</setters>
+	</element>
+</elements>

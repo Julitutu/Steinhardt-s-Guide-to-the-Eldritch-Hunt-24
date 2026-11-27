@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Blade of Radiance</name>
+		<description>The Blade of Radiance subclass for the Rogue from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="rogue-bladeofradiance.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/rogue-bladeofradiance.xml" />
+		</update>
+	</info>
+
+	<element name="Blade of Radiance" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_ROGUE_BLADE_OF_RADIANCE">
+		<supports>Rogue Subclass</supports>
+		<description>
+			<p>The Blades of Radiance, also called Steel Saints, are known to be one of the most lethal orders of the Church. In order to become a blade, one must be a devout follower of the faith, as only those who would die for the cause are deemed worthy. Prospective members are trained within the walls of the Church, taking on the clergy as their new kin and discarding whatever familial bonds they might have held onto. Their zealous fervor grants them unrivaled powers on the battlefield, wielding massive weapons as if they were mere toys, infusing their blade with divine powers, and breaking down their foes one by one.</p>
+			<p class="indent">The Blades of Radiance receive an incredibly diverse range of missions. The most brutal of their members handle gruesome matters in a lethal fashion, whereas those of a more empathetic temperament are tasked with protecting their fellows. Despite this sundry in character, they all share one goal: safeguarding the Church and its members, no matter what.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_SANCTIFIED_CHAMPION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_DIVINE_BLESSINGS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_RIGHTEOUS_ARMAMENT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_SAINTLY_REVELATIONS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_FINAL_JUDGEMENT" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_SANCTIFIED_CHAMPION" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_DIVINE_BLESSINGS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_RIGHTEOUS_ARMAMENT" level="9" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_SAINTLY_REVELATIONS" level="13" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_FINAL_JUDGEMENT" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Sanctified Champion" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_SANCTIFIED_CHAMPION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_SANCTIFIED_CHAMPION</requirements>
+		<description>
+			<p>Your intense training bears fruit. You gain proficiency with Martial weapons and training with Medium armor. Whenever you finish a Short Rest, you can perform a ritual on a melee weapon you are proficient with that deals Piercing or Slashing damage, sanctifying it. It becomes your sanctified blade, and you can only have one such blade at a time. The blade has the Finesse property for you, and attacks made with it against Aberrations, Fiends, and Undead ignore Resistance to damage.</p>
+		</description>
+		<sheet alt="Sanctified Champion">
+			<description>On a Short Rest, sanctify one proficient melee weapon dealing Piercing or Slashing damage (max 1 at a time). It gains the Finesse property for you, and its attacks ignore damage Resistance against Aberrations, Fiends, and Undead.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Divine Blessings" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_DIVINE_BLESSINGS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_DIVINE_BLESSINGS</requirements>
+		<description>
+			<p>Your devotion to eradicating enemies of the Church manifests as righteous power. You have a pool of Divine Points equal to 1 + your Wisdom modifier (minimum of 1 point). You regain all expended points when you finish a Short or Long Rest. In addition, whenever you kill an Aberration, Beast, Fiend, or Undead of CR 1/2 or higher with your sanctified blade, you regain 1 expended Divine Point.</p>
+			<p class="indent"><strong><em>Radiance Save DC.</em></strong> If a feature of this subclass requires a saving throw, the DC equals 8 plus your Wisdom modifier and your Proficiency Bonus.</p>
+			<p class="indent">You can expend your Divine Points on the following features.</p>
+			<p class="indent"><strong><em>Armor of the Faithful.</em></strong> As a Reaction when a creature targets you with an attack, you can expend 1 Divine Point to force that creature to make a Wisdom saving throw. On a failed save, the attacker must choose a new target or the attack has no effect. In addition, the attacker can't target you with an attack until the start of your next turn. This feature doesn't protect you from areas of effect, such as the explosion of a Fireball spell.</p>
+			<p class="indent"><strong><em>Divine Inspiration.</em></strong> When you make an Intelligence (History or Religion) or a Wisdom (Insight) check, you can expend 1 Divine Point to reroll the d20, and you must use the new result. You can choose to use this feature after you roll the die, but before the outcome is determined. You gain a bonus to the check equal to your Wisdom modifier (minimum 1).</p>
+			<p class="indent"><strong><em>Rend the Blasphemous.</em></strong> On your turn after you take the Attack action with your sanctified blade, you can take a Bonus Action and expend 1 Divine Point to let the divine hand guide you. Make a weapon attack with it against a creature within your reach. You gain a bonus to your attack roll equal to your Wisdom modifier (minimum 1).</p>
+		</description>
+		<sheet alt="Divine Blessings" usage="{{divine blessings:usage}}/Short Rest">
+			<description>Regain 1 Divine Point when killing an Aberration, Beast, Fiend, or Undead of CR 1/2+ with your sanctified blade. Radiance Save DC: {{radiance:dc}}.&#13;
+			• Armor of the Faithful (Reaction, 1 DP): When targeted by an attack, DC{{radiance:dc}} Wis save or attacker picks a new target/misses and can't target you with attacks until start of your next turn (doesn't stop AoEs).&#13;
+			• Divine Inspiration (1 DP): Reroll a History, Religion, or Insight check (use new roll) and add +{{wisdom:bonus}}.&#13;
+			• Rend the Blasphemous (Bonus Action, 1 DP): After Attack action with sanctified blade, make 1 weapon attack with it at +{{wisdom:bonus}} to hit.</description>
+		</sheet>
+		<rules>
+			<stat name="divine blessings:value" value="1" />
+			<stat name="divine blessings:value" value="wisdom:modifier" />
+			<stat name="divine blessings:usage" value="1" bonus="base" />
+			<stat name="divine blessings:usage" value="divine blessings:value" bonus="base" />
+
+			<stat name="radiance:dc" value="8" bonus="base" />
+			<stat name="radiance:dc" value="proficiency" bonus="proficiency" />
+			<stat name="radiance:dc" value="wisdom:modifier" bonus="ability" />
+
+			<stat name="wisdom:bonus" value="1" bonus="base" />
+			<stat name="wisdom:bonus" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 9: Righteous Armament" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_RIGHTEOUS_ARMAMENT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_RIGHTEOUS_ARMAMENT</requirements>
+		<description>
+			<p>Your faith gives you the power to rebel against fate itself. You learn the following features that use your Divine Points.</p>
+			<p class="indent"><strong><em>Chains of Judgement.</em></strong> When you hit a creature with your sanctified blade, you can expend 1 Divine Point to create holy chains around the creature. The target must succeed on a Strength saving throw or take Radiant damage equal to your Wisdom modifier and have the Restrained condition until the end of your next turn.</p>
+			<p class="indent"><strong><em>Divine Retaliation.</em></strong> As a Reaction when a creature damages you with a melee attack while you are wielding your sanctified blade, you can expend 1 Divine Point to make a melee attack with your blade against the creature. You gain a bonus to the damage roll equal to your Wisdom modifier.</p>
+			<p class="indent"><strong><em>Erupting Blades.</em></strong> When you hit a creature with an attack that could apply your Sneak Attack damage, you can forgo damaging the creature with your Sneak Attack and expend 2 Divine Points to cause radiant blades to fall on the battlefield. The target and each creature in a 45-foot-long, 5-foot-wide Line originating from the target must make a Dexterity saving throw. On a failed save, a target takes Radiant damage equal to your Sneak Attack damage. On a successful save, a target takes half damage.</p>
+		</description>
+		<sheet alt="Righteous Armament">
+			<description>• Chains of Judgement (1 DP): On hit with sanctified blade, DC{{radiance:dc}} Str save or take {{wisdom:modifier}} Radiant damage and be Restrained until end of your next turn.&#13;
+			• Divine Retaliation (Reaction, 1 DP): When damaged by a melee attack while wielding sanctified blade, make a melee attack with it (+{{wisdom:modifier}} damage).&#13;
+			• Erupting Blades (2 DP): On a Sneak Attack-eligible hit, forgo Sneak Attack damage to force target and creatures in a 45-ft x 5-ft Line from target to make a DC{{radiance:dc}} Dex save or take your Sneak Attack damage as Radiant (half on success).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 13: Saintly Revelations" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_SAINTLY_REVELATIONS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_SAINTLY_REVELATIONS</requirements>
+		<description>
+			<p>You experience revelations, showing you how to channel divine energy to embolden your blade. You learn two cantrips of your choice from the Cleric spell list.</p>
+			<p class="indent">In addition, you always have the Heroism, Protection From Evil and Good, and Shield of Faith spells prepared. With this feature, you can cast these spells at will, targeting only yourself, without a spell slot or components. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent">Starting at Rogue level 17, when you cast these spells using this feature, they don't require Concentration. However, you can only have one spell cast from this feature active at a time; if you cast a second one, the first spell ends.</p>
+		</description>
+		<sheet alt="Saintly Revelations">
+			<description>You can cast Heroism, Protection from Evil and Good, and Shield of Faith at will (self-only, no slot or components; Wisdom spellcasting).</description>
+			<description level="17">You can cast Heroism, Protection from Evil and Good, and Shield of Faith at will (self-only, no slot or components, no Concentration; max 1 active at a time).</description>
+		</sheet>
+		<spellcasting name="Blade of Radiance" ability="Wisdom">
+			<list>Cleric</list>
+		</spellcasting>
+		<rules>
+			<select type="Spell" name="Cantrip (Saintly Revelations)" supports="0, Cleric" number="2" spellcasting="Blade of Radiance" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEROISM" spellcasting="Blade of Radiance" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" spellcasting="Blade of Radiance" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD_OF_FAITH" spellcasting="Blade of Radiance" prepared="true" />
+		</rules>
+	</element>
+
+	<element name="Level 17: Final Judgement" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_BLADE_RADIANCE_FINAL_JUDGEMENT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_FINAL_JUDGEMENT</requirements>
+		<description>
+			<p>Your sanctified blade becomes imbued with holy power, granting you the following benefits.</p>
+			<p class="indent"><strong><em>Divine Spirits.</em></strong> As a Magic action while wielding the blade, you can cast Spirit Guardians without a spell slot or components. Creatures within the area of the spell, for the purpose of your Sneak Attack, are considered within 5 feet of an ally of yours. Once you cast the spell with this feature, you can't do so again until you finish a Long Rest unless you expend 3 Divine Points (no action required) to restore your use of it.</p>
+			<p class="indent"><strong><em>Radiant Blade.</em></strong> You can speak a command word (no action required) to cause your blade to emit Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. The light lasts until you speak the command word again or you stow your weapon. While emitting light in this way, the weapon is considered a magic weapon, and attacks made with it deal an extra 2d4 Radiant damage on a hit.</p>
+		</description>
+		<sheet alt="Final Judgement" usage="1/Long Rest">
+			<description>• Divine Spirits (Magic Action): While wielding your blade, cast Spirit Guardians without a slot/components (creatures in area count as within 5 ft of an ally for Sneak Attack). Spend 3 Divine Points to restore use.&#13;
+			• Radiant Blade (no action): Emit 30 ft Bright Light + 30 ft Dim Light; blade counts as magic and deals +2d4 Radiant damage on a hit.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIRIT_GUARDIANS" spellcasting="Blade of Radiance" prepared="true" />
+		</rules>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Sanctified Champion Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_SANCTIFIED_CHAMPION" />
+	<element name="Divine Blessings Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_DIVINE_BLESSINGS" />
+	<element name="Righteous Armament Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_RIGHTEOUS_ARMAMENT" />
+	<element name="Saintly Revelations Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_SAINTLY_REVELATIONS" />
+	<element name="Final Judgement Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_BLADE_RADIANCE_FINAL_JUDGEMENT" />
+
+</elements>

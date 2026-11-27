@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Scourgeborne</name>
+		<description>The Scourgeborne species from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.1.0">
+			<file name="species-scourgeborne.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-scourgeborne.xml" />
+		</update>
+	</info>
+	
+	<element name="Scourgeborne" type="Race" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACE_SCOURGEBORNE">
+		<description>
+			<p>Scourgebornes should not exist. They are an abomination of the world, a vile curse placed on those who peered beyond the veil and succumbed to madness. Their twisted appearance is but a mirror of the darkest recesses of their personality. All sentient creatures harbor a monster within their soul—the dark of you that resents your neighbor for having a better life than you, that hates your friends when they ignore you, that wishes to harm those that wrong you. Most are fortunate enough to be able to hide this monster behind a mask of false virtues. Not the scourgeborne. Their curse has taken the most twisted aspects of their personality and laid them bare for the whole world to see. They wear this disfigured appearance every day; the more resentment, hatred and anger one possesses, the more monstrous the appearance.</p>
+			<p class="indent">Many view this Eldritch revelation as a curse that drives one to slip deeper and deeper into the depths of depravity until nothing but the monster remains. Yet, many refuse to let it break them; with their innermost darkness now visible, they have no choice but to accept it. It is said that accepting a fault is the first step in correcting it. Those scourgeborne who embrace their inner monster but refuse to let it rule them often become messianic heroes within the walls of Luyarnha, attempting to redeem the entire world with their actions—and perhaps one day, themselves.</p>
+			<p class="indent"><strong><em>Aranea.</em></strong> The person who schemes and creates a web of lies around themselves is, unsurprisingly, bound to turn into an aranea. Also known as half-spiders, these scourgeborne differ from others: though many turn, few retain their sanity. Amongst the scourgeborne, araneas are the least trusted, their appearance revealing their former—or current—manipulative personality. Although most citizens understand the need for violence, especially in Luyarnha, none tolerate deception and betrayal.</p>
+			<p class="indent"><strong><em>Belua.</em></strong> Those who harbor seething anger within oft turn into the most feral of beasts. Belua—also known as half-wolves—are the most feral of all the scourgeborne roaming the streets of Luyarnha. Many of them choose to hide their eyes, as their intense bloodlust turns their gaze crimson red, a terrifying sight for the uninitiated.</p>
+			<p class="indent"><strong><em>Cervus.</em></strong> Amongst the scourgeborne, the cervus are the rarest. To become a cervus, also called half-deer or waldschrat, one must have committed the foulest of sins: devouring the flesh of their kin. Or so the rumor went. This urban legend has long since been disproved, as many of the town’s most trusted figures have turned into such creatures. Interestingly, it seems that those who become cervus are the most apt at fighting creatures of the night, an achievement that earns them the respect of hunters across the city-state.</p>
+			<p class="indent"><strong><em>Vespertilio.</em></strong> Those who hid in fear in the face of adversity are cursed to become these beasts of the night. Vespertilio, sometimes known as half-bats, present some of the most accursed beings amongst the scourgeborne. Their unwillingness to see their problems has taken a literal form, as most of their sight was stolen from them. Instead, they received half-broken wings in a cruel farce of fate, as if to run away from their problems. Yet those who harness these new powers can become some of the fiercest hunters—an act of defiance against fate itself.</p>
+			<h5>SCOURGEBORNE TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Age.</strong> Scourgeborne are made not born. This means that they mature at the same rate as the race they originally belonged to.</li>
+				<li><strong>Creature Type:</strong> Monstrosity</li>
+				<li><strong>Size:</strong> Medium (about 4–7 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet</li>
+			</ul>
+			<p>As a Scourgeborne, you have these special traits.</p>
+			<p class="indent"><strong><em>Born of Madness.</em></strong> Your body is not the one you were born with, but rather the consequence to your exposure to eldritch madness. You have one of the following options based on your alignment:</p>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em">
+				<li><strong>Good Alignment.</strong> Your conviction grants you control over your darkest impulses. You have Advantage on saving throws you make to avoid or end Madness but have Disadvantage on Charisma (Intimidation) checks.</li>
+				<li><strong>Neutral Alignment.</strong> You do not gain any benefits or penalties from your alignment.</li>
+				<li><strong>Evil Alignment.</strong> You let the depraved monster within you influence you. You gain a bonus to Dexterity saving throws equal to your Proficiency Bonus but have Disadvantage on saving throws you make to avoid or end Madness.</li>
+			</ul>
+			<p class="indent"><strong><em>Eldritch Curse.</em></strong> Your curse is not something mere mortals can undo. You are immune to any spell that would alter your form, such as the <i>Alter Self</i> or <i>Polymorph</i> spells.</p>
+			<p class="indent"><strong><em>Feral Limbs.</em></strong> You can use your horns, claws, or fangs originating from your mutation to make Unarmed Strikes. When you do so, you deal Piercing damage equal to 1d6 plus your Strength modifier instead of the normal damage for your Unarmed Strike. If your alignment is Evil, your feral side is more dominant, and the die size for your Unarmed Strikes increases to a d8.</p>
+			<p class="indent"><strong><em>Monstrous Lineage.</em></strong> You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Monstrous Lineages table. You gain the level 1 benefit of that lineage. When you reach character levels 3 and 5, you gain further benefits, as shown on the table.</p>
+			<h5>Monstrous Lineages</h5>
+			<table>
+				<thead>
+					<tr><td>Lineage</td><td>Level 1</td><td>Level 3</td><td>Level 5</td></tr>
+				</thead>
+				<tr>
+					<td>Aranea</td>
+					<td>You have a Climb Speed of 30 feet. While in water, you have Disadvantage on all ability checks and attack rolls.</td>
+					<td>You can climb difficult surfaces, including along ceilings, without needing to make an ability check. Once you use this trait for 1 minute, you can’t do so again until you finish a Long Rest.</td>
+					<td>You can use your Level 3 trait for a number of minutes equal to your Proficiency Bonus, and you regain all expended minutes when you finish a Long Rest.</td>
+				</tr>
+				<tr>
+					<td>Belua</td>
+					<td>You have Advantage on Wisdom (Perception) checks that rely on hearing or smell. Whenever you cause a creature to become Bloodied, you take 1d4 Psychic damage as you attempt to retain your sanity.</td>
+					<td>As a Bonus Action, you can make an Unarmed Strike to feed off of a creature within reach. On a hit, you regain Hit Points equal to the damage dealt. Once you use this trait, you can’t do so again until you finish a Long Rest.</td>
+					<td>You can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</td>
+				</tr>
+				<tr>
+					<td>Cervus</td>
+					<td>Your Speed increases to 40 feet. Standing up from the Prone condition costs you an additional 5 feet.</td>
+					<td>If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, that target must make a Strength saving throw (DC 8 plus your Strength modifier and your Proficiency Bonus). On a failed save, the target has the Prone condition, and you can immediately take a Bonus Action to make one melee attack against it. Once you’ve forced a creature to make this save, you can’t do so again until you finish a Long Rest.</td>
+					<td>You can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</td>
+				</tr>
+				<tr>
+					<td>Vespertilio</td>
+					<td>You have Blindsight with a range of 30 feet. You have Disadvantage any ability check or attack roll that requires sight beyond this range.</td>
+					<td>You can take a Bonus Action to gain a Fly Speed of 30 feet until the end of your turn. If nothing is holding you aloft at the end of your turn, you fall. Once you use this trait, you can’t do so again until you finish a Short or Long Rest.</td>
+					<td>You can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.</td>
+				</tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Scourgeborne)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Scourgeborne)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language (Scourgeborne)" supports="Custom Race Language" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" number="3" />
+
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_BORN_OF_MADNESS" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ELDRITCH_CURSE" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_FERAL_LIMBS" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_MONSTROUS_LINEAGE" />
+		</rules>
+	</element>
+
+	<element name="Born of Madness" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_BORN_OF_MADNESS">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_BORN_OF_MADNESS</requirements>
+		<description>
+			<p>Your body is not the one you were born with, but rather the consequence to your exposure to eldritch madness. You have one of the following options based on your alignment:</p>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em">
+				<li><strong>Good Alignment.</strong> Your conviction grants you control over your darkest impulses. You have Advantage on saving throws you make to avoid or end Madness but have Disadvantage on Charisma (Intimidation) checks.</li>
+				<li><strong>Neutral Alignment.</strong> You do not gain any benefits or penalties from your alignment.</li>
+				<li><strong>Evil Alignment.</strong> You let the depraved monster within you influence you. You gain a bonus to Dexterity saving throws equal to your Proficiency Bonus but have Disadvantage on saving throws you make to avoid or end Madness.</li>
+			</ul>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Born of Madness (Alignment)" supports="Born of Madness SGEH24" />
+		</rules>
+	</element>
+	<element name="Good Alignment" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ALIGNMENT_GOOD">
+		<supports>Born of Madness SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Your conviction grants you control over your darkest impulses. You have Advantage on saving throws you make to avoid or end Madness but have Disadvantage on Charisma (Intimidation) checks.</p>
+		</description>
+		<sheet alt="Born of Madness (Good)">
+			<description>You have Advantage on saving throws to avoid or end Madness, but have Disadvantage on Charisma (Intimidation) checks.</description>
+		</sheet>
+	</element>
+	<element name="Neutral Alignment" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ALIGNMENT_NEUTRAL">
+		<supports>Born of Madness SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You do not gain any benefits or penalties from your alignment.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+	<element name="Evil Alignment" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ALIGNMENT_EVIL">
+		<supports>Born of Madness SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You let the depraved monster within you influence you. You gain a bonus to Dexterity saving throws equal to your Proficiency Bonus but have Disadvantage on saving throws you make to avoid or end Madness.</p>
+		</description>
+		<sheet alt="Born of Madness (Evil)">
+			<description>You gain a +{{proficiency}} bonus to Dexterity saving throws, but have Disadvantage on saving throws to avoid or end Madness.</description>
+		</sheet>
+		<rules>
+			<grant type="Grants" id="ID_LT_SGEH24_GRANTS_SCOURGEBORNE_ALIGNMENT_EVIL" />
+			<stat name="dexterity:save:misc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Eldritch Curse" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ELDRITCH_CURSE">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_ELDRITCH_CURSE</requirements>
+		<description>
+			<p>Your curse is not something mere mortals can undo. You are immune to any spell that would alter your form, such as the <i>Alter Self</i> or <i>Polymorph</i> spells.</p>
+		</description>
+		<sheet>
+			<description>You are immune to any spell that would alter your form, such as Alter Self or Polymorph.</description>
+		</sheet>
+	</element>
+
+	<element name="Feral Limbs" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_FERAL_LIMBS">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_FERAL_LIMBS</requirements>
+		<description>
+			<p>You can use your horns, claws, or fangs originating from your mutation to make Unarmed Strikes. When you do so, you deal Piercing damage equal to 1d6 plus your Strength modifier instead of the normal damage for your Unarmed Strike. If your alignment is Evil, your feral side is more dominant, and the die size for your Unarmed Strikes increases to a d8.</p>
+		</description>
+		<sheet>
+			<description>You can use your horns, claws, or fangs to make Unarmed Strikes dealing 1d{{feral limbs:dice}}+{{strength:modifier}} Piercing damage.</description>
+		</sheet>
+		<rules>
+			<stat name="feral limbs:dice" value="6" bonus="base" />
+			<stat name="feral limbs:dice" value="8" bonus="base" requirements="ID_LT_SGEH24_GRANTS_SCOURGEBORNE_ALIGNMENT_EVIL" />
+		</rules>
+	</element>
+
+	<element name="Monstrous Lineage" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_MONSTROUS_LINEAGE">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_MONSTROUS_LINEAGE</requirements>
+		<description>
+			<p>You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Monstrous Lineages table. You gain the level 1 benefit of that lineage. When you reach character levels 3 and 5, you gain further benefits, as shown on the table.</p>
+			<h5>Monstrous Lineages</h5>
+			<table>
+				<thead>
+					<tr><td>Lineage</td><td>Level 1</td><td>Level 3</td><td>Level 5</td></tr>
+				</thead>
+				<tr>
+					<td>Aranea</td>
+					<td>You have a Climb Speed of 30 feet. While in water, you have Disadvantage on all ability checks and attack rolls.</td>
+					<td>You can climb difficult surfaces, including along ceilings, without needing to make an ability check. Once you use this trait for 1 minute, you can’t do so again until you finish a Long Rest.</td>
+					<td>You can use your Level 3 trait for a number of minutes equal to your Proficiency Bonus, and you regain all expended minutes when you finish a Long Rest.</td>
+				</tr>
+				<tr>
+					<td>Belua</td>
+					<td>You have Advantage on Wisdom (Perception) checks that rely on hearing or smell. Whenever you cause a creature to become Bloodied, you take 1d4 Psychic damage as you attempt to retain your sanity.</td>
+					<td>As a Bonus Action, you can make an Unarmed Strike to feed off of a creature within reach. On a hit, you regain Hit Points equal to the damage dealt. Once you use this trait, you can’t do so again until you finish a Long Rest.</td>
+					<td>You can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</td>
+				</tr>
+				<tr>
+					<td>Cervus</td>
+					<td>Your Speed increases to 40 feet. Standing up from the Prone condition costs you an additional 5 feet.</td>
+					<td>If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, that target must make a Strength saving throw (DC 8 plus your Strength modifier and your Proficiency Bonus). On a failed save, the target has the Prone condition, and you can immediately take a Bonus Action to make one melee attack against it. Once you’ve forced a creature to make this save, you can’t do so again until you finish a Long Rest.</td>
+					<td>You can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</td>
+				</tr>
+				<tr>
+					<td>Vespertilio</td>
+					<td>You have Blindsight with a range of 30 feet. You have Disadvantage any ability check or attack roll that requires sight beyond this range.</td>
+					<td>You can take a Bonus Action to gain a Fly Speed of 30 feet until the end of your turn. If nothing is holding you aloft at the end of your turn, you fall. Once you use this trait, you can’t do so again until you finish a Short or Long Rest.</td>
+					<td>You can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.</td>
+				</tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Monstrous Lineage" supports="Monstrous Lineage SGEH24" />
+		</rules>
+	</element>
+
+	<!-- Aranea -->
+	<element name="Aranea" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ARANEA">
+		<supports>Monstrous Lineage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You have a Climb Speed of 30 feet. While in water, you have Disadvantage on all ability checks and attack rolls.</p>
+			<p class="indent">When you reach character level 3, you can climb difficult surfaces, including along ceilings, without needing to make an ability check. Once you use this trait for 1 minute, you can’t do so again until you finish a Long Rest.</p>
+			<p class="indent">When you reach character level 5, you can use your Level 3 trait for a number of minutes equal to your Proficiency Bonus, and you regain all expended minutes when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Aranea)">
+			<description>You have a Climb Speed of 30 feet. While in water, you have Disadvantage on all ability checks and attack rolls.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:climb" value="30" bonus="base" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ARANEA_CLIMB" level="3" />
+		</rules>
+	</element>
+	<element name="Aranea (Spider Climb)" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_ARANEA_CLIMB">
+		<compendium display="false" />
+		<description>
+			<p>You can climb difficult surfaces, including along ceilings, without needing to make an ability check.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Aranea Climb)" usage="{{aranea:usage}} min/Long Rest">
+			<description>You can climb difficult surfaces, including along ceilings, without needing to make an ability check.</description>
+		</sheet>
+		<rules>
+			<stat name="aranea:usage" value="1" level="3" bonus="base" />
+			<stat name="aranea:usage" value="proficiency" level="5" bonus="base" />
+		</rules>
+	</element>
+
+	<!-- Belua -->
+	<element name="Belua" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_BELUA">
+		<supports>Monstrous Lineage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You have Advantage on Wisdom (Perception) checks that rely on hearing or smell. Whenever you cause a creature to become Bloodied, you take 1d4 Psychic damage as you attempt to retain your sanity.</p>
+			<p class="indent">When you reach character level 3, as a Bonus Action, you can make an Unarmed Strike to feed off of a creature within reach. On a hit, you regain Hit Points equal to the damage dealt. Once you use this trait, you can’t do so again until you finish a Long Rest.</p>
+			<p class="indent">When you reach character level 5, you can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Belua)">
+			<description>You have Advantage on Wisdom (Perception) checks that rely on hearing or smell. Whenever you cause a creature to become Bloodied, you take 1d4 Psychic damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_BELUA_FEED" level="3" />
+		</rules>
+	</element>
+	<element name="Belua (Feed)" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_BELUA_FEED">
+		<compendium display="false" />
+		<description>
+			<p>As a Bonus Action, you can make an Unarmed Strike to feed off of a creature within reach. On a hit, you regain Hit Points equal to the damage dealt.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Belua Feed)" action="Bonus Action" usage="{{belua:usage}}/Long Rest">
+			<description>You can make an Unarmed Strike to feed off of a creature within reach. On a hit, you regain Hit Points equal to the damage dealt.</description>
+		</sheet>
+		<rules>
+			<stat name="belua:usage" value="1" level="3" bonus="base" />
+			<stat name="belua:usage" value="proficiency" level="5" bonus="base" />
+		</rules>
+	</element>
+
+	<!-- Cervus -->
+	<element name="Cervus" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_CERVUS">
+		<supports>Monstrous Lineage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Your Speed increases to 40 feet. Standing up from the Prone condition costs you an additional 5 feet.</p>
+			<p class="indent">When you reach character level 3, if you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, that target must make a Strength saving throw (DC 8 plus your Strength modifier and your Proficiency Bonus). On a failed save, the target has the Prone condition, and you can immediately take a Bonus Action to make one melee attack against it. Once you’ve forced a creature to make this save, you can’t do so again until you finish a Long Rest.</p>
+			<p class="indent">When you reach character level 5, you can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Cervus)">
+			<description>Standing up from the Prone condition costs you an additional 5 feet.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="40" bonus="base" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_CERVUS_CHARGE" level="3" />
+		</rules>
+	</element>
+	<element name="Cervus (Charge)" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_CERVUS_CHARGE">
+		<compendium display="false" />
+		<description>
+			<p>If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, that target must make a Strength saving throw (DC 8 plus your Strength modifier and your Proficiency Bonus). On a failed save, the target has the Prone condition, and you can immediately take a Bonus Action to make one melee attack against it.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Cervus Charge)" usage="{{cervus:usage}}/Long Rest">
+			<description>If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, it must succeed on a DC {{cervus:dc}} Strength saving throw or fall Prone, allowing you to immediately make one melee attack against it as a Bonus Action.</description>
+		</sheet>
+		<rules>
+			<stat name="cervus:dc" value="8" bonus="base" />
+			<stat name="cervus:dc" value="strength:modifier" bonus="ability" />
+			<stat name="cervus:dc" value="proficiency" bonus="proficiency" />
+			<stat name="cervus:usage" value="1" level="3" bonus="base" />
+			<stat name="cervus:usage" value="proficiency" level="5" bonus="base" />
+		</rules>
+	</element>
+
+	<!-- Vespertilio -->
+	<element name="Vespertilio" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_VESPERTILIO">
+		<supports>Monstrous Lineage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You have Blindsight with a range of 30 feet. You have Disadvantage any ability check or attack roll that requires sight beyond this range.</p>
+			<p class="indent">When you reach character level 3, you can take a Bonus Action to gain a Fly Speed of 30 feet until the end of your turn. If nothing is holding you aloft at the end of your turn, you fall. Once you use this trait, you can’t do so again until you finish a Short or Long Rest.</p>
+			<p class="indent">When you reach character level 5, you can use your Level 3 trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Vespertilio)">
+			<description>You have Disadvantage on any ability check or attack roll that requires sight beyond 30 feet.</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+			<stat name="blindsight:range" value="30" bonus="base" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_VESPERTILIO_FLIGHT" level="3" />
+		</rules>
+	</element>
+	<element name="Vespertilio (Flight)" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_SCOURGEBORNE_VESPERTILIO_FLIGHT">
+		<compendium display="false" />
+		<description>
+			<p>You can take a Bonus Action to gain a Fly Speed of 30 feet until the end of your turn. If nothing is holding you aloft at the end of your turn, you fall.</p>
+		</description>
+		<sheet alt="Monstrous Lineage (Vespertilio Flight)" action="Bonus Action" usage="{{vespertilio:usage}}/Short Rest">
+			<description>You gain a Fly Speed of 30 feet until the end of your turn. If nothing is holding you aloft at the end of your turn, you fall.</description>
+		</sheet>
+		<rules>
+			<stat name="vespertilio:usage" value="1" level="3" bonus="base" />
+			<stat name="vespertilio:usage" value="proficiency" level="5" bonus="base" />
+		</rules>
+	</element>
+
+	<!-- Alignment Grant -->
+	<element name="Alignment: Evil (Scourgeborne)" type="Grants" source="Internal" id="ID_LT_SGEH24_GRANTS_SCOURGEBORNE_ALIGNMENT_EVIL" />
+
+	<!-- Racial Trait Replacement Grants -->
+	<element name="Born of Madness Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_BORN_OF_MADNESS" />
+	<element name="Eldritch Curse Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_ELDRITCH_CURSE" />
+	<element name="Feral Limbs Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_FERAL_LIMBS" />
+	<element name="Monstrous Lineage Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_SCOURGEBORNE_MONSTROUS_LINEAGE" />
+
+</elements>

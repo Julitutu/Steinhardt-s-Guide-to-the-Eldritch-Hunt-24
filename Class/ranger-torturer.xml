@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Torturer Conclave</name>
+		<description>The Torturer Conclave subclass for the Ranger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="ranger-torturer.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/ranger-torturer.xml" />
+		</update>
+	</info>
+
+	<element name="Torturer Conclave" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_RANGER_TORTURER_CONCLAVE">
+		<supports>Ranger Subclass</supports>
+		<description>
+			<p>Enshrouded within the radiance of Luyarnha, a conclave of Rangers lies concealed, their solemn duty vowed to the preservation of peace within the walls, regardless of the means. Ever vigilant against the insidious advance of the Scourge, they have honed their inquisitorial craft, recognizing the importance of early prevention of this plague. They achieve this by finding and interrogating victims—and even potential victims—before signs of sickness manifest themselves.</p>
+			<p class="indent">Although these Rangers have been known to serve the clergy and royalty, since the fall of the House of Commons, they are no longer beholden to the fickle desires of any specific lord or lady. Many are now driven by a loftier purpose, one that necessitates the utmost discipline and commitment, for they recognize that if the Scourge is allowed to propagate, it shall wreak havoc upon all they cherish. Yet, some pursue baser ambitions, offering their expertise to those who desire to bend these Rangers to their malevolent will, extracting confessions or inflicting retribution upon adversaries. After all, torture, a practice as ancient as the very bedrock of the earth, is a dreadful instrument, potent enough to shatter even the most indomitable of spirits.</p>
+			<p class="indent">In the throes of battle, these Rangers bring their torturous expertise with them, employing it with merciless precision to break their enemies and methodically subject them to unspeakable agony. They show no mercy to their foes, for they are well aware that none would be extended to them in kind.</p>
+			<p class="indent"><em>Disclaimer: Please be advised that while some may use torture as a plot device or as a means of gathering information, it is a sensitive and disturbing topic. While the use of torture can be integral to the story being told, which is why it is included in this book, it is important to ensure that everyone at the table comes to an agreement regarding its use prior to the session beginning, and if it's included, whether descriptions should fade to black or be more detailed.</em></p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TOOLS_OF_THE_TRADE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TORTURER_TECHNIQUES" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_DEPRAVED_MIND" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_VEIL_OF_PAIN" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_MENTAL_AGONY" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TOOLS_OF_THE_TRADE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TORTURER_TECHNIQUES" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_DEPRAVED_MIND" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_VEIL_OF_PAIN" level="11" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_MENTAL_AGONY" level="15" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Tools of the Trade" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TOOLS_OF_THE_TRADE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_TOOLS_OF_THE_TRADE</requirements>
+		<description>
+			<p>You've learned to interrogate and use implements of torture. You gain proficiency with Torture Tools and the Insight skill. You also have Expertise with them.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ITEM_TORTURE_TOOLS" />
+			</div>
+		</description>
+		<sheet alt="Tools of the Trade">
+			<description>You have proficiency and Expertise with Torture Tools.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<stat name="insight:proficiency" value="proficiency" bonus="double" />
+			<grant type="Proficiency" id="ID_LT_SGEH24_PROFICIENCY_TOOL_TORTURE_TOOLS" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Torturer Techniques" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TORTURER_TECHNIQUES">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_TORTURER_TECHNIQUES</requirements>
+		<description>
+			<p>You learn to use techniques. Unlike others who require patience and careful preparation, you make use of techniques that are fueled by your magic, letting you employ of Torture Tools in the midst of hunts—no creature too alien or too resolute to escape your methods.</p>
+			<p class="indent">You can use each technique twice, and you regain all expended uses when you finish a Long Rest. You can expend one use of your Favored Enemy feature (no action required) to regain one use of a technique.</p>
+			<p class="indent"><strong><em>Techniques.</em></strong> When you hit a creature with a melee weapon attack or an Unarmed Strike while you have Torture Tools in one hand (or a free hand and the presence of Torture Tools at your disposal, such as strapped around your leg), as part of that attack, you can use a technique to enhance it in some way. You can only use a technique once per turn, though you can use different techniques in the same turn, and you can only use one technique per attack.</p>
+			<p class="indent"><strong><em>Empowered Techniques.</em></strong> When you use a technique, you can empower it by expending a spell slot (no action required). When you do so, you inflict extra damage to the target, and the target subtracts a number of d4s from the saving throws it makes against the technique.</p>
+			<table>
+				<thead>
+					<tr><td>Ranger level</td><td>Spell Slot</td><td>Extra Damage</td><td>Saving Throw Penalty</td></tr>
+				</thead>
+				<tr><td>3</td><td>1</td><td>Wisdom mod</td><td>-1d4</td></tr>
+				<tr><td>5</td><td>2</td><td>2 x Wisdom mod</td><td>-2d4</td></tr>
+				<tr><td>9</td><td>3</td><td>3 x Wisdom mod</td><td>-3d4</td></tr>
+				<tr><td>13</td><td>4</td><td>4 x Wisdom mod</td><td>-4d4</td></tr>
+				<tr><td>17</td><td>5</td><td>5 x Wisdom mod</td><td>-5d4</td></tr>
+			</table>
+			<p class="indent">The amount of damage and the number of dice subtracted are determined by the level of the spell slot expended, as shown on the following table. You can expend a spell slot up to a level determined by your Ranger level, also shown on the following table. You can also empower a technique if you expend one use of your Favored Enemy feature, which counts as a level 1 spell slot.</p>
+			<h5>Techniques</h5>
+			<p>You learn each of the following techniques. At higher levels, these techniques are improved.</p>
+			<p class="indent"><strong><em>Technique Save DC.</em></strong> If a technique requires a saving throw, the DC equals 8 plus your Wisdom modifier and Proficiency Bonus.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_COMBING" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_ENUCLEATION" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_HAMSTRINGING" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_NERVE_SCRAPING" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_THROAT_CHOP" />
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_TYMPANIC_RUPTURE" />
+			</div>
+		</description>
+		<sheet alt="Torturer Techniques">
+			<description>Use each technique 2/Long Rest (spend 1 Favored Enemy use to regain 1 technique use). Apply on a melee weapon/Unarmed Strike hit with Torture Tools in hand or a free hand with tools at your disposal (max 1 per attack, each technique 1/turn; Save DC {{technique:dc}}).&#13;
+			Empower (no action): Expend a spell slot (max level {{torturer:max slot}}) or Favored Enemy use (counts as level 1) to deal extra damage equal to (slot level x {{wisdom:modifier}}) and subtract (slot level)d4 from the target's save against the technique.</description>
+		</sheet>
+		<rules>
+			<stat name="technique:dc" value="8" bonus="base" />
+			<stat name="technique:dc" value="proficiency" bonus="proficiency" />
+			<stat name="technique:dc" value="wisdom:modifier" bonus="ability" />
+
+			<stat name="torturer:max slot" value="1" bonus="base" />
+			<stat name="torturer:max slot" value="2" bonus="base" level="5" />
+			<stat name="torturer:max slot" value="3" bonus="base" level="9" />
+			<stat name="torturer:max slot" value="4" bonus="base" level="13" />
+			<stat name="torturer:max slot" value="5" bonus="base" level="17" />
+
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_COMBING" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_ENUCLEATION" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_HAMSTRINGING" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_NERVE_SCRAPING" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_THROAT_CHOP" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_TYMPANIC_RUPTURE" />
+		</rules>
+	</element>
+
+	<!-- Techniques -->
+	<element name="Combing" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_COMBING">
+		<compendium display="false" />
+		<description>
+			<p>You scrape, tear, and flay the victim's body. On a hit, the target takes an extra 1d10 Slashing damage.</p>
+			<p class="indent">Starting at Ranger level 7, if you damage a target two rounds in a row with this technique, it must make a Constitution saving throw. On a failure, you tear away so much of its body that it starts to decompose. It takes Necrotic damage equal to your Wisdom modifier at the start of each of its turns for 1 minute. This damage can't be reduced or prevented in any way. A decomposing creature repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+			<p class="indent">Any extra damage from empowering this technique also applies to this Necrotic damage. A creature can't suffer multiple instances of this effect at once.</p>
+		</description>
+		<sheet alt="Combing (Technique)" usage="2/Long Rest">
+			<description>Target takes +1d10 Slashing damage.</description>
+			<description level="7">Target takes +1d10 Slashing damage. If you damage a target 2 rounds in a row with this, it makes a DC{{technique:dc}} Con save or takes {{wisdom:modifier}} (+Empowerment damage) unpreventable Necrotic damage at the start of its turns for 1 min (save ends at end of turns).</description>
+		</sheet>
+	</element>
+
+	<element name="Enucleation" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_ENUCLEATION">
+		<compendium display="false" />
+		<description>
+			<p>You aim a vicious strike at the target's eye, reducing their vision to a macabre blur. On a hit, the target takes an extra 1d6 of the weapon's damage type, and it must make a Constitution saving throw. Creatures with more than two eyes have Advantage on this saving throw. On a failed save, the target has Disadvantage on Wisdom (Perception) checks and has the Blinded condition against anything further than 60 feet from it for 1 minute. The target repeats this save at the end of each of its turns, ending the effect on itself on a success.</p>
+			<p class="indent">Starting at Ranger level 11, if the target fails its saving throw against this technique two rounds in a row, it has the Blinded condition for the same duration.</p>
+		</description>
+		<sheet alt="Enucleation (Technique)" usage="2/Long Rest">
+			<description>Target takes +1d6 weapon damage and makes a DC{{technique:dc}} Con save (Advantage if &gt;2 eyes) or has Disadvantage on Perception checks and is Blinded beyond 60 ft for 1 min (save ends at end of turns).</description>
+			<description level="11">Target takes +1d6 weapon damage and makes a DC{{technique:dc}} Con save (Advantage if &gt;2 eyes) or has Disadvantage on Perception checks and is Blinded beyond 60 ft for 1 min (save ends at end of turns). Failing 2 rounds in a row inflicts full Blinded condition for 1 min.</description>
+		</sheet>
+	</element>
+
+	<element name="Hamstringing" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_HAMSTRINGING">
+		<compendium display="false" />
+		<description>
+			<p>You slash at the creature's tendons. On a hit, the target takes an extra 1d6 Slashing damage and must succeed on a Constitution saving throw or have its Speed reduced to 0 until the start of your next turn.</p>
+			<p class="indent">Starting at Ranger level 7, if the target fails its saving throw against this technique two rounds in a row, you sever its tendons, and its Speed becomes 0 for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+		</description>
+		<sheet alt="Hamstringing (Technique)" usage="2/Long Rest">
+			<description>Target takes +1d6 Slashing damage and makes a DC{{technique:dc}} Con save or its Speed becomes 0 until the start of your next turn.</description>
+			<description level="7">Target takes +1d6 Slashing damage and makes a DC{{technique:dc}} Con save or its Speed becomes 0 until the start of your next turn. Failing 2 rounds in a row reduces Speed to 0 for 1 min (save ends at end of turns).</description>
+		</sheet>
+	</element>
+
+	<element name="Nerve Scraping" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_NERVE_SCRAPING">
+		<compendium display="false" />
+		<description>
+			<p>You damage the creature's nerves, causing its body to writhe in pain. On a hit, the target takes an extra 1d4 Psychic damage and must make a Constitution saving throw. On a failed save, the target loses its grip on reality and can't differentiate friend from foe through the veil of pain. Until the start of your next turn, the target must use its action before moving on each of its turns to make a melee attack against a randomly determined creature within its reach other than itself. If no creature is within its reach, it acts as normal, though it still can't discern allies and enemies, and if it makes an attack, it randomly determines a target within its reach or range other than itself.</p>
+			<p class="indent">Starting at Ranger level 11, if the target fails its saving throw against this technique two rounds in a row, it subtracts 1d4 from its attack rolls and saving throws for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+		</description>
+		<sheet alt="Nerve Scraping (Technique)" usage="2/Long Rest">
+			<description>Target takes +1d4 Psychic damage and makes a DC{{technique:dc}} Con save or until start of your next turn can't distinguish friend from foe and must use its action before moving to melee attack a random creature in reach (if none, acts normally with random attack targets).</description>
+			<description level="11">Target takes +1d4 Psychic damage and makes a DC{{technique:dc}} Con save or until start of your next turn can't distinguish friend from foe and must use its action before moving to melee attack a random creature in reach. Failing 2 rounds in a row also causes it to subtract 1d4 from attacks and saves for 1 min (save ends at end of turns).</description>
+		</sheet>
+	</element>
+
+	<element name="Throat Chop" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_THROAT_CHOP">
+		<compendium display="false" />
+		<description>
+			<p>You deliver a fierce cleave to the target's throat, severely impairing its ability to breathe and speak. On a hit, the target takes an extra 1d8 Bludgeoning damage and can't speak or use the Verbal components of spells until the start of your next turn.</p>
+			<p class="indent">Starting at Ranger level 11, if you hit a target two rounds in a row with this technique, it must make a Constitution saving throw. On a failure, the target has the Stunned condition until the end of your next turn.</p>
+		</description>
+		<sheet alt="Throat Chop (Technique)" usage="2/Long Rest">
+			<description>Target takes +1d8 Bludgeoning damage and can't speak or use Verbal components until the start of your next turn.</description>
+			<description level="11">Target takes +1d8 Bludgeoning damage and can't speak or use Verbal components until the start of your next turn. Hitting 2 rounds in a row forces a DC{{technique:dc}} Con save or it is Stunned until the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Tympanic Rupture" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_TECHNIQUE_TYMPANIC_RUPTURE">
+		<compendium display="false" />
+		<description>
+			<p>You slam the target's ears in an attempt to destabilize it. On a hit, the target takes an extra 1d8 Bludgeoning damage and must succeed on a Constitution saving throw or have the Deafened condition for 1 minute. A Deafened creature repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+			<p class="indent">Starting at Ranger level 7, if the target fails its saving throw against this technique two rounds in a row, it is disoriented for the duration. While disoriented, the target can't take Reactions.</p>
+		</description>
+		<sheet alt="Tympanic Rupture (Technique)" usage="2/Long Rest">
+			<description>Target takes +1d8 Bludgeoning damage and makes a DC{{technique:dc}} Con save or is Deafened for 1 min (save ends at end of turns).</description>
+			<description level="7">Target takes +1d8 Bludgeoning damage and makes a DC{{technique:dc}} Con save or is Deafened for 1 min (save ends at end of turns). Failing 2 rounds in a row also prevents it from taking Reactions for the duration.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 7: Depraved Mind" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_DEPRAVED_MIND">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_DEPRAVED_MIND</requirements>
+		<description>
+			<p>You've seen the worst depravities that plague this world and have committed most of them. You are immune to the Frightened condition and gain Resistance to Psychic damage.</p>
+			<p class="indent">In addition, if a creature attempts to read your mind or telepathically talk to you against your will, it must first make a Wisdom saving throw against your Technique save DC. On a failed save, it witnesses the horrors within your mind. It takes Psychic damage equal to your level and fails to communicate with you. On a successful save, it can interact with you in this way for 1 minute without making the saving throw.</p>
+		</description>
+		<sheet alt="Depraved Mind">
+			<description>You are immune to the Frightened condition. Creatures attempting to read your mind or speak telepathically against your will must make a DC{{technique:dc}} Wis save or take {{level:ranger}} Psychic damage and fail to communicate (on success, immune for 1 min).</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+		</rules>
+	</element>
+
+	<element name="Level 11: Veil of Pain" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_VEIL_OF_PAIN">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_VEIL_OF_PAIN</requirements>
+		<description>
+			<p>When you damage a creature with your torturer techniques, you can attempt to rattle its mind with the pain (no action required). The target must succeed on a Wisdom saving throw against your Technique save DC or start dissociating your presence, its mind refusing to acknowledge the anguish you are causing it, only perceiving you as a flicker. You have the Invisible condition to the target for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum once) and regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Veil of Pain" usage="{{veil of pain:usage}}/Long Rest">
+			<description>When you damage a creature with a torturer technique (no action), force a DC{{technique:dc}} Wis save or become Invisible to the target for 1 min (save ends at end of turns).</description>
+		</sheet>
+		<rules>
+			<stat name="veil of pain:usage" value="1" bonus="base" />
+			<stat name="veil of pain:usage" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 15: Mental Agony" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_TORTURER_MENTAL_AGONY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_MENTAL_AGONY</requirements>
+		<description>
+			<p>You know how to cause pain to your quarry both physically and mentally. When a creature you can see within 60 feet of yourself that failed a saving throw against one of your torturer techniques since the start of your last turn makes an Intelligence, a Wisdom, or a Charisma saving throw, you can take a Reaction to flourish your blades, smile, or perform a similar terrifying display. The target subtracts 1d10 from its saving throw. Creatures that are immune to the Frightened condition are immune to this effect.</p>
+		</description>
+		<sheet alt="Mental Agony" action="Reaction">
+			<description>When a creature within 60 ft that failed a save against a torturer technique since the start of your last turn makes an Int, Wis, or Cha save, force it to subtract 1d10 from the roll (creatures immune to Frightened are immune).</description>
+		</sheet>
+	</element>
+
+	<!-- Torture Tools Item & Proficiency -->
+	<element name="Torture Tools" type="Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ITEM_TORTURE_TOOLS">
+		<description>
+			<p>This satchel contains various small implements that can bludgeon, cut, and pierce in ways designed to maximize pain. Meant to extract the truth, many use these tools with far more nefarious intentions.</p>
+			<p class="indent">Proficiency with these tools grants the following benefits:</p>
+			<p class="indent"><strong><em>Exhaustion.</em></strong> Using these tools for 1 hour on a Restrained creature causes it to gain 1 Exhaustion level, after which you must make a Dexterity (Torture Tools) check. The DC is equal to 20 minus the creature's Constitution modifier. On a failure, the creature takes 10 points of your choice of Bludgeoning, Piercing, or Slashing damage.</p>
+			<p class="indent"><strong><em>Intimidation.</em></strong> When you make a Charisma (Intimidation) check against a creature you have previously used these tools on, you gain a bonus to the roll equal to twice your Proficiency Bonus.</p>
+		</description>
+		<setters>
+			<set name="category">Tools</set>
+			<set name="cost" currency="gp">20</set>
+			<set name="weight" lb="10">10 lb.</set>
+		</setters>
+	</element>
+
+	<element name="Tool Proficiency (Torture Tools)" type="Proficiency" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_PROFICIENCY_TOOL_TORTURE_TOOLS">
+		<supports>Tool</supports>
+		<description>
+			<p>You are proficient with Torture Tools.</p>
+		</description>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Tools of the Trade Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_TOOLS_OF_THE_TRADE" />
+	<element name="Torturer Techniques Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_TORTURER_TECHNIQUES" />
+	<element name="Depraved Mind Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_DEPRAVED_MIND" />
+	<element name="Veil of Pain Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_VEIL_OF_PAIN" />
+	<element name="Mental Agony Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_TORTURER_MENTAL_AGONY" />
+
+</elements>

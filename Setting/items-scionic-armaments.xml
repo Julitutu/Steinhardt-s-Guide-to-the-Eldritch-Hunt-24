@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Scionic Armaments</name>
+		<description>Scionic Armament and Roaring Scionic Armament magic items from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<update version="0.0.1">
+			<file name="items-scionic-armaments.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-scionic-armaments.xml" />
+		</update>
+	</info>
+
+	<!-- Scionic Armament (Rare) -->
+	<element name="Scionic Armament" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SCIONIC_ARMAMENT_MELEE">
+		<description>
+			<p>The Scions' weapons—whether dead or alive—are constructed from the bones of formidable monsters. The bones are then tortured with strong lightning, granting a twisted appearance and savage fury to the armament. The weapon’s osseous component grants it ancient strength, and the electricity that dances across its body brutalizes all who come in contact with it.</p>
+			<p class="indent">Scionic weapons all require Attunement. A creature that attunes to such a weapon takes 2d8 Lightning damage.</p>
+			<p class="indent">You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which deals an extra 1d6 Lightning damage on a hit. This weapon has the Explosive Retreat property.</p>
+			<p class="indent"><b><i>Explosive Retreat.</i></b> When you hit a creature with this weapon, you can choose to detonate it. The target makes a DC 14 Dexterity saving throw, taking 3d8 Lightning damage on a failed save or half as much damage on a successful one. The detonation pushes you 10 feet away from the target. Once used, this property can't be used again until the next dawn.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any melee">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE</set>
+			<set name="name-format">Scionic {{parent}}</set>
+		</setters>
+	</element>
+
+	<element name="Scionic Armament" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SCIONIC_ARMAMENT_RANGED">
+		<description>
+			<p>The Scions' weapons—whether dead or alive—are constructed from the bones of formidable monsters. The bones are then tortured with strong lightning, granting a twisted appearance and savage fury to the armament. The weapon’s osseous component grants it ancient strength, and the electricity that dances across its body brutalizes all who come in contact with it.</p>
+			<p class="indent">Scionic weapons all require Attunement. A creature that attunes to such a weapon takes 2d8 Lightning damage.</p>
+			<p class="indent">You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. When you make attacks using this weapon, you fire electricity generated from the armament, dealing Lightning damage instead of the weapon’s normal damage, and you can ignore the Ammunition, Barrel, or Reload property of the weapon. This weapon has the Guiding Fury property.</p>
+			<p class="indent"><b><i>Guiding Fury.</i></b> While holding this weapon, you can unleash the rage held within its bones to make a ranged attack roll with this weapon against a creature within range, and you have Advantage on the attack. On a hit, you deal the weapon’s damage, and lightning streaks from the target to a different creature of your choice within 30 feet of it. Make a ranged attack roll against the new target, and on a hit, deal the weapon’s damage and the lightning streaks again. A creature can be targeted only once by each use of Guiding Fury. Once used, this property can't be used again until the next dawn.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any ranged">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="name-format">Scionic {{parent}}</set>
+		</setters>
+	</element>
+
+	<element name="Scionic Armament" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SCIONIC_ARMAMENT_FOCUS">
+		<description>
+			<p>The Scions' weapons—whether dead or alive—are constructed from the bones of formidable monsters. The bones are then tortured with strong lightning, granting a twisted appearance and savage fury to the armament. The weapon’s osseous component grants it ancient strength, and the electricity that dances across its body brutalizes all who come in contact with it.</p>
+			<p class="indent">Scionic weapons all require Attunement. A creature that attunes to such a weapon takes 2d8 Lightning damage.</p>
+			<p class="indent">You gain a +1 bonus to spell attack rolls made with this focus, and you can cast the <i>Shocking Grasp</i> cantrip from it, using your spellcasting ability. When you roll a 1 or 2 on a damage die for a spell that deals Lightning damage cast using this focus, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. This focus has the Ionized Conduit property.</p>
+			<p class="indent"><b><i>Ionized Conduit.</i></b> As a Bonus Action, you can increase the polarity of the focus. For the next minute, when you use this Spellcasting Focus to cast spells that deal Lightning damage, creatures have a -3 penalty to their saving throws against those spells if they are wearing or carrying metal. Once used, this property can't be used again until the next dawn.</p>
+		</description>
+		<setters>
+			<set name="category">Spellcasting Focus</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any spellcasting focus">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement" addition="by a spellcaster">true</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="1" bonus="enhancement" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHOCKING_GRASP" />
+		</rules>
+	</element>
+
+	<!-- Roaring Scionic Armament (Very Rare) -->
+	<element name="Roaring Scionic Armament" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_ROARING_SCIONIC_ARMAMENT_MELEE">
+		<description>
+			<p>Roaring Scionic weapons are the pinnacle of Scionic technology, requiring hefty resources to produce even one of them. Scionic weapons all require Attunement. A creature that attunes to such a weapon takes 5d8 Lightning damage.</p>
+			<p class="indent">You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon, which deals an extra 2d6 Lightning damage on a hit. This weapon has the Explosive Retreat and Galvanic Engage properties.</p>
+			<p class="indent"><b><i>Explosive Retreat.</i></b> When you hit a creature with this weapon, you can choose to detonate it. The target makes a DC 16 Dexterity saving throw, taking 4d8 Lightning damage on a failed save or half as much damage on a successful one. The detonation pushes you 10 feet away from the target. Once used, this property can't be used again until the next dawn.</p>
+			<p class="indent"><b><i>Galvanic Engage.</i></b> On your first turn in combat while this weapon is on your person, you can take a Bonus Action to move up to half your Speed toward an enemy creature. If you end this movement within 5 feet of an enemy, your next attack with this weapon before the end of your turn releases explosive energy, dealing an extra 4d8 Lightning damage. Once used, this property can't be used again until the next dawn.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any melee">Weapon</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="enhancement">2</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE</set>
+			<set name="name-format">Roaring Scionic {{parent}}</set>
+		</setters>
+	</element>
+
+	<element name="Roaring Scionic Armament" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_ROARING_SCIONIC_ARMAMENT_RANGED">
+		<description>
+			<p>Roaring Scionic weapons are the pinnacle of Scionic technology, requiring hefty resources to produce even one of them. Scionic weapons all require Attunement. A creature that attunes to such a weapon takes 5d8 Lightning damage.</p>
+			<p class="indent">You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon. When you make attacks using this weapon, you fire electricity generated from the armament, dealing Lightning damage instead of the weapon’s normal damage, and you can ignore the Ammunition, Barrel, or Reload property of the weapon. This weapon has the Guiding Fury and Lightning Surge properties.</p>
+			<p class="indent"><b><i>Guiding Fury.</i></b> While holding this weapon, you can unleash the rage held within its bones to make a ranged attack roll with this weapon against a creature within range, and you have Advantage on the attack. On a hit, you deal the weapon's damage, and lightning streaks from the target to a different creature of your choice within 30 feet of it. Make a ranged attack roll against the new target, and on a hit, deal the weapon's damage and the lightning streaks again. A creature can be targeted only once by each use of Guiding Fury. Once used, this property can't be used again until the next dawn.</p>
+			<p class="indent"><b><i>Lightning Surge.</i></b> When you hit a creature with this weapon, your Speed increases by 5 feet until the end of your next turn, increasing another 5 feet with each subsequent hit.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any ranged">Weapon</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="enhancement">2</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="name-format">Roaring Scionic {{parent}}</set>
+		</setters>
+	</element>
+
+	<element name="Roaring Scionic Armament" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_ROARING_SCIONIC_ARMAMENT_FOCUS">
+		<description>
+			<p>Roaring Scionic weapons are the pinnacle of Scionic technology, requiring hefty resources to produce even one of them. Scionic weapons all require Attunement. A creature that attunes to such a weapon takes 5d8 Lightning damage.</p>
+			<p class="indent">You gain a +2 bonus to spell attack rolls made with this focus, and you can cast the <i>Shocking Grasp</i> cantrip from it. When you roll a 1 or 2 on a damage die for a spell that deals Lightning damage cast using this focus, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. This focus has the Ionized Conduit and Lightning Harness properties.</p>
+			<p class="indent"><b><i>Ionized Conduit.</i></b> As a Bonus Action, you can increase the polarity of the focus. For the next minute, when you use this Spellcasting Focus to cast spells that deal Lightning damage, creatures have a -5 penalty to their saving throws against those spells if they are wearing or carrying metal. Once used, this property can't be used again until the next dawn.</p>
+			<p class="indent"><b><i>Lightning Harness.</i></b> As a Reaction to taking Lightning damage while this focus is on your person, you can harness the energy, granting yourself a Fly Speed of 30 feet. This Speed lasts as long as you maintain Concentration, to a maximum of 1 minute. When the effect ends, you fall if you are still aloft, at a rate of 30 feet per round, unless you can stop the fall.</p>
+		</description>
+		<setters>
+			<set name="category">Spellcasting Focus</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="any spellcasting focus">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement" addition="by a spellcaster">true</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="2" bonus="enhancement" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHOCKING_GRASP" />
+		</rules>
+	</element>
+
+</elements>

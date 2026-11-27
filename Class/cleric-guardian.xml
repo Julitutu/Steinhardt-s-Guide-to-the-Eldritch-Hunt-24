@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Guardian Domain</name>
+		<description>The Guardian Domain subclass for the Cleric from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="cleric-guardian.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/cleric-guardian.xml" />
+		</update>
+	</info>
+
+	<element name="Guardian Domain" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_CLERIC_GUARDIAN_DOMAIN">
+		<supports>Cleric Subclass</supports>
+		<description>
+			<p>Clerics of the Radiant Church are venerated as saint-like figures, and those who walk the path of the guardian even more so. Such overwhelming praise was only heightened by the arrival of the Scourge, and the countless heroic actions performed by the Church anchored it as a beacon of salvation in the heart of the citizens of Luyarnha. This abundant reverence has its risks, of course, though few dare point it out; a zealous crowd is best left well alone.</p>
+			<p class="indent">Clerics of the Guardian Domain were the first to jump into combat against the beasts, and to this day they haven't backed down from the battle despite the pain and loss they have endured. Their protective spirit is embodied in their magic—summoning guardian angels—which swoop to their side, protecting any who would ask under their wings. Although the features of these angels can be unsettling, none would dare doubt their intentions.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_SPELLS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_PROTECTIVE_MAGIC" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_GUARDIAN_ANGEL" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_ANGELIC_PROTECTION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_DIVINE_PUNISHMENT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_DEFENSIVE_WARD" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_PROTECTIVE_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_GUARDIAN_ANGEL" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_ANGELIC_PROTECTION" level="6" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_DIVINE_PUNISHMENT" level="6" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_DEFENSIVE_WARD" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Guardian Domain Spells" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_SPELLS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_SPELLS</requirements>
+		<description>
+			<p>Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the Guardian Domain Spells table, you thereafter always have the listed spells prepared.</p>
+			<h5>Guardian Domain Spells</h5>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><em>Aid, Protection from Evil and Good, Sanctuary, Warding Bond</em></td></tr>
+				<tr><td style="text-align:center">5</td><td><em>Protection from Energy, Slow</em></td></tr>
+				<tr><td style="text-align:center">7</td><td><em>Guardian of Faith, Resilient Sphere</em></td></tr>
+				<tr><td style="text-align:center">9</td><td><em>Antilife Shell, Wall of Force</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AID" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SANCTUARY" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PROTECTION_FROM_ENERGY" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SLOW" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUARDIAN_OF_FAITH" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_OTILUKES_RESILIENT_SPHERE" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANTILIFE_SHELL" level="9" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WALL_OF_FORCE" level="9" spellcasting="Cleric" prepared="true" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Protective Magic" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_PROTECTIVE_MAGIC">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_PROTECTIVE_MAGIC</requirements>
+		<description>
+			<p>When you cast a spell that restores Hit Points to a creature, the target also gains half as many Temporary Hit Points (round down). If a spell targets multiple creatures, choose only one of the creatures to benefit from this effect.</p>
+		</description>
+		<sheet alt="Protective Magic">
+			<description>When you cast a spell that restores HP to a creature, one target of the spell also gains THP equal to half the HP restored (rounded down).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Guardian Angel" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_GUARDIAN_ANGEL">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_GUARDIAN_ANGEL</requirements>
+		<description>
+			<p>As a Magic Action, you present your Holy Symbol and expend one use of your Channel Divinity. In a flash of radiance, a Guardian Angel appears in an unoccupied space of your choice within 30 feet of you. The angel is Friendly to you and your companions and obeys your commands. When you gain this feature, choose the nature of your angel: Necrotic or Radiant. This choice affects the angel's Immunities and the damage type of its Divine Blade attack.</p>
+			<p class="indent">You determine the angel's appearance. Some angels take the form of a humanoid angelic figure dressed with pure garments, while many others espouse a more eldritch appearance.</p>
+			<p class="indent">In combat, the angel shares your Initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the Dodge action, unless you take a Bonus Action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you have the Incapacitated condition, the angel can take any action of its choice, not just Dodge.</p>
+			<p class="indent">The angel remains for 1 hour, until it is reduced to 0 Hit Points, until you use this feature to summon the angel again, or until you die.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_INFORMATION_COMPANION_GUARDIAN_ANGEL" />
+			</div>
+		</description>
+		<sheet alt="Guardian Angel" action="Action" usage="Channel Divinity">
+			<description>Summon a Guardian Angel within 30 ft for 1 hr (or until 0 HP, resummoned, or you die). It acts immediately after you, taking the Dodge action unless commanded via Bonus Action (or if you are Incapacitated).</description>
+		</sheet>
+		<rules>
+			<select type="Companion" name="Guardian Angel Nature" supports="ID_LT_SGEH24_COMPANION_GUARDIAN_ANGEL_RADIANT|ID_LT_SGEH24_COMPANION_GUARDIAN_ANGEL_NECROTIC" />
+		</rules>
+	</element>
+
+	<element name="Level 6: Angelic Protection" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_ANGELIC_PROTECTION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_ANGELIC_PROTECTION</requirements>
+		<description>
+			<p>When you use your Channel Divinity to summon a guardian angel, the angel immediately casts Warding Bond (no action required) without spell components on you or a Friendly creature it can see within 30 feet of itself.</p>
+		</description>
+		<sheet alt="Angelic Protection">
+			<description>When you summon your Guardian Angel, it immediately casts Warding Bond (no action, no components) on you or a Friendly creature within 30 ft of itself.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Divine Punishment" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_DIVINE_PUNISHMENT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_DIVINE_PUNISHMENT</requirements>
+		<description>
+			<p>When you gain the Blessed Strikes feature, and later the Improved Blessed Strikes feature, your guardian angel can use the Divine Strike option, even if you didn't choose that option. The damage type for this option is determined by the nature of the angel.</p>
+		</description>
+		<sheet alt="Divine Punishment">
+			<description>When you gain Blessed Strikes (and Improved Blessed Strikes), your Guardian Angel can use the Divine Strike option using its chosen nature's damage type.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 17: Defensive Ward" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_GUARDIAN_DOMAIN_DEFENSIVE_WARD">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_DEFENSIVE_WARD</requirements>
+		<description>
+			<p>When your guardian angel casts Warding Bond, it can choose a number of allied creatures (including you) equal to your Wisdom modifier (minimum 1) within a 60 feet of itself. The spell functions as if the angel had created a Warding Bond with each chosen creature. In addition, when it casts this spell, the guardian angel gains Temporary Hit Points equal to 5 times the number of creatures affected by the spell.</p>
+			<p class="indent">Once you use this feature, you can't use it again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Defensive Ward" usage="1/Long Rest">
+			<description>When your Guardian Angel casts Warding Bond, it can target up to {{defensive ward:targets}} allies (including you) within 60 ft of itself, gaining 5 THP per affected creature.</description>
+		</sheet>
+		<rules>
+			<stat name="defensive ward:targets" value="1" bonus="base" />
+			<stat name="defensive ward:targets" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+
+	<!-- Guardian Angel Companions -->
+	<element name="Guardian Angel (Radiant)" type="Companion" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_GUARDIAN_ANGEL_RADIANT">
+		<compendium display="false" />
+		<setters>
+			<set name="size">Medium</set>
+			<set name="type">Construct</set>
+			<set name="alignment">Unaligned</set>
+			<set name="ac">10 + PB</set>
+			<set name="hp">5 + 5 times your Cleric Level</set>
+			<set name="speed">0 ft., Fly 10 ft. (hover)</set>
+            <set name="strength">10</set>
+            <set name="dexterity">14</set>
+            <set name="constitution">14</set>
+            <set name="intelligence">12</set>
+            <set name="wisdom">14</set>
+            <set name="charisma">10</set>
+			<set name="immunities">Radiant; Blinded, Charmed, Frightened, Grappled, Prone, Restrained</set>
+			<set name="senses">Blindsight 60 ft., Passive Perception 12</set>
+			<set name="languages">Understands the languages you speak</set>
+			<set name="challenge">—</set>
+			<set name="traits">ID_LT_SGEH24_COMPANION_TRAIT_GUARDIAN_ANGEL_INCORPOREAL_BEING</set>
+			<set name="actions">ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_DIVINE_BLADE_RADIANT,ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_REALITY_WARP</set>
+			<set name="reactions">ID_LT_SGEH24_COMPANION_REACTION_GUARDIAN_ANGEL_SELF_SACRIFICE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="10" bonus="base" />
+			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
+			<stat name="companion:hp:max" value="5" bonus="base" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:speed" value="0" bonus="base" />
+			<stat name="companion:speed:fly" value="10" bonus="base" />
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+			<stat name="companion:proficiency" value="-2" bonus="base companion PB removal" />
+		</rules>
+	</element>
+
+	<element name="Guardian Angel (Necrotic)" type="Companion" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_GUARDIAN_ANGEL_NECROTIC">
+		<compendium display="false" />
+		<setters>
+			<set name="size">Medium</set>
+			<set name="type">Construct</set>
+			<set name="alignment">Unaligned</set>
+			<set name="ac">10 + PB</set>
+			<set name="hp">5 + 5 times your Cleric Level</set>
+			<set name="speed">0 ft., Fly 10 ft. (hover)</set>
+            <set name="strength">10</set>
+            <set name="dexterity">14</set>
+            <set name="constitution">14</set>
+            <set name="intelligence">12</set>
+            <set name="wisdom">14</set>
+            <set name="charisma">10</set>
+			<set name="immunities">Necrotic; Blinded, Charmed, Frightened, Grappled, Prone, Restrained</set>
+			<set name="senses">Blindsight 60 ft., Passive Perception 12</set>
+			<set name="languages">Understands the languages you speak</set>
+			<set name="challenge">—</set>
+			<set name="traits">ID_LT_SGEH24_COMPANION_TRAIT_GUARDIAN_ANGEL_INCORPOREAL_BEING</set>
+			<set name="actions">ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_DIVINE_BLADE_NECROTIC,ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_REALITY_WARP</set>
+			<set name="reactions">ID_LT_SGEH24_COMPANION_REACTION_GUARDIAN_ANGEL_SELF_SACRIFICE</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="10" bonus="base" />
+			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
+			<stat name="companion:hp:max" value="5" bonus="base" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:hp:max" value="level:cleric" />
+			<stat name="companion:speed" value="0" bonus="base" />
+			<stat name="companion:speed:fly" value="10" bonus="base" />
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+			<stat name="companion:proficiency" value="-2" bonus="base companion PB removal" />
+		</rules>
+	</element>
+
+	<element name="Incorporeal Being" type="Companion Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_TRAIT_GUARDIAN_ANGEL_INCORPOREAL_BEING">
+		<description>
+			<p>The angel can move through other creatures as if they were Difficult Terrain.</p>
+		</description>
+		<sheet>
+			<description>The angel can move through other creatures as if they were Difficult Terrain.</description>
+		</sheet>
+	</element>
+
+	<element name="Divine Blade" type="Companion Action" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_DIVINE_BLADE_RADIANT">
+		<description>
+			<p><i>Melee Weapon Attack:</i> Bonus equals your spell attack modifier, range 10 ft. <i>Hit:</i> 1d6 + PB Radiant damage, and the angel regains Hit Points equal to half the damage taken.</p>
+		</description>
+		<sheet>
+			<description>Melee Weapon Attack: Your spell attack modifier to hit, range 10 ft. Hit: 1d6 + PB  Radiant damage, and the angel regains HP equal to half the damage dealt.</description>
+		</sheet>
+	</element>
+
+	<element name="Divine Blade" type="Companion Action" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_DIVINE_BLADE_NECROTIC">
+		<description>
+			<p><i>Melee Weapon Attack:</i> Bonus equals your spell attack modifier, range 10 ft. <i>Hit:</i> 1d6 + PB Necrotic damage, and the angel regains Hit Points equal to half the damage taken.</p>
+		</description>
+		<sheet>
+			<description>Melee Weapon Attack: Your spell attack modifier to hit, range 10 ft. Hit: 1d6 + PB  Necrotic damage, and the angel regains HP equal to half the damage dealt.</description>
+		</sheet>
+	</element>
+
+	<element name="Reality Warp (Bonus Action)" type="Companion Action" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_ACTION_GUARDIAN_ANGEL_REALITY_WARP">
+		<description>
+			<p><i>Bonus Action:</i> The angel teleports up to 60 feet to an unoccupied space it can see within 5 feet of an allied creature.</p>
+		</description>
+		<sheet>
+			<description>The angel teleports up to 60 feet to an unoccupied space it can see within 5 feet of an allied creature.</description>
+		</sheet>
+	</element>
+
+	<element name="Self Sacrifice (Reaction)" type="Companion Reaction" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_COMPANION_REACTION_GUARDIAN_ANGEL_SELF_SACRIFICE">
+		<description>
+			<p>When a creature other than the angel is hit by an attack while within 30 feet of the angel, the angel teleports into the creature's space and takes the damage instead of the creature. To do so, the angel must be able to see both the creature and the attacker. The angel then moves to the nearest unoccupied space.</p>
+		</description>
+		<sheet>
+			<description>When a creature other than the angel within 30 ft is hit by an attack, the angel teleports into its space and takes the damage instead (must see both creature and attacker), then moves to the nearest unoccupied space.</description>
+		</sheet>
+	</element>
+
+	<element name="Guardian Angel" type="Information" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_INFORMATION_COMPANION_GUARDIAN_ANGEL">
+		<description>
+			<p style="margin-bottom:5px"><em>Medium Construct, Unaligned</em></p>
+			<ul class="unstyled">
+				<li><strong>AC</strong> 10 + PB</li>
+				<li><strong>HP</strong> 5 + 5 times your Cleric Level</li>
+				<li><strong>Speed</strong> 0 ft., Fly 10 ft. (hover)</li>
+			</ul>
+			<ul class="unstyled">
+				<li><strong>Immunities</strong> Necrotic or Radiant (type determined by angel's nature); Blinded, Charmed, Frightened, Grappled, Prone, Restrained</li>
+				<li><strong>Senses</strong> Blindsight 60 ft., Passive Perception 12</li>
+				<li><strong>Languages</strong> Understands the languages you speak</li>
+				<li><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</li>
+			</ul>
+			<h4 style="margin-top:5px">Traits</h4>
+			<ul class="unstyled">
+				<li><strong><em>Incorporeal Being.</em></strong> The angel can move through other creatures as if they were Difficult Terrain.</li>
+			</ul>
+			<h4 style="margin-top:5px">Actions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Divine Blade.</strong> Melee Weapon Attack:</em> Bonus equals your spell attack modifier, range 10 ft. <em>Hit:</em> 1d6 + PB Necrotic or Radiant damage (type determined by angel's nature), and the angel regains Hit Points equal to half the damage taken.</li>
+			</ul>
+			<h4 style="margin-top:5px">Bonus Actions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Reality Warp.</strong></em> The angel teleports up to 60 feet to an unoccupied space it can see within 5 feet of an allied creature.</li>
+			</ul>
+			<h4 style="margin-top:5px">Reactions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Self Sacrifice.</strong></em> When a creature other than the angel is hit by an attack while within 30 feet of the angel, the angel teleports into the creature's space and takes the damage instead of the creature. To do so, the angel must be able to see both the creature and the attacker. The angel then moves to the nearest unoccupied space.</li>
+			</ul>
+		</description>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Guardian Domain Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_SPELLS" />
+	<element name="Protective Magic Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_PROTECTIVE_MAGIC" />
+	<element name="Guardian Angel Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_GUARDIAN_ANGEL" />
+	<element name="Angelic Protection Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_ANGELIC_PROTECTION" />
+	<element name="Divine Punishment Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_DIVINE_PUNISHMENT" />
+	<element name="Defensive Ward Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_GUARDIAN_DOMAIN_DEFENSIVE_WARD" />
+
+</elements>

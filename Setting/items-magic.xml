@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Magic Items</name>
+		<description>Magic Items and Potions from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<update version="0.0.1">
+			<file name="items-magic.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-magic.xml" />
+		</update>
+	</info>
+
+	<element name="Bag of Cannonballs" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_BAG_OF_CANNONBALLS">
+		<description>
+			<p>This bag connects to an extradimensional space that allows it to hold numerous items while never weighing more than 3 pounds. It can hold up to 100 Cannonballs or similar objects. You can take out Cannonballs as if doing so from a normal sack (no action required).</p>
+		</description>
+		<setters>
+			<set name="category">Magic Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+			<set name="weight" lb="3">3 lbs.</set>
+			<set name="stash" lb="900" weightless="true">true</set>
+		</setters>
+	</element>
+
+	<element name="Damascena" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_DAMASCENA">
+		<description>
+			<p>This basic technology invented by the Scions sacrifices lead bullets to generate powerful azure flames that scorch the abhorrent. This device is an effort to replicate the magical ability possessed by a select few.</p>
+			<p class="indent">As a Magic action, you can cause the Damascena to project blue flames in a 15-foot Cone. Each creature in the Cone must make a Dexterity saving throw (DC 11 plus your Proficiency Bonus), taking 4d4 Fire damage plus a number of d4s equal to your Proficiency Bonus on a failed save or half as much damage on a successful one. Each use of the Damascena consumes 5 Bullets.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+
+	<element name="Hand of Glory" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_HAND_OF_GLORY">
+		<description>
+			<p>A hand of glory is crafted from the hand of a hanged scourgeborne after it was covered in corpse wax and left to ferment in a casket.</p>
+			<p class="indent">While holding the hand, you can attune to one additional magical item. This magical item can only be a ring and must be worn on the Hand of Glory.</p>
+			<p class="indent">This hand has 5 charges and regains 1 charge daily at dusk. Whenever you expend a charge, a finger from the hand is burnt to a stump. As a Magic action while holding the hand, you can expend 1 charge and set a digit of the hand ablaze to cast the <i>Invisibility</i> spell targeting yourself. For the duration of the spell, the hand sheds Bright Light in a 10-foot radius that is only visible to the wearer of the hand. The spell ends early if the flame is extinguished by the wearer (no action required).</p>
+			<p class="indent">In addition, while under the effects of the <i>Invisibility</i> spell, you can cast the <i>Knock</i> spell at will on objects within the radius of the Bright Light.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+			<set name="charges">5</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_KNOCK" />
+		</rules>
+	</element>
+
+	<!-- Fungic Tea Variants -->
+	<element name="Fungic Tea (White)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FUNGIC_TEA_WHITE">
+		<description>
+			<p>The aroma and appearance of this tea are undeniably repulsive, with seemingly still-living organisms squirming within it. However, for those who can stomach it, the tea offers impressive soothing properties. Known for temporarily alleviating the effects of Madness, the darker the tea, the more potent and challenging to brew.</p>
+			<p class="indent">When you ingest the tea, you are relieved of the affected Madness for 1 hour or until the Madness ends, whichever is shorter. However, upon swallowing the tea, you must make a Constitution saving throw. On a failure, you can't stomach the appalling taste, regurgitate the tea, and don't gain the benefits. Both the type of Madness that the tea can end and the save DC are determined by its rarity (see table below).</p>
+			<p class="indent">The tea is made in kettles that can pour up to 2d4 cups.</p>
+			<p class="indent"><strong>White Tea:</strong> DC 12 Constitution saving throw; relieves one short-term Madness.</p>
+			<table>
+				<thead>
+					<tr><td>Tea Type</td><td>Saving Throw DC</td><td>Affected Madness</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>White</td><td>12</td><td>One short-term</td><td>Uncommon</td></tr>
+					<tr><td>Yellow</td><td>14</td><td>All short-term; one long-term</td><td>Rare</td></tr>
+					<tr><td>Blue</td><td>16</td><td>All short-term and long-term</td><td>Very Rare</td></tr>
+					<tr><td>Black</td><td>18</td><td>All short-term and long-term; one indefinite</td><td>Legendary</td></tr>
+				</tbody>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Uncommon</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Fungic Tea (Yellow)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FUNGIC_TEA_YELLOW">
+		<description>
+			<p>The aroma and appearance of this tea are undeniably repulsive, with seemingly still-living organisms squirming within it. However, for those who can stomach it, the tea offers impressive soothing properties. Known for temporarily alleviating the effects of Madness, the darker the tea, the more potent and challenging to brew.</p>
+			<p class="indent">When you ingest the tea, you are relieved of the affected Madness for 1 hour or until the Madness ends, whichever is shorter. However, upon swallowing the tea, you must make a Constitution saving throw. On a failure, you can't stomach the appalling taste, regurgitate the tea, and don't gain the benefits. Both the type of Madness that the tea can end and the save DC are determined by its rarity (see table below).</p>
+			<p class="indent">The tea is made in kettles that can pour up to 2d4 cups.</p>
+			<p class="indent"><strong>Yellow Tea:</strong> DC 14 Constitution saving throw; relieves all short-term Madness and one long-term Madness.</p>
+			<table>
+				<thead>
+					<tr><td>Tea Type</td><td>Saving Throw DC</td><td>Affected Madness</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>White</td><td>12</td><td>One short-term</td><td>Uncommon</td></tr>
+					<tr><td>Yellow</td><td>14</td><td>All short-term; one long-term</td><td>Rare</td></tr>
+					<tr><td>Blue</td><td>16</td><td>All short-term and long-term</td><td>Very Rare</td></tr>
+					<tr><td>Black</td><td>18</td><td>All short-term and long-term; one indefinite</td><td>Legendary</td></tr>
+				</tbody>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Rare</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Fungic Tea (Blue)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FUNGIC_TEA_BLUE">
+		<description>
+			<p>The aroma and appearance of this tea are undeniably repulsive, with seemingly still-living organisms squirming within it. However, for those who can stomach it, the tea offers impressive soothing properties. Known for temporarily alleviating the effects of Madness, the darker the tea, the more potent and challenging to brew.</p>
+			<p class="indent">When you ingest the tea, you are relieved of the affected Madness for 1 hour or until the Madness ends, whichever is shorter. However, upon swallowing the tea, you must make a Constitution saving throw. On a failure, you can't stomach the appalling taste, regurgitate the tea, and don't gain the benefits. Both the type of Madness that the tea can end and the save DC are determined by its rarity (see table below).</p>
+			<p class="indent">The tea is made in kettles that can pour up to 2d4 cups.</p>
+			<p class="indent"><strong>Blue Tea:</strong> DC 16 Constitution saving throw; relieves all short-term and long-term Madness.</p>
+			<table>
+				<thead>
+					<tr><td>Tea Type</td><td>Saving Throw DC</td><td>Affected Madness</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>White</td><td>12</td><td>One short-term</td><td>Uncommon</td></tr>
+					<tr><td>Yellow</td><td>14</td><td>All short-term; one long-term</td><td>Rare</td></tr>
+					<tr><td>Blue</td><td>16</td><td>All short-term and long-term</td><td>Very Rare</td></tr>
+					<tr><td>Black</td><td>18</td><td>All short-term and long-term; one indefinite</td><td>Legendary</td></tr>
+				</tbody>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Very Rare</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Fungic Tea (Black)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FUNGIC_TEA_BLACK">
+		<description>
+			<p>The aroma and appearance of this tea are undeniably repulsive, with seemingly still-living organisms squirming within it. However, for those who can stomach it, the tea offers impressive soothing properties. Known for temporarily alleviating the effects of Madness, the darker the tea, the more potent and challenging to brew.</p>
+			<p class="indent">When you ingest the tea, you are relieved of the affected Madness for 1 hour or until the Madness ends, whichever is shorter. However, upon swallowing the tea, you must make a Constitution saving throw. On a failure, you can't stomach the appalling taste, regurgitate the tea, and don't gain the benefits. Both the type of Madness that the tea can end and the save DC are determined by its rarity (see table below).</p>
+			<p class="indent">The tea is made in kettles that can pour up to 2d4 cups.</p>
+			<p class="indent"><strong>Black Tea:</strong> DC 18 Constitution saving throw; relieves all short-term and long-term Madness, and one indefinite Madness.</p>
+			<table>
+				<thead>
+					<tr><td>Tea Type</td><td>Saving Throw DC</td><td>Affected Madness</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>White</td><td>12</td><td>One short-term</td><td>Uncommon</td></tr>
+					<tr><td>Yellow</td><td>14</td><td>All short-term; one long-term</td><td>Rare</td></tr>
+					<tr><td>Blue</td><td>16</td><td>All short-term and long-term</td><td>Very Rare</td></tr>
+					<tr><td>Black</td><td>18</td><td>All short-term and long-term; one indefinite</td><td>Legendary</td></tr>
+				</tbody>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Legendary</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<!-- Holy Tonic Variants -->
+	<element name="Holy Tonic" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_HOLY_TONIC">
+		<description>
+			<p>The mostly clear tonic in this vial is slightly milky and sparkles when light shines through. It was originally created by a secretive branch of the Radiant Church.</p>
+			<p class="indent">When you drink this tonic, you are cured of any magical contagions affecting you, you regain 4d4 + 4 Hit Points, and you may suffer additional side effects.</p>
+			<table>
+				<thead>
+					<tr><td>Tonic</td><td>HP Regained</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>Holy Tonic</td><td>4d4 + 4</td><td>Uncommon</td></tr>
+					<tr><td>Ascendant Tonic</td><td>6d4 + 4</td><td>Rare</td></tr>
+					<tr><td>Radiant Tonic</td><td>8d8 + 4</td><td>Very Rare</td></tr>
+				</tbody>
+			</table>
+			<p class="indent"><strong>Side Effects.</strong> Depending on the lore your game implements, the Holy Tonic can have one or more of the following side effects. These effects are hidden from player characters and no magic can reveal them.</p>
+			<ul>
+				<li>If you gain the Unconscious condition within 1d12 minutes after drinking the tonic, you must succeed a DC 12 Wisdom saving throw or gain a Long-Term Madness when you regain consciousness.</li>
+				<li>1 hour after you drink the tonic, you hear whispering voices urging you toward violence and chaos. You must succeed on a DC 10 Wisdom saving throw or have Disadvantage on any Charisma (Persuasion) checks made in the next 1d4 hours. Additionally, for the duration, you are compelled to act on aggressive impulses as determined by the GM.</li>
+				<li>24 hours after you drink the tonic, you must succeed on a DC 10 Wisdom saving throw or gain a Short-Term Madness.</li>
+				<li>24 hours after you drink the tonic, you must succeed on a DC 11 Wisdom saving throw or crave more tonic. For the next 1d4 hours, you desperately search for a Holy Tonic and drink the first one you find. If you do not drink one within this time, you gain 1 Exhaustion level and the craving goes away.</li>
+			</ul>
+			<p class="indent">Each subsequent Holy Tonic you drink in a 7-day period increases the DCs for the saving throws you must make by 1. Each three Holy Tonics you drink in a 7-day period increases any Exhaustion levels the tonic causes by 1. If you fail five Wisdom saving throws caused by a Holy Tonic within a 7-day period, a curse fully takes hold. You undergo a horrifying transformation into a monstrous beast, losing control of your actions and permanently becoming a Beast or Monstrosity of the GM's choice under their control.</p>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Uncommon</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Ascendant Tonic" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_ASCENDANT_TONIC">
+		<description>
+			<p>The mostly clear tonic in this vial is slightly milky and sparkles when light shines through. It was originally created by a secretive branch of the Radiant Church.</p>
+			<p class="indent">When you drink this tonic, you are cured of any magical contagions affecting you, you regain 6d4 + 4 Hit Points, and you may suffer additional side effects.</p>
+			<table>
+				<thead>
+					<tr><td>Tonic</td><td>HP Regained</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>Holy Tonic</td><td>4d4 + 4</td><td>Uncommon</td></tr>
+					<tr><td>Ascendant Tonic</td><td>6d4 + 4</td><td>Rare</td></tr>
+					<tr><td>Radiant Tonic</td><td>8d8 + 4</td><td>Very Rare</td></tr>
+				</tbody>
+			</table>
+			<p class="indent"><strong>Side Effects.</strong> Depending on the lore your game implements, the Holy Tonic can have one or more of the following side effects. These effects are hidden from player characters and no magic can reveal them.</p>
+			<ul>
+				<li>If you gain the Unconscious condition within 1d12 minutes after drinking the tonic, you must succeed a DC 12 Wisdom saving throw or gain a Long-Term Madness when you regain consciousness.</li>
+				<li>1 hour after you drink the tonic, you hear whispering voices urging you toward violence and chaos. You must succeed on a DC 10 Wisdom saving throw or have Disadvantage on any Charisma (Persuasion) checks made in the next 1d4 hours. Additionally, for the duration, you are compelled to act on aggressive impulses as determined by the GM.</li>
+				<li>24 hours after you drink the tonic, you must succeed on a DC 10 Wisdom saving throw or gain a Short-Term Madness.</li>
+				<li>24 hours after you drink the tonic, you must succeed on a DC 11 Wisdom saving throw or crave more tonic. For the next 1d4 hours, you desperately search for a Holy Tonic and drink the first one you find. If you do not drink one within this time, you gain 1 Exhaustion level and the craving goes away.</li>
+			</ul>
+			<p class="indent">Each subsequent Holy Tonic you drink in a 7-day period increases the DCs for the saving throws you must make by 1. Each three Holy Tonics you drink in a 7-day period increases any Exhaustion levels the tonic causes by 1. If you fail five Wisdom saving throws caused by a Holy Tonic within a 7-day period, a curse fully takes hold. You undergo a horrifying transformation into a monstrous beast, losing control of your actions and permanently becoming a Beast or Monstrosity of the GM's choice under their control.</p>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Rare</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+	<element name="Radiant Tonic" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_RADIANT_TONIC">
+		<description>
+			<p>The mostly clear tonic in this vial is slightly milky and sparkles when light shines through. It was originally created by a secretive branch of the Radiant Church.</p>
+			<p class="indent">When you drink this tonic, you are cured of any magical contagions affecting you, you regain 8d8 + 4 Hit Points, and you may suffer additional side effects.</p>
+			<table>
+				<thead>
+					<tr><td>Tonic</td><td>HP Regained</td><td>Rarity</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>Holy Tonic</td><td>4d4 + 4</td><td>Uncommon</td></tr>
+					<tr><td>Ascendant Tonic</td><td>6d4 + 4</td><td>Rare</td></tr>
+					<tr><td>Radiant Tonic</td><td>8d8 + 4</td><td>Very Rare</td></tr>
+				</tbody>
+			</table>
+			<p class="indent"><strong>Side Effects.</strong> Depending on the lore your game implements, the Holy Tonic can have one or more of the following side effects. These effects are hidden from player characters and no magic can reveal them.</p>
+			<ul>
+				<li>If you gain the Unconscious condition within 1d12 minutes after drinking the tonic, you must succeed a DC 12 Wisdom saving throw or gain a Long-Term Madness when you regain consciousness.</li>
+				<li>1 hour after you drink the tonic, you hear whispering voices urging you toward violence and chaos. You must succeed on a DC 10 Wisdom saving throw or have Disadvantage on any Charisma (Persuasion) checks made in the next 1d4 hours. Additionally, for the duration, you are compelled to act on aggressive impulses as determined by the GM.</li>
+				<li>24 hours after you drink the tonic, you must succeed on a DC 10 Wisdom saving throw or gain a Short-Term Madness.</li>
+				<li>24 hours after you drink the tonic, you must succeed on a DC 11 Wisdom saving throw or crave more tonic. For the next 1d4 hours, you desperately search for a Holy Tonic and drink the first one you find. If you do not drink one within this time, you gain 1 Exhaustion level and the craving goes away.</li>
+			</ul>
+			<p class="indent">Each subsequent Holy Tonic you drink in a 7-day period increases the DCs for the saving throws you must make by 1. Each three Holy Tonics you drink in a 7-day period increases any Exhaustion levels the tonic causes by 1. If you fail five Wisdom saving throws caused by a Holy Tonic within a 7-day period, a curse fully takes hold. You undergo a horrifying transformation into a monstrous beast, losing control of your actions and permanently becoming a Beast or Monstrosity of the GM's choice under their control.</p>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Very Rare</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+
+</elements>

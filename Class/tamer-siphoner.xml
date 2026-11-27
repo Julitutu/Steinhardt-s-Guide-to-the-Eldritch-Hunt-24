@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Tamer - Siphoner</name>
+		<source>Steinhardt's Guide to the Eldritch Hunt (2024)</source>
+		<update version="0.1.0">
+			<file name="tamer-siphoner.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/tamer-siphoner.xml" />
+		</update>
+	</info>
+
+	<element name="Siphoner" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_TAMER_SIPHONER">
+		<supports>Training Paradigm</supports>
+		<description>
+			<p>Whether it be blood, bone marrow, or primordial essence, you are a specialist at funnelling the life force of a foe into your companions. With their biomantic signature captured, you can turn this power back on its donor in the form of blood disease or, in the case of the bloodless, crippling internal afflictions. A student of physiologies of all persuasions, you are as adept at restoring the plagued as you are at disseminating debilitating maladies.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_SIPHON" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_AFFLICTION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_SIPHONER_SPELLS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_CORRUPTION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_WARDING_TRANSFUSION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_UNIVERSAL_RECIPIENT" />
+		</description>
+		<sheet display="false">
+			<description>Whether it be blood, bone marrow, or primordial essence, you are a specialist at funnelling the life force of a foe into your companions.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_SIPHON" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_AFFLICTION" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_SIPHONER_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_CORRUPTION" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_WARDING_TRANSFUSION" level="10" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_UNIVERSAL_RECIPIENT" level="14" />
+		</rules>
+	</element>
+	<element name="Siphon" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_SIPHON">
+		<description>
+			<p>Your companions' attacks siphon motes of its target's life force. Once per turn, when your companion hits a creature of CR ¼ or higher with an attack and reduces its current hit points, your companion gains 1 haemophilic charge and the target becomes marked.</p>
+			<p class="indent">Your companion can have a maximum number of charges equal to your proficiency bonus plus your tamer spellcasting ability modifier and loses all charges 1 minute after it gains its last one. When a companion loses its haemophilic charges, any creatures marked by it cease being marked.</p>
+			<p class="indent"><b>Current &amp; Temporary Hit Points.</b> The Siphon feature does not trigger if the damage a companion deals only damages a target's temporary hit points; a target's actual current hit points must be reduced in order to gain a charge. This is also true for any features of this subclass that references reducing “current hit points”, such as Universal Recipient.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>When your companion hits a creature of CR 1/4 or higher with an attack and reduces its actual current hit points, your companion gains 1 haemophilic charge and the target becomes marked.&#13;
+			Your companion can have a maximum number of charges equal to {{proficiency}} plus your tamer spellcasting ability modifier and loses all charges 1 minute after it gains its last one. When a companion loses its haemophilic charges, any creatures marked by it cease being marked.</description>
+		</sheet>
+	</element>
+	<element name="Affliction" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_AFFLICTION">
+		<description>
+			<p>As an action, you can spend a number of your summoned companion's haemophilic charges up to your proficiency bonus (minimum of 1) to produce one of the following effects of your choice. If an effect calls for a saving throw, this is against your tamer spell save DC.</p>
+			<ul>
+				<li><strong>Haemorrhage.</strong> The next time your companion hits a creature marked by it with an attack before the end of your next turn, that creature begins bleeding for 1 minute. While bleeding, a creature takes 1d6 necrotic damage at the start of each of its turns for each charge spent and then makes a Constitution saving throw, ending the effect on a success. A creature that doesn't have blood is immune to this effect.</li>
+				<li><strong>Thalassemia.</strong> You target a number of marked creatures that you can see within 30 feet of your companion equal to the number of charges spent. Each creature must succeed on a Charisma saving throw or become cursed as per the bane spell for 1 minute. A cursed creature can make a Charisma saving throw at the end of each of its turns, ending the curse on itself on a success.</li>
+				<li><strong>Lyssaviria.</strong> Until the start of your next turn, the critical range of attacks your companion makes against creatures marked by it is increased by 1 for every 2 charges spent. For example, if you spend 4 charges and your companion would normally score a critical hit on a roll of 20, your companion instead scores a critical hit on a roll of 18-20.</li>
+				<li><strong>Neutrophilia.</strong> One creature within 30 feet of your companion that is marked by it must succeed on a Wisdom saving throw or become cursed for 1 minute. While cursed in this way, the target sees all creatures as hostile to it and randomly targets creatures with its attacks, spells, and other effects. This effect ends early when the cursed target has damaged creatures it would usually consider friendly a number of times equal to the number of charges spent on this effect.</li>
+				<li><strong>Thrombosis.</strong> A blood clot forms in the heart of one creature within 30 feet of your companion that is marked by it. The target must make a Strength saving throw as its heart tries to unblock the clot. On a failed save, a creature takes necrotic damage equal to your tamer spellcasting ability modifier, plus 1d8 for each charge spent on this effect. On a successful save, the creature takes half as much damage. A creature that doesn't have blood is immune to this effect.</li>
+			</ul>
+			<p class="indent">A creature can't be affected by more than one of the effects from this feature at a time; it immediately loses any effects previously gained from this feature when it gains a new one.</p>
+		</description>
+		<sheet action="Action">
+			<description>You can spend up to {{proficiency}} of your summoned companion's haemophilic charges (minimum 1) to produce one of the following effects (Save DC {{tamer:spellcasting:dc}}):&#13;
+			• Haemorrhage. Next time your companion hits a marked creature before the end of your next turn, it bleeds for 1 minute, taking 1d6 necrotic damage per charge spent at the start of each of its turns, then making a Constitution saving throw to end it (bloodless creatures are immune).&#13;
+			• Thalassemia. Target marked creatures within 30 feet of your companion equal to charges spent. Each must succeed on a Charisma saving throw or be cursed as per bane for 1 minute (repeat save at end of each turn).&#13;
+			• Lyssaviria. Until the start of your next turn, your companion's critical hit range against marked creatures increases by 1 for every 2 charges spent.&#13;
+			• Neutrophilia. One marked creature within 30 feet of your companion must succeed on a Wisdom saving throw or be cursed for 1 minute, seeing all creatures as hostile and targeting randomly until it damages friendly creatures a number of times equal to charges spent.&#13;
+			• Thrombosis. One marked creature within 30 feet of your companion makes a Strength saving throw, taking your tamer spellcasting ability modifier + 1d8 necrotic damage per charge spent on a failure, or half on a success (bloodless creatures are immune).&#13;
+			A creature can't be affected by more than one of these effects at a time.</description>
+		</sheet>
+	</element>
+	<element name="Siphoner Spells" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_SIPHONER_SPELLS">
+		<description>
+			<p>You learn additional spells when you reach certain levels in this class, as shown in the Siphoner Spells table. Each spell counts as a tamer spell for you, but it doesn't count against the number of tamer spells you know.</p>
+			<h5>Siphoner Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Tamer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><i>cure wounds, hideous laughter</i></td></tr>
+				<tr><td>5th</td><td><i>lesser restoration, levitate</i></td></tr>
+				<tr><td>9th</td><td><i>bestow curse, mass healing word</i></td></tr>
+				<tr><td>13th</td><td><i>blight, stoneskin</i></td></tr>
+				<tr><td>17th</td><td><i>greater restoration, mass cure wounds</i></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" level="3" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_TASHAS_HIDEOUS_LAUGHTER" level="3" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" level="5" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_LEVITATE" level="5" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BESTOW_CURSE" level="9" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MASS_HEALING_WORD" level="9" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLIGHT" level="13" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_STONESKIN" level="13" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_GREATER_RESTORATION" level="17" spellcasting="Tamer" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MASS_CURE_WOUNDS" level="17" spellcasting="Tamer" prepared="true" />
+		</rules>
+	</element>
+	<element name="Corruption" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_CORRUPTION">
+		<description>
+			<p>You've taught your companion how to use its haemophilic charges to corrupt the biospheres of those around it. Choose one of the following diseases from the contagion spell: blinding sickness, filth fever, mindfire, or seizure. As an action on its turn, your summoned companion can spend a number of haemophilic charges up to your proficiency bonus to force an equal number of creatures it can see within 30 feet of it to each make a Constitution saving throw. Creatures marked by your companion have disadvantage on this saving throw. On a failure, a creature is poisoned and immediately becomes afflicted by the chosen disease's effect for 10 minutes. An affected creature can repeat the saving throw at the end of each of its turns, ending the poisoned condition and the effect on itself on a success.</p>
+			<p class="indent">After your companion uses this feature, that companion can't use this feature again until you finish a short or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest" action="Action">
+			<description>Choose blinding sickness, filth fever, mindfire, or seizure from the contagion spell. As an action on its turn, your summoned companion can spend up to {{proficiency}} haemophilic charges to force an equal number of creatures within 30 feet of it to make a DC {{tamer:spellcasting:dc}} Constitution saving throw (marked creatures have disadvantage). On a failure, a creature is poisoned and afflicted by the chosen disease for 10 minutes (repeat save at the end of each of its turns to end both).</description>
+		</sheet>
+	</element>
+	<element name="Warding Transfusion" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_WARDING_TRANSFUSION">
+		<description>
+			<p>Whenever you summon a companion, you can create a haematological bond with it (no action required). Until the companion is dismissed, you become linked as per the warding bond spell. This effect doesn't end by you and the companion being more than 60 feet apart and, for the duration, neither you nor your companion can be the target of a warding bond spell.</p>
+			<p class="indent"><b>Transfusion.</b> As a reaction when you take damage, you can spend a number of your companion's haemophilic charges up to your proficiency bonus to invigorate your body. The damage is reduced by 2d6 for each charge spent.</p>
+		</description>
+		<sheet action="Reaction">
+			<description>Whenever you summon a companion, you can link with it as per warding bond (no action required, doesn't end by distance, neither can be targeted by warding bond).&#13;
+			• Transfusion. As a reaction when you take damage, you can spend up to {{proficiency}} of your companion's haemophilic charges to reduce the damage by 2d6 for each charge spent.</description>
+		</sheet>
+	</element>
+	<element name="Universal Recipient" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SIPHONER_UNIVERSAL_RECIPIENT">
+		<description>
+			<p>As an action, you transform the physiology of your summoned companion, causing it to become a willing recipient for all blood types. For the next minute, your companion gains the following traits. If an effect calls for a saving throw, this is against your tamer spell save DC.</p>
+			<ul>
+				<li>Once per turn, when a creature hits your companion with a melee attack and its current hit points are reduced, your companion gains one haemophilic charge and the attacker becomes marked, as per the Siphon feature.</li>
+				<li>At the start of its turn, your companion regains 1d6 hit points for each haemophilic charge it has.</li>
+				<li>When your companion hits a creature with an attack, the creature must succeed on a Constitution saving throw or become poisoned for 1 minute.</li>
+			</ul>
+			<p class="indent">For the duration, at the end of each of your turns, you can cause your companion to gain a number of haemophilic charges up to your tamer spellcasting ability modifier (no action required). For each charge your companion gains in this way, you take 2d6 necrotic damage that can't be reduced or prevented in any way.</p>
+			<p class="indent">Once you use this feature, you can't do so again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Action">
+			<description>You transform your summoned companion's physiology for 1 minute, granting it the following traits (Save DC {{tamer:spellcasting:dc}}):&#13;
+			• Once per turn, when hit by a melee attack that reduces its actual current hit points, it gains 1 haemophilic charge and marks the attacker.&#13;
+			• At the start of its turn, it regains 1d6 hit points per haemophilic charge it has.&#13;
+			• When it hits a creature with an attack, the creature must succeed on a Constitution saving throw or be poisoned for 1 minute.&#13;
+			At the end of each of your turns for the duration, you can grant your companion haemophilic charges up to your tamer spellcasting ability modifier (no action required), taking 2d6 unpreventable/irreducible necrotic damage per charge granted.</description>
+		</sheet>
+	</element>
+</elements>

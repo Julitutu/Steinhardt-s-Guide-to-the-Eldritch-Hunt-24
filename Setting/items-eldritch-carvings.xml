@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Eldritch Carvings</name>
+		<description>Eldritch Carvings from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<update version="0.0.1">
+			<file name="items-eldritch-carvings.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-eldritch-carvings.xml" />
+		</update>
+	</info>
+
+	<element name="Eldritch Carvings" type="Rule" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS">
+		<description>
+			<p>To apply an Eldritch Carving, one must be proficient with Leatherworker's Tools. Unlike most art, where the artist determines the quality of the art, with Eldritch Carvings, the canvas—the person getting carved—determines the quality of the work. The canvas must envision the rune in their mind as best they can, causing their body to distort under the eldritch pressure. The carver can then simply apply the necessary tool against the skin and let the eldritch powers move the brush, needle, or knife, depending on whether the Eldritch Carving is Drawn, Tattooed, or Scarified, respectively. This procedure takes 3 hours, and the canvas must make a saving throw at the end.</p>
+			<ul>
+				<li><strong>Drawn.</strong> A creature that has an Eldritch Carving drawn on its flesh makes a DC 13 Constitution saving throw. On a failure, it takes 2d10 Force damage and gains a Short-Term Madness, and the Eldritch Carving isn't created successfully.</li>
+				<li><strong>Tattooed.</strong> A creature that has an Eldritch Carving tattooed on its flesh makes a DC 20 Constitution saving throw. On a failure, it takes 10d10 Force damage and gains a Long-Term Madness, and the carving isn't created successfully.</li>
+				<li><strong>Scarified.</strong> A creature that has an Eldritch Carving scarred on its flesh makes a DC 29 Constitution saving throw. On a failure, it takes 25d10 Force damage and gains an Indefinite Madness, and the Eldritch Carving isn't created successfully.</li>
+			</ul>
+			<p class="indent">Success on the saving throw completes the Eldritch Carving. If the carving procedure is interrupted at any moment before the end, the saving throw automatically fails, inflicting the appropriate damage and Madness to the canvas. If the damage of failing an Eldritch Carving reduces a creature to 0 Hit Points, its body is instantly disintegrated into a puddle of blood and gore.</p>
+			<p class="indent">After the Eldritch Carving is complete, a creature is attuned to it (if required) and gains both the effects of the carving and the effects of its lesser carvings. For example, if an Eldritch Carving is Tattooed on your flesh, you gain the benefits of it being Tattooed and also those from it being Drawn.</p>
+			<p class="indent">If attuning to an Eldritch Carving would cause a creature to be attuned to more than three items, it loses Attunement to one item of its choice. Some Eldritch Carvings, denoted as 'Requires Special Attunement', do not count against your maximum number of attuned items. To remove an Eldritch Carving, the flesh where the Eldritch Carving is located needs to be thoroughly burnt. Burning a carving also removes Attunement to it. Scarified Eldritch Carvings can’t be removed.</p>
+			<p class="indent">The DC of the Constitution saving throw can be increased or decreased (to a minimum of 0) by the canvas, depending on the factors below. Only one of the following can be applied at a time.</p>
+			<ul>
+				<li>A creature that has seen the original Eldritch Carving and studied it for 8 hours lowers the DC of the saving throw by 15.</li>
+				<li>A creature that has seen a perfect copy of the original Eldritch Carving and studied it for 8 hours can understand most of the eldritch essence, lowering the DC by 8.</li>
+				<li>A creature that has seen a near-perfect copy of the original Eldritch Carving and studied it for 8 hours can lower the DC of the saving throw by 4.</li>
+				<li>A creature that has seen an imperfect copy of the Eldritch Carving and studied it for 8 hours is misguided in their approach, and the DC of the saving throw is increased by 5.</li>
+			</ul>
+		</description>
+	</element>
+
+	<!-- Curse of Moon-Blood -->
+	<element name="Curse of Moon-Blood (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_CURSE_OF_MOON_BLOOD_DRAWN">
+		<description>
+			<p>During the initial days of the scourge, not all the afflicted turned to beasts. Most of them went mad, some unlucky few were devoured, but the hunger of those blood-thirsty enough to consume the flesh of both man and beast irreversibly twisted their soul and body. These cannibals did what they had to in order to survive, but became cursed, turning into the first of the crimson beasts, also known as the Moon-Blooded. The fate of a Moon-Blooded was to die an atrocious death, worthy of the weight of their sins.</p>
+			<p class="indent">Such atrocities wouldn’t go unnoticed, and one day all those who contracted this curse were found dead, their mangled corpses half buried within the ground. Who committed such an act? No one knows. In the ensuing days, those privy to the powers of eldritch carvings were quick to notice the pattern amidst the corpses, Martyr Tulio first among them.</p>
+			<p class="indent">This eldritch rune engraved upon one's flesh allows the control of the curse it was created from. The host can shape their blood into weapons and use it to deflect deadly blows. Though powerful, if too much blood is spilled, the ancient curse awakens anew, devouring life and unleashing the terrifying crimson beast of old.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>As a Bonus Action, you unleash the powers held within the carving, transforming into a crimson beast. You take Necrotic damage equal to one roll of your Hit Die, which can’t be reduced or prevented in any way, and you take this damage again for each minute you remain transformed. This transformation ends early if you gain the Unconscious condition or end it as a Bonus Action. The blood you lose shapes itself into one of the following forms:</p>
+			<p class="indent"><strong>Barbed Tail.</strong> A bloody tail erupts from your lower spine. As part of transforming and as a Bonus Action on subsequent turns, you can make a melee attack roll with it. The tail is considered a Simple Melee weapon with which you are proficient, it has the Finesse and Reach properties, and it deals 1d8 Piercing damage on a hit.</p>
+			<p class="indent"><strong>Razor Claws.</strong> Your hands grow sharp claws that you can use to climb and kill. You gain a Climb Speed equal to your Speed, and your Unarmed Strikes deal an extra 1d6 Slashing damage.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Curse of Moon-Blood (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_CURSE_OF_MOON_BLOOD_TATTOOED">
+		<description>
+			<p>This eldritch rune engraved upon one's flesh allows the control of the curse it was created from. The host can shape their blood into weapons and use it to deflect deadly blows. Though powerful, if too much blood is spilled, the ancient curse awakens anew, devouring life and unleashing the terrifying crimson beast of old.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>As a Bonus Action, you unleash the powers held within the carving, transforming into a crimson beast. You take Necrotic damage equal to one roll of your Hit Die, which can’t be reduced or prevented in any way, and you take this damage again for each minute you remain transformed. This transformation ends early if you gain the Unconscious condition or end it as a Bonus Action. The blood you lose shapes itself into one of the following forms:</p>
+			<p class="indent"><strong>Barbed Tail.</strong> A bloody tail erupts from your lower spine. As part of transforming and as a Bonus Action on subsequent turns, you can make a melee attack roll with it. The tail is considered a Simple Melee weapon with which you are proficient, it has the Finesse and Reach properties, and it deals 1d8 Piercing damage on a hit.</p>
+			<p class="indent"><strong>Razor Claws.</strong> Your hands grow sharp claws that you can use to climb and kill. You gain a Climb Speed equal to your Speed, and your Unarmed Strikes deal an extra 1d6 Slashing damage.</p>
+			<h5 class="caption">Tattooed</h5>
+			<p>The carving's power protects your body when the situation is most dire. Your AC increases by 2 while you are Bloodied.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Curse of Moon-Blood (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_CURSE_OF_MOON_BLOOD_SCARIFIED">
+		<description>
+			<p>This eldritch rune engraved upon one's flesh allows the control of the curse it was created from. The host can shape their blood into weapons and use it to deflect deadly blows. Though powerful, if too much blood is spilled, the ancient curse awakens anew, devouring life and unleashing the terrifying crimson beast of old.</p>
+			<h5 class="caption">Tattooed</h5>
+			<p>The carving's power protects your body when the situation is most dire. Your AC increases by 2 while you are Bloodied.</p>
+			<h5 class="caption">Scarified</h5>
+			<p>When you choose to transform into a crimson beast (as a Bonus Action, taking Necrotic damage equal to one roll of your Hit Die initially and per minute, which can't be reduced or prevented), the powers you gain access to are enhanced, replacing the Drawn powers. Choose one of the following forms:</p>
+			<p class="indent"><strong>Blood Wings.</strong> You sprout wings from your back, giving you a Fly Speed equal to your Speed.</p>
+			<p class="indent"><strong>Barbed Tail.</strong> A bloody tail erupts from your lower spine. As part of transforming and as a Bonus Action on subsequent turns, you can make a melee attack roll with it. The tail is considered a Simple Melee weapon with which you are proficient, it has the Finesse and Reach properties, and it deals 3d8 Piercing damage on a hit.</p>
+			<p class="indent"><strong>Razor Claws.</strong> Your hands grow sharp claws that you can use to climb and kill. You gain a Climb Speed equal to your Speed, and your Unarmed Strikes deal an extra 2d6 Slashing damage.</p>
+			<p class="indent">In addition, when you are reduced to 0 Hit Points, your blood takes a life of its own and you go berserk for 1 minute or until you have the Unconscious condition. You regain 1 Hit Point and gain a number of Temporary Hit Points equal to your Hit Point maximum. While berserk, you gain all three forms of your crimson beast transformation, and on each of your turns, you spend your turn moving to and attacking the nearest creature you can see. If no creature is near enough, you attack an object, with preference for an object smaller than yourself. When the berserk effect ends, you immediately drop to 0 Hit Points, are dying, and have 2 failed Death Saving Throws. Additionally, you lose all properties of the Eldritch Carving for 1 week.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<!-- Leaded Blood -->
+	<element name="Leaded Blood (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_LEADED_BLOOD_DRAWN">
+		<description>
+			<p>Though the original carving has been lost to time, the Scions have manufactured enough perfect replicas to make this one of the most widely distributed eldritch carvings, having shared them with the Church and the hunters in an apparent selfless effort to aid against the Scourge. The most recent manikins of the Scions all come with this carving drawn on their porcelain skin, as most cannot handle a deeper eldritch knowledge.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>You can convert your blood into bullets. As a Bonus Action, you can lose 3 Hit Points to create 3 blood Bullets. These Bullets function as regular Bullets. You can only ever have 3 blood Bullets present at once; any additional Bullets you create immediately liquefy. The Bullets last until they're used or until you finish a Short or Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement" addition="Special">true</set>
+		</setters>
+	</element>
+
+	<element name="Leaded Blood (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_LEADED_BLOOD_TATTOOED">
+		<description>
+			<p>Though the original carving has been lost to time, the Scions have manufactured enough perfect replicas to make this one of the most widely distributed eldritch carvings, having shared them with the Church and the hunters in an apparent selfless effort to aid against the Scourge.</p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p>You can convert your blood into bullets. As a Bonus Action, you can lose 3 Hit Points to create 5 blood Bullets. These Bullets function as regular Bullets. You can only ever have 5 blood Bullets present at once; any additional Bullets you create immediately liquefy. The Bullets last until they're used or until you finish a Short or Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement" addition="Special">true</set>
+		</setters>
+	</element>
+
+	<element name="Leaded Blood (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_LEADED_BLOOD_SCARIFIED">
+		<description>
+			<p>Though the original carving has been lost to time, the Scions have manufactured enough perfect replicas to make this one of the most widely distributed eldritch carvings, having shared them with the Church and the hunters in an apparent selfless effort to aid against the Scourge.</p>
+			<h5 class="caption">Drawn, Tattooed &amp; Scarified</h5>
+			<p>You can convert your blood into bullets. As a Bonus Action, you can lose 3 Hit Points to create 10 blood Bullets or a blood Cannonball. These function as their regular counterparts. You can only ever have 10 blood Bullets or a blood Cannonball present at once; any additional Bullets or Cannonballs you create immediately liquefy. These last until they're used or until you finish a Short or Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement" addition="Special">true</set>
+		</setters>
+	</element>
+
+	<!-- Sacrificial Brand -->
+	<element name="Sacrificial Brand (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SACRIFICIAL_BRAND_DRAWN">
+		<description>
+			<p>The carving, notorious among hunters and commonly dubbed the "Brand of Death" is a harbinger of an early demise for those burdened with its curse. Nevertheless, Steinhardt and Martyr Tulio—valiant souls undaunted by fear—carved the eldritch sigil into their own skin willingly. By bearing the ominous symbol, they sought to lure the beasts closer to them during the Hunt, granting their brothers-in-arms moments of respite amidst the chaos.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>During the three days of the Blood Moon, all Evil-aligned creatures within Luyarnha gain Advantage on Wisdom (Perception) or Wisdom (Survival) checks to locate creatures with this Eldritch Carving.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Common</set>
+		</setters>
+	</element>
+
+	<element name="Sacrificial Brand (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SACRIFICIAL_BRAND_TATTOOED">
+		<description>
+			<p>The carving, notorious among hunters and commonly dubbed the "Brand of Death" is a harbinger of an early demise for those burdened with its curse.</p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p>During the three days of the Blood Moon, all Evil-aligned creatures within Luyarnha gain Advantage on Wisdom (Perception) or Wisdom (Survival) checks to locate creatures with this Eldritch Carving. If they are within 120 feet of a creature bearing the Eldritch Carving, they know their exact location and receive a +1 bonus to attack rolls and damage rolls against them.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+
+	<element name="Sacrificial Brand (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SACRIFICIAL_BRAND_SCARIFIED">
+		<description>
+			<p>The carving, notorious among hunters and commonly dubbed the "Brand of Death" is a harbinger of an early demise for those burdened with its curse.</p>
+			<h5 class="caption">Drawn, Tattooed &amp; Scarified</h5>
+			<p>During the three days of the Blood Moon, all Evil-aligned creatures within Luyarnha gain Advantage on Wisdom (Perception) or Wisdom (Survival) checks to locate creatures with this Eldritch Carving. If they are within 120 feet of a creature bearing the Eldritch Carving, they know their exact location and receive a +3 bonus to attack rolls and damage rolls against them, and they have a -3 penalty to attack rolls and damage rolls against other creatures not bearing the brand.</p>
+			<p class="indent">In addition, creatures bearing this carving begin to painfully bleed from it when Hostile monsters within 300 feet of them are aware of their position. They can’t be surprised for the duration of the Blood Moon.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+
+	<!-- Lightning Scion -->
+	<element name="Lightning Scion (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_LIGHTNING_SCION_DRAWN">
+		<description>
+			<p>The Lightning Scion carving was unearthed by a group of arcanists delving into the mysteries of forlorn artifacts. The profound connection between electrical energy and life was unveiled before them, propelling a surge of never-before-seen technological advancements. Thus began the magnificence of the once humble faction that would come to be known as the Scions.</p>
+			<p class="indent">The carving embodies the raw power that serves as the bedrock of the Scions, infusing its possessor with the force of lightning. This allows them to traverse and assail with speed beyond mortal perception, or alternatively, employ the electricity to reanimate corpses through careful stimulation of the marrow.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>You gain Resistance to Lightning damage.</p>
+			<p class="indent">In addition, as a Bonus Action, you can teleport up to 20 feet to an unoccupied space you can see. This property can be used a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+		</rules>
+	</element>
+
+	<element name="Lightning Scion (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_LIGHTNING_SCION_TATTOOED">
+		<description>
+			<p>The carving embodies the raw power that serves as the bedrock of the Scions, infusing its possessor with the force of lightning.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>You gain Resistance to Lightning damage.</p>
+			<p class="indent">In addition, as a Bonus Action, you can teleport to an unoccupied space you can see. This property can be used a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<h5 class="caption">Tattooed</h5>
+			<p>The distance you can teleport with this carving increases to 30 feet. After you teleport, your body becomes overcharged with electricity, and the next attack you make before the end of your next turn deals an extra 1d12 Lightning damage on a hit.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+		</rules>
+	</element>
+
+	<element name="Lightning Scion (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_LIGHTNING_SCION_SCARIFIED">
+		<description>
+			<p>The carving embodies the raw power that serves as the bedrock of the Scions, infusing its possessor with the force of lightning.</p>
+			<h5 class="caption">Drawn, Tattooed &amp; Scarified</h5>
+			<p>You have Immunity to Lightning damage.</p>
+			<p class="indent">As a Bonus Action, you can teleport up to 60 feet to an unoccupied space you can see. After you teleport, your body becomes overcharged with electricity, and the next attack you make before the end of your next turn deals an extra 2d12 Lightning damage on a hit. This carving can be used in this way a number of times equal to 2 plus your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<p class="indent">Additionally, you can use the rampaging electricity that courses through you to cast the <i>Create Undead</i> spell without expending a spell slot and without Material components. Charisma is your spellcasting ability for it. Once you use this Eldritch Carving to cast this spell, you can't do so again until you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_LIGHTNING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CREATE_UNDEAD" />
+		</rules>
+	</element>
+
+	<!-- Nawre's Blessing -->
+	<element name="Nawre's Blessing (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_NAWRES_BLESSING_DRAWN">
+		<description>
+			<p><i>Na’e or some say nawre, do you hear our prayers?</i></p>
+			<p class="indent">Carmella's Greenhouse was frequently referred to as a morgue because only individuals on the verge of death were accepted in its walls. Through her studies, she discovered that implanting cordyceps sinensis would artificially prolong her patients’ lives, despite the fact that the fungus would consume the host's soul, leaving them an empty husk. It wasn't until she granted her favors to an enigmatic being that she was able to grasp a true solution—something that would bring the dead back to life. Despite their unearthly appearance, they are totally in control of their bodies, or so she claims.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>You start grasping the depth of the Eldritch Truth. If your body is not infected with the Cordyceps Sinensis, you gain a 1d4 bonus to any Intelligence (Arcana or Religion) or Wisdom (Insight) checks you make.</p>
+			<p class="indent">If your body is infected with the Cordyceps Sinensis, your symbiotic relationship with the fungus begins. You learn 2 Warlock cantrips of your choice, using Intelligence, Wisdom, or Charisma (choose one when you first receive this Eldritch Carving) as your spellcasting ability for these spells.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Nawre's Blessing (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_NAWRES_BLESSING_TATTOOED">
+		<description>
+			<p><i>Na’e or some say nawre, do you hear our prayers?</i></p>
+			<h5 class="caption">Drawn</h5>
+			<p>You start grasping the depth of the Eldritch Truth. If your body is not infected with the Cordyceps Sinensis, you gain a 1d4 bonus to any Intelligence (Arcana or Religion) or Wisdom (Insight) checks you make.</p>
+			<p class="indent">If your body is infected with the Cordyceps Sinensis, your symbiotic relationship with the fungus begins. You learn 2 Warlock cantrips of your choice, using Intelligence, Wisdom, or Charisma (choose one when you first receive this Eldritch Carving) as your spellcasting ability for these spells.</p>
+			<h5 class="caption">Tattooed</h5>
+			<p>Your mind gazes deep into the revelations of the void. If your body is not infected with the Cordyceps Sinensis, you gain a 1d8 bonus to any Intelligence (Arcana or Religion) or Wisdom (Insight) checks you make. In addition, you gain a 1d4 bonus to Intelligence, Wisdom, and Charisma saving throws. This bonus increases to 1d8 on saving throws against Madness.</p>
+			<p class="indent">If your body is infected with the Cordyceps Sinensis, your symbiotic relationship with the fungus begins. You learn 2 Warlock cantrips of your choice, using Intelligence, Wisdom, or Charisma (choose one when you first receive this Eldritch Carving) as your spellcasting ability for these spells. In addition, you learn a Warlock Eldritch Invocation of your choice for which you meet the prerequisites (you can treat invocations that require a certain Warlock level as if they instead require a certain character level). When you gain a character level, you can replace this invocation with another for which you meet the prerequisites.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Nawre's Blessing (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_NAWRES_BLESSING_SCARIFIED">
+		<description>
+			<p><i>Na’e or some say nawre, do you hear our prayers?</i></p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p>You gain all benefits from the Drawn and Tattooed tiers of this carving.</p>
+			<h5 class="caption">Scarified</h5>
+			<p>You become one with the Eldritch Truth. You die. If your body is infected with the Cordyceps Sinensis, it wipes this understanding away from your brain, and if you were not dead for longer than 100 years, you come back to life over the course of an hour. The Eldritch Carving closes all wounds, neutralizes any poisons, cures any magical contagions, and lifts any curses that were affecting you when you died. The fungus replaces damaged or missing organs or limbs. The more tissue you were missing, the more fungic your appearance. In addition, you gain the following benefits:</p>
+			<ul>
+				<li>You learn 2 Warlock cantrips of your choice, using Intelligence, Wisdom, or Charisma (choose one when you first receive this Eldritch Carving) as your spellcasting ability for these spells. In addition, you learn a Warlock Eldritch Invocation of your choice for which you meet the prerequisites (you can treat invocations that require a certain Warlock level as if they instead require a certain character level). When you gain a character level, you can replace this invocation with another for which you meet the prerequisites.</li>
+				<li>If you are reduced to 0 Hit Points, you do not gain the Unconscious condition. You still make Death Saving Throws and can be stabilized as normal. If you are Stable for 1 minute, you regain 1 Hit Point. If you die and haven't taken Fire or Radiant damage within the last minute, you come back to life with 1 Hit Point after an hour. If you are exposed to Fire or Radiant damage during that period, you do not resurrect.</li>
+			</ul>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<!-- Mephitic Seal -->
+	<element name="Mephitic Seal (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_MEPHITIC_SEAL_DRAWN">
+		<description>
+			<p>This intricate carving is a rotten word, nauseating to those who hear it and causing plagues upon the world, or so the story goes. A rogue faction of manikins has managed to locate the original carving and have been using it to further their own goals, much to the dismay of beings of flesh—yet such power could so easily be turned against them.</p>
+			<h5 class="caption">Drawn</h5>
+			<p>As a Magic action, you can conjure a toxic miasma in a 15-foot-radius Sphere centered on a point you can see within 30 feet of yourself. The miasma spreads around corners, and it lasts until the end of your next turn. Each creature that is completely within the miasma at the start of its turn makes a DC 18 Constitution saving throw. On a failed save, a creature takes a number of d6s of Poison damage equal to your Proficiency Bonus and has the Poisoned condition for the duration of the miasma. A Poisoned creature repeats the save at the end of each of its turns, ending the effect on itself on a success. You can use this Eldritch Carving twice, and you regain all expended uses when you finish a Long Rest.</p>
+			<p class="indent">When you summon the miasma, it gains your choice of 1 property from the following list of options:</p>
+			<ul>
+				<li><strong>Duration:</strong> The miasma lasts for 1 minute or until a strong wind (such as the one created by <i>Gust of Wind</i>) disperses it. You can move the miasma up to 10 feet as a Bonus Action on each of your turns.</li>
+				<li><strong>Immunity:</strong> You are immune to and ignore the effects of the miasma.</li>
+				<li><strong>Lingering:</strong> On a successful save, a creature takes half as much damage only.</li>
+				<li><strong>Obfuscation:</strong> The area becomes Heavily Obscured.</li>
+				<li><strong>Radius:</strong> The radius increases to 25 feet.</li>
+				<li><strong>Virulent:</strong> The damage dice become d12s instead of d6s.</li>
+			</ul>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Mephitic Seal (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_MEPHITIC_SEAL_TATTOOED">
+		<description>
+			<p>This intricate carving is a rotten word, nauseating to those who hear it and causing plagues upon the world, or so the story goes.</p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p>As a Magic action, you can conjure a toxic miasma in a 15-foot-radius Sphere centered on a point you can see within 30 feet of yourself. The miasma spreads around corners, and it lasts until the end of your next turn. Each creature that is completely within the miasma at the start of its turn makes a DC 18 Constitution saving throw. On a failed save, a creature takes a number of d6s of Poison damage equal to your Proficiency Bonus and has the Poisoned condition for the duration of the miasma. A Poisoned creature repeats the save at the end of each of its turns, ending the effect on itself on a success. You can use this Eldritch Carving a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<p class="indent">When you summon the miasma, it instead gains your choice of 2 properties from the following list of options:</p>
+			<ul>
+				<li><strong>Duration:</strong> The miasma lasts for 1 minute or until a strong wind (such as the one created by <i>Gust of Wind</i>) disperses it. You can move the miasma up to 10 feet as a Bonus Action on each of your turns.</li>
+				<li><strong>Immunity:</strong> You are immune to and ignore the effects of the miasma.</li>
+				<li><strong>Lingering:</strong> On a successful save, a creature takes half as much damage only.</li>
+				<li><strong>Obfuscation:</strong> The area becomes Heavily Obscured.</li>
+				<li><strong>Radius:</strong> The radius increases to 25 feet.</li>
+				<li><strong>Virulent:</strong> The damage dice become d12s instead of d6s.</li>
+				<li><strong>Corrosion:</strong> The miasma deals an extra number of d4s of Acid damage equal to your Proficiency Bonus on a failed save. Creatures that fail the saving throw by 5 or more have the Blinded condition until the end of your next turn.</li>
+				<li><strong>Destruction:</strong> You can cause the miasma to exude a corrosive substance that can eat through 1-inch-thick nonmagical wood, metal, or stone each round. If you do so, the miasma ignores Resistance and Immunity to Poison damage and to the Poisoned condition, and Constructs have Disadvantage on the saving throw.</li>
+			</ul>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Mephitic Seal (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_MEPHITIC_SEAL_SCARIFIED">
+		<description>
+			<p>This intricate carving is a rotten word, nauseating to those who hear it and causing plagues upon the world, or so the story goes.</p>
+			<h5 class="caption">Drawn, Tattooed &amp; Scarified</h5>
+			<p>As a Magic action, you can conjure a toxic miasma in a 15-foot-radius Sphere centered on a point you can see within 30 feet of yourself. The miasma spreads around corners, and it lasts until the end of your next turn. Each creature that is completely within the miasma at the start of its turn makes a DC 18 Constitution saving throw. On a failed save, a creature takes a number of d6s of Poison damage equal to your Proficiency Bonus and has the Poisoned condition for the duration of the miasma. A Poisoned creature repeats the save at the end of each of its turns, ending the effect on itself on a success. You can use this Eldritch Carving a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<p class="indent">When you summon the miasma, it instead gains your choice of 4 properties from the following list of options:</p>
+			<ul>
+				<li><strong>Duration:</strong> The miasma lasts for 1 minute or until a strong wind (such as the one created by <i>Gust of Wind</i>) disperses it. You can move the miasma up to 30 feet as a Bonus Action on each of your turns.</li>
+				<li><strong>Immunity:</strong> You are immune to and ignore the effects of the miasma.</li>
+				<li><strong>Lingering:</strong> On a successful save, a creature takes half as much damage only.</li>
+				<li><strong>Obfuscation:</strong> The area becomes Heavily Obscured.</li>
+				<li><strong>Radius:</strong> The radius increases to 25 feet.</li>
+				<li><strong>Virulent:</strong> The damage dice become d12s instead of d6s.</li>
+				<li><strong>Corrosion:</strong> The miasma deals an extra number of d4s of Acid damage equal to your Proficiency Bonus on a failed save. Creatures that fail the saving throw by 5 or more have the Blinded condition until the end of your next turn.</li>
+				<li><strong>Destruction:</strong> You can cause the miasma to exude a corrosive substance that can eat through 1-inch-thick nonmagical wood, metal, or stone each round. If you do so, the miasma ignores Resistance and Immunity to Poison damage and to the Poisoned condition, and Constructs have Disadvantage on the saving throw.</li>
+				<li><strong>Hallucinatory Toxins:</strong> You turn your miasma into powerful hallucinogens, changing each damage type of the miasma, including from its properties, to Psychic damage. The saving throw becomes an Intelligence saving throw instead. You can’t use the Destruction property alongside this one.</li>
+				<li><strong>Protection:</strong> When you summon the miasma, you can choose a number of creatures other than yourself equal to your Proficiency Bonus; they are immune to the effects of the miasma. In addition, the miasma requires Concentration.</li>
+			</ul>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<!-- Third Carving -->
+	<element name="Third Carving (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_THIRD_CARVING_DRAWN">
+		<description>
+			<p>The Third Carving is Mikha'el—The Left Hand of Creation, the herald of punishment.</p>
+			<p class="indent"><i>War broke out in heaven. From the throne came flashes of lightning, and rumblings and peals of thunder, and before the throne were burning seven torches of fire. Mikhaʾel and his angels fought against the dragon, and the dragon and his angels fought back. But he was not strong enough, and they lost their place in heaven. The great dragon was hurled down—that ancient serpent called the devil, who leads the whole world astray. He was hurled to the earth, and his angels with him.</i> —Tome of Revelations</p>
+			<h5 class="caption">Drawn</h5>
+			<p>When you roll Initiative, you can choose to let the carving consume you for 1 minute (no action required). You gain the following benefits:</p>
+			<p class="indent"><strong>Seraphic Blade.</strong> A blade of eldritch—or perhaps divine—energy appears in your hand. This blade is a magic Shortsword that has the Finesse property and deals 1d6 Fire damage plus 1d6 Psychic damage on a hit instead of its normal damage.</p>
+			<p class="indent"><strong>Wings of Judgement.</strong> Wings sprout on your back, granting you a Fly Speed of 30 feet. You can only use this Speed to move toward a Hostile creature that you can see.</p>
+			<p class="indent">Once you use this Eldritch Carving, you can't do so again until you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Third Carving (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_THIRD_CARVING_TATTOOED">
+		<description>
+			<p>The Third Carving is Mikha'el—The Left Hand of Creation, the herald of punishment.</p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p>When you roll Initiative, you can choose to let the carving consume you for 1 minute (no action required). You instead gain the following improved benefits for the duration:</p>
+			<p class="indent"><strong>Righteous Punishment.</strong> Creatures that raise their hand against you—a chosen one—must be punished. When you take damage from a creature you can see within 120 feet of yourself, you can take a Reaction to emit a psychic shockwave in its direction. The attacking creature must make an Intelligence saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, the target takes Psychic damage equal to your character level. On a successful save, it takes half as much damage. As part of the same Reaction, you can cause a creature that failed its saving throw to have the Stunned condition until the end of your next turn. Once you cause a creature to gain the Stunned condition in this way, you can't do so again until you finish a Long Rest.</p>
+			<p class="indent"><strong>Seraphic Blade.</strong> A blade of eldritch—or perhaps divine—energy appears in your hand. This blade is a magic Shortsword that has the Finesse and Thrown (range 60/120) properties, and it deals 1d8 Fire damage plus 1d8 Psychic damage on a hit instead of its normal damage. Each time you throw the blade, it flies back to your hand after the attack. If you are holding a nonmagical melee weapon when you gain this benefit, you can instead cause the energy to fuse with the weapon and grant it these properties for the duration. If you do so, you gain a +1 bonus to attack rolls and damage rolls made with the weapon, and you deal an extra 1d6 Fire damage plus 1d6 Psychic damage on a hit.</p>
+			<p class="indent"><strong>Wings of Judgement.</strong> Wings sprout on your back, granting you a Fly Speed of 60 feet. You can only use this Speed to move toward a Hostile creature that you can see.</p>
+			<p class="indent">Once you use this Eldritch Carving, you can't do so again until you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<element name="Third Carving (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_THIRD_CARVING_SCARIFIED">
+		<description>
+			<p>The Third Carving is Mikha'el—The Left Hand of Creation, the herald of punishment.</p>
+			<h5 class="caption">Drawn, Tattooed &amp; Scarified</h5>
+			<p>The carving imbues you, permanently granting you the benefits of the Tattooed carving (without needing to be consumed on Initiative):</p>
+			<p class="indent"><strong>Righteous Punishment.</strong> When you take damage from a creature you can see within 120 feet of yourself, you can take a Reaction to emit a psychic shockwave in its direction. The attacking creature must make an Intelligence saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, the target takes Psychic damage equal to your character level. On a successful save, it takes half as much damage. As part of the same Reaction, you can cause a creature that failed its saving throw to have the Stunned condition until the end of your next turn. When you use your Righteous Punishment to give a creature the Stunned condition, you can do so again after 1 minute.</p>
+			<p class="indent"><strong>Seraphic Blade.</strong> You can cause your Seraphic Blade to appear or disappear in your hand at will (no action required), and it can also fuse with a magical melee weapon that you are holding. This blade is a magic Shortsword that has the Finesse and Thrown (range 60/120) properties, and it deals 1d8 Fire damage plus 1d8 Psychic damage on a hit instead of its normal damage. Each time you throw the blade, it flies back to your hand after the attack. If fused with a melee weapon you are holding, you gain a +1 bonus to attack rolls and damage rolls made with the weapon, and you deal an extra 1d6 Fire damage plus 1d6 Psychic damage on a hit.</p>
+			<p class="indent"><strong>Wings of Judgement.</strong> Wings sprout on your back, granting you a Fly Speed of 60 feet. You can only use this Speed to move toward a Hostile creature that you can see.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+	<!-- Second Carving -->
+	<element name="Second Carving (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SECOND_CARVING_DRAWN">
+		<description>
+			<p>The Second Carving—the Voice of Creation, said to originate from the ancient scriptures of a lost civilization—manifests the omnipotence of He who spoke it into being. A power that reflects the terror of what lies beyond, as this single word holds the potential to unravel reality in a myriad of ways.</p>
+			<p class="indent">No mortal should be given this power of creation, their hubris begetting suffering and tyranny. The last possessor of this carving, the Godless King, proclaimed himself divine, turning the world into hell, for it meant that he could rule over its ashes as a god.</p>
+			<h5 class="caption">Drawn</h5>
+			<p class="indent"><strong>Dark Knowledge.</strong> You understand and speak Celestial and Deep Speech.</p>
+			<p class="indent"><strong>King’s Decrees.</strong> You are imbued with righteous power and gain the ability to cast spells. Constitution or Wisdom is your spellcasting ability for these spells, whichever is higher. You can use each of the following decrees once, and you regain all expended uses when you finish a Long Rest. Each decree only requires the Verbal component of the spell.</p>
+			<ul>
+				<li><strong>Decree of Blood.</strong> You harangue your soldiers to endure. You can cast the <i>Healing Word</i> spell on a willing creature. Until the end of the target's next turn, it gains a +1 bonus to attack rolls and damage rolls, and each time it takes damage, it takes an extra 1d4 damage of the same type.</li>
+				<li><strong>Decree of Obedience.</strong> You force the heretic to kneel and worship. You can cast the <i>Command</i> spell, using only the Grovel command.</li>
+				<li><strong>Decree of Power.</strong> You unleash destructive might. You can cast the <i>Bless</i> spell on willing creatures. When a creature rolls a 1 on the d4 as part of this spell, it can reroll the die and must use the new roll, even if the new roll is a 1. A creature under the effect of the spell also takes 1d4 Necrotic damage (which can’t be reduced or prevented in any way) at the start of each of its turns.</li>
+			</ul>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+			<grant type="Language" id="ID_LANGUAGE_DEEP_SPEECH" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLESS" />
+		</rules>
+	</element>
+
+	<element name="Second Carving (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SECOND_CARVING_TATTOOED">
+		<description>
+			<p>The Second Carving—the Voice of Creation—manifests the omnipotence of He who spoke it into being.</p>
+			<h5 class="caption">Drawn</h5>
+			<p class="indent"><strong>Dark Knowledge.</strong> You understand and speak Celestial and Deep Speech.</p>
+			<p class="indent"><strong>King’s Decrees.</strong> Constitution or Wisdom is your spellcasting ability for these spells, whichever is higher. Each decree only requires the Verbal component of the spell.</p>
+			<ul>
+				<li><strong>Decree of Blood.</strong> Cast <i>Healing Word</i> on a willing creature; until the end of the target's next turn, it gains +1 to attack and damage rolls, and takes +1d4 damage of the same type whenever it takes damage.</li>
+				<li><strong>Decree of Obedience.</strong> Cast <i>Command</i>, using only the Grovel command.</li>
+				<li><strong>Decree of Power.</strong> Cast <i>Bless</i> on willing creatures; affected creatures reroll 1s on the d4 (keeping the new roll) and take 1d4 Necrotic damage (irreducible) at the start of each of their turns.</li>
+			</ul>
+			<h5 class="caption">Tattooed</h5>
+			<p class="indent"><strong>Aegis of the Almighty.</strong> You gain Resistance to Radiant damage. Each day at dawn, you can choose one creature that you can see. For the next 24 hours, it has Resistance to Radiant damage as long as it remains within 10 feet of you and you are conscious.</p>
+			<p class="indent"><strong>Improved Decrees.</strong> You can now use each of your King’s Decrees a number of times equal to your Constitution or Wisdom modifier, whichever is higher (minimum of once each), and you regain all expended uses when you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+			<grant type="Language" id="ID_LANGUAGE_DEEP_SPEECH" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLESS" />
+		</rules>
+	</element>
+
+	<element name="Second Carving (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SECOND_CARVING_SCARIFIED">
+		<description>
+			<p>The Second Carving—the Voice of Creation—manifests the omnipotence of He who spoke it into being.</p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p class="indent"><strong>Dark Knowledge.</strong> You understand and speak Celestial and Deep Speech.</p>
+			<p class="indent"><strong>Improved Decrees.</strong> Constitution or Wisdom is your spellcasting ability for your King's Decrees, whichever is higher. You can use each decree a number of times equal to your Constitution or Wisdom modifier, whichever is higher (minimum of once each), regaining all expended uses on a Long Rest. Each decree only requires the Verbal component.</p>
+			<h5 class="caption">Scarified</h5>
+			<p class="indent"><strong>Aegis of the Almighty.</strong> You emit an aura of splendor in a 15-foot Emanation originating from you. You and your allies in the aura have Resistance to Radiant damage while you are conscious.</p>
+			<p class="indent"><strong>Final Decrees.</strong> You can amplify the effect of your King’s Decrees. When you do so, you expend two uses instead of one.</p>
+			<ul>
+				<li><strong>Improved Decree of Blood.</strong> When you cast the <i>Healing Word</i> spell with this decree, it is cast at level 7. Until the end of the target's next turn, it instead gains a +3 bonus to attack rolls and damage rolls, and each time it takes damage, it instead takes an extra 2d4 damage of the same type.</li>
+				<li><strong>Improved Decree of Obedience.</strong> When you cast the <i>Command</i> spell with this decree, you cast it at a level equal to your Constitution or Wisdom modifier, whichever is higher (minimum of level 1).</li>
+				<li><strong>Improved Decree of Power.</strong> When you cast the <i>Bless</i> spell with this decree, each creature under the effect of the spell gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Utilize action. The Necrotic damage a creature takes at the start of each of its turns increases to 2d4.</li>
+			</ul>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+			<grant type="Language" id="ID_LANGUAGE_DEEP_SPEECH" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLESS" />
+		</rules>
+	</element>
+
+	<!-- First Carving -->
+	<element name="First Carving (Drawn)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FIRST_CARVING_DRAWN">
+		<description>
+			<p>The original carving, The Right Hand of Creation, is the first sign the Old Ones left behind when devoted worshipers implored for divine help against the Scourge. The price for such power is still being paid to this day. None have seen the full power of this carving, as the original is sealed deep within the earth, guarded by a sin left behind by the Radiant Church.</p>
+			<p class="indent"><i>When you give a person something to die for, you conversely give them something to live for.</i></p>
+			<h5 class="caption">Drawn</h5>
+			<p class="indent"><strong>Chosen.</strong> When you finish a Long Rest, you gain the effect of a <i>Sanctuary</i> spell that lasts until the start of your next Long Rest (the spell can end early as normal). The saving throw DC for the spell equals 8 plus your Constitution or Wisdom modifier (whichever is higher) plus your Proficiency Bonus.</p>
+			<p class="indent"><strong>Wings of Salvation.</strong> When a willing creature you can see within 60 feet of you is targeted by an attack roll or forced to make a saving throw, you can take a Reaction to give it wings to fly out of danger. A pair of angelic wings sprout on its back, which carries it in a straight line to you, where it lands in an unoccupied space next to you. This can potentially cause the harmful effect to miss if the creature leaves the reach or range of the effect. The wings then vanish. Once you use this property, you can't do so again until you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SANCTUARY" />
+		</rules>
+	</element>
+
+	<element name="First Carving (Tattooed)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FIRST_CARVING_TATTOOED">
+		<description>
+			<p>The original carving, The Right Hand of Creation, is the first sign the Old Ones left behind when devoted worshipers implored for divine help against the Scourge.</p>
+			<h5 class="caption">Drawn</h5>
+			<p class="indent"><strong>Chosen.</strong> When you finish a Long Rest, you gain the effect of a <i>Sanctuary</i> spell that lasts until the start of your next Long Rest (save DC = 8 + your Con or Wis mod, whichever is higher, + PB).</p>
+			<p class="indent"><strong>Wings of Salvation.</strong> When a willing creature you can see within 60 feet of you is targeted by an attack roll or forced to make a saving throw, you can take a Reaction to give it wings to fly in a straight line to an unoccupied space next to you, potentially causing the effect to miss.</p>
+			<h5 class="caption">Tattooed</h5>
+			<p class="indent"><strong>Protected.</strong> When you finish a Long Rest, you gain the effect of the <i>Death Ward</i> spell cast on yourself.</p>
+			<p class="indent"><strong>Improved Wings.</strong> You can use Wings of Salvation twice, regaining all expended uses when you finish a Long Rest. Further, when you use Wings of Salvation, as part of the Reaction, you can cast the <i>Warding Bond</i> spell on the target. Charisma is your spellcasting ability for it. You do not need to provide the spell slot or Material components for the spell, but it requires Concentration.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SANCTUARY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" />
+		</rules>
+	</element>
+
+	<element name="First Carving (Scarified)" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_FIRST_CARVING_SCARIFIED">
+		<description>
+			<p>The original carving, The Right Hand of Creation, is the first sign the Old Ones left behind when devoted worshipers implored for divine help against the Scourge.</p>
+			<h5 class="caption">Drawn &amp; Tattooed</h5>
+			<p class="indent"><strong>Chosen.</strong> When you finish a Long Rest, you gain the effect of a <i>Sanctuary</i> spell that lasts until the start of your next Long Rest (save DC = 8 + your Con or Wis mod, whichever is higher, + PB).</p>
+			<p class="indent"><strong>Protected.</strong> When you finish a Long Rest, you gain the effect of the <i>Death Ward</i> spell cast on yourself.</p>
+			<p class="indent"><strong>Wings of Salvation.</strong> When a willing creature you can see within 60 feet of you is targeted by an attack roll or forced to make a saving throw, you can take a Reaction to fly it in a straight line to an unoccupied space next to you, and as part of the Reaction, you can cast <i>Warding Bond</i> on the target (requiring Concentration, no slot or Material components).</p>
+			<h5 class="caption">Scarified</h5>
+			<p class="indent"><strong>Devour Sin.</strong> Upon death, your body is immediately affected by the <i>True Resurrection</i> spell. Alternatively, if a creature dies while under the effect of <i>Warding Bond</i> cast through your Wings of Salvation, the creature is affected by the <i>True Resurrection</i> spell. Once Devour Sin grants its effects, the Eldritch Carving provides no benefits for the next 3 days.</p>
+			<p class="indent"><strong>Perfected Wings.</strong> You can use Wings of Salvation a number of times equal to your Constitution or Wisdom modifier, whichever is higher (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_RULE_ELDRITCH_CARVINGS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Eldritch Carvings</set>
+			<set name="type">Eldritch Carving</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SANCTUARY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TRUE_RESURRECTION" />
+		</rules>
+	</element>
+
+</elements>

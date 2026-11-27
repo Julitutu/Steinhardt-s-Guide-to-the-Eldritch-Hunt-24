@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Steinhardt's Guide to the Eldritch Hunt (2024).index</name>
+		<update version="0.1.0">
+			<file name="Steinhardts2024.index" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Steinhardts2024.index" />
+		</update>
+	</info>
+	<files>
+        <file name="source-SGEH24.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/source-SGEH24.xml" />
+
+        <!-- Class -->
+        <file name="class-jaeger.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/class-jaeger.xml" />
+        <file name="jaeger-sanguine.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-sanguine.xml" />
+        <file name="jaeger-absolute.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-absolute.xml" />
+        <file name="jaeger-heretic.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-heretic.xml" />
+        <file name="jaeger-marauder.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-marauder.xml" />
+        <file name="jaeger-salvation.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-salvation.xml" />        
+        <file name="monk-firedancer.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/monk-firedancer.xml" />
+        <file name="paladin-eldritchhunt.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/paladin-eldritchhunt.xml" />
+        <file name="ranger-lunarwarden.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/ranger-lunarwarden.xml" />
+        <file name="ranger-torturer.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/ranger-torturer.xml" />
+        <file name="rogue-bladeofradiance.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/rogue-bladeofradiance.xml" />
+        <file name="rogue-shadow.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/rogue-shadow.xml" />
+        <file name="druid-symbiosis.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/druid-symbiosis.xml" />
+        <file name="wizard-osteomancer.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/wizard-osteomancer.xml" />
+        <file name="cleric-guardian.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/cleric-guardian.xml" />
+        <file name="sorcerer-scionofmadness.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/sorcerer-scionofmadness.xml" />
+        <file name="warlock-invocations.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/warlock-invocations.xml" />
+        <file name="warlock-thevoid.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/warlock-thevoid.xml" />
+        <file name="barbarian-earthbreaker.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/barbarian-earthbreaker.xml" />
+        <file name="barbarian-lightningvessel.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/barbarian-lightningvessel.xml" />
+        <file name="bard-apocalypse.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/bard-apocalypse.xml" />
+        <file name="fighter-bloodhound.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/fighter-bloodhound.xml" />
+        <file name="fighter-livingnightmare.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/fighter-livingnightmare.xml" />        
+        <file name="tamer-siphoner.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/tamer-siphoner.xml" />
+
+        <!-- Species -->
+        <file name="species-demidritch.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-demidritch.xml" />
+        <file name="species-deep-one-dwarf.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-deep-one-dwarf.xml" />
+        <file name="species-cursed-blood.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-cursed-blood.xml" />
+        <file name="species-accursed.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-accursed.xml" />
+        <file name="species-scourgeborne.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-scourgeborne.xml" />
+        <file name="species-manikin.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-manikin.xml" />
+
+        <!-- Setting -->
+        <file name="items-eldritch-carvings.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-eldritch-carvings.xml" />
+        <file name="feats.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/feats.xml" />
+        <file name="backgrounds.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/backgrounds.xml" />
+        <file name="spells.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/spells.xml" />
+        <file name="items-weapons.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-weapons.xml" />
+        <file name="items-trick-weapons.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-trick-weapons.xml" />
+        <file name="items-scionic-armaments.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-scionic-armaments.xml" />
+        <file name="items-magic-weapons.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-magic-weapons.xml" />
+        <file name="items-magic.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-magic.xml" />
+
+	</files>
+</index>

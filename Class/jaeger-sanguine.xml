@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Sanguine Chapter</name>
+		<description>The Sanguine Chapter subclass for the Jaeger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="jaeger-sanguine.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-sanguine.xml" />
+		</update>
+	</info>
+
+	<element name="Sanguine Chapter" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_JAEGER_SANGUINE_CHAPTER">
+		<supports>Jaeger Chapter</supports>
+		<description>
+			<p>In order to strengthen themselves, jaegers of the Sanguine Chapter rely on the mastery of blood. They achieve resilient states of unnatural life and feed their powers with the fruits of their violence. Although some consider them to be monsters, when faced with the horrors of the Scourge, the sentiment quickly changes. These jaeger's abilities can hold the line and preserve the tenuous flame of life when it should have long since been extinguished, keeping themselves and their allies alive while draining the strength of their enemies in an endless crimson parade of blood.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_VITAL_CONSUMPTION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_CRIMSON_RAGE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_HEX" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_EMPOWERED_BLOOD_HEX" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_FRENZY" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_VITAL_CONSUMPTION" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_CRIMSON_RAGE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_HEX" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_EMPOWERED_BLOOD_HEX" level="14" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_FRENZY" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Vital Consumption" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_VITAL_CONSUMPTION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_VITAL_CONSUMPTION</requirements>
+		<description>
+			<p>You gain the ability to draw power from the flowing blood of your foes. You learn the Blood Drain Finisher, which does not count against your Finishers known.</p>
+			<p class="indent">Some of your abilities use a Blood Magic save DC, which is calculated as follows:</p>
+			<center>
+				<p><strong>Blood Magic save DC</strong> = 8 + your Proficiency Bonus + your Intelligence or Constitution modifier (your choice).</p>
+			</center>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_DRAIN" />
+			</div>
+		</description>
+		<sheet alt="Vital Consumption">
+			<description>Blood Magic save DC: {{blood magic:dc}}.</description>
+		</sheet>
+		<rules>
+			<stat name="blood magic:dc" value="8" bonus="base" />
+			<stat name="blood magic:dc" value="proficiency" bonus="proficiency" />
+			<stat name="blood magic:dc" value="blood magic:dc:ability" />
+			<select type="Archetype Feature" name="Blood Magic Save DC Ability" supports="Blood Magic Ability" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_DRAIN" />
+		</rules>
+	</element>
+	<element name="Intelligence" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_ABILITY_INT">
+		<supports>Blood Magic Ability</supports>
+		<compendium display="false" />
+		<description>
+			<p>Use Intelligence for your Blood Magic save DC.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="blood magic:dc:ability" value="intelligence:modifier" bonus="ability" />
+		</rules>
+	</element>
+	<element name="Constitution" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_ABILITY_CON">
+		<supports>Blood Magic Ability</supports>
+		<compendium display="false" />
+		<description>
+			<p>Use Constitution for your Blood Magic save DC.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="blood magic:dc:ability" value="constitution:modifier" bonus="ability" />
+		</rules>
+	</element>
+
+	<element name="Blood Drain" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_DRAIN">
+		<compendium display="false" />
+		<description>
+			<p><em>Finisher, Bonus Action</em></p>
+			<p>As a Bonus Action, you expend all of your Momentum dice to drain the blood of a creature within 15 feet of you, magically consuming its vitality to empower you. The target must make a Constitution saving throw. Roll all of your expended Momentum dice, on a failed save the target takes Necrotic damage equal to the total rolled, or half as much on a successful save. Success or failure, you regain Hit Points equal to half the Necrotic damage dealt. If this would restore you above your Hit Point maximum, you gain the excess as Temporary Hit Points</p>
+			<p class="indent">If the target has the Bloodied condition or is otherwise bleeding from an ability (such as the Hemorrhaging Wound finisher), it automatically fails its saving throw against this finisher, and you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet alt="Blood Drain (Finisher)" action="Bonus Action" usage="All Momentum Dice">
+			<description>Target within 15 ft makes a DC{{blood magic:dc}} Con save (auto-fails if Bloodied or bleeding, and you regain 1 Adrenaline Point). Fail: Necrotic damage equal to all expended Momentum dice. Success: Half damage. You regain HP equal to half Necrotic damage dealt (excess becomes THP).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Crimson Rage" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_CRIMSON_RAGE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_CRIMSON_RAGE</requirements>
+		<description>
+			<p>When you become Bloodied, you regain 1 Adrenaline Point and gain 1 Momentum die. You cannot benefit from this feature again for 1 minute.</p>
+		</description>
+		<sheet alt="Crimson Rage" usage="1/Minute">
+			<description>When you become Bloodied, you regain 1 Adrenaline Point and gain 1 Momentum die.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 7: Blood Hex" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_HEX">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_BLOOD_HEX</requirements>
+		<description>
+			<p>When you use a Finisher against a target with Bloodied condition, you can force one target hit by the Finisher to make a Constitution saving throw against your Blood Magic save DC, selecting one of the following effects. You can use one of these effects when using your Blood Drain Finisher even if the target does not have the Bloodied condition, and when using that Finisher it uses the Finisher's saving throw rather than making a separate saving throw.</p>
+			<ul>
+				<li><strong><em>Blood Puppet.</em></strong> The target must use its Reaction to move up to 5 feet in a direction of your choice (if the target's Reaction is unavailable, it cannot move).</li>
+				<li><strong><em>Bound Blood.</em></strong> The target's Speed is halved until the start of your next turn.</li>
+				<li><strong><em>Burning Blood.</em></strong> The target takes Fire damage equal to half the Necrotic damage dealt.</li>
+			</ul>
+		</description>
+		<sheet alt="Blood Hex">
+			<description>When using a Finisher against a Bloodied target (or any target via Blood Drain), force a DC{{blood magic:dc}} Con save (uses Blood Drain's save) for one effect:&#13;
+			• Blood Puppet: Target uses its Reaction to move up to 5 ft in a direction of your choice.&#13;
+			• Bound Blood: Target's Speed is halved until the start of your next turn.&#13;
+			• Burning Blood: Target takes Fire damage equal to half the Necrotic damage dealt.</description>
+			<description level="14">When using a Finisher against a Bloodied target (or any target via Blood Drain), force a DC{{blood magic:dc}} Con save (uses Blood Drain's save) for one effect (or spend 2 Adrenaline Points for an Empowered version):&#13;
+			• Blood Puppet: Target uses Reaction to move up to 5 ft. Empowered (2 AP): Move up to 10 ft and make 1 weapon attack against a creature of your choice.&#13;
+			• Bound Blood: Speed halved until start of your next turn. Empowered (2 AP): Target is Restrained until start of your next turn.&#13;
+			• Burning Blood: Fire damage = half Necrotic damage dealt. Empowered (2 AP): At start of each of its turns, target takes Fire damage = Necrotic damage dealt (Con save at end of turns to end).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Empowered Blood Hex" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_EMPOWERED_BLOOD_HEX">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_EMPOWERED_BLOOD_HEX</requirements>
+		<description>
+			<p>You can invoke more powerful blood hexes. You gain the following options for your Blood Hex feature, each of which are improved versions of the hexes granted by Blood Hex, but cost 2 Adrenaline Points to invoke.</p>
+			<ul>
+				<li><strong><em>Blood Puppet (Empowered).</em></strong> The target must use its Reaction to move up to 10 feet and make a single weapon attack against a creature of your choice (if the target's Reaction is unavailable, it cannot move).</li>
+				<li><strong><em>Bound Blood (Empowered).</em></strong> The target gains the Restrained condition until the start of your next turn.</li>
+				<li><strong><em>Burning Blood (Empowered).</em></strong> At the start of each of its turns, the target takes Fire damage equal to the Necrotic damage dealt. The target can repeat the saving throw it made against the Blood Drain Finisher at the end of each of its turns, ending the effect on a success.</li>
+			</ul>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 17: Blood Frenzy" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SANGUINE_BLOOD_FRENZY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_BLOOD_FRENZY</requirements>
+		<description>
+			<p>While you have the Bloodied condition you gain the following benefits:</p>
+			<ul>
+				<li>Your Speed is increased by 20 feet.</li>
+				<li>When you take the Attack action, the number of attacks you make increases to three.</li>
+				<li>All Hit Points you regain from your Jaeger abilities are doubled. If an ability would restore you to no longer having the Bloodied condition, the effects of this ability do not fade until the end of your turn.</li>
+				<li>You can use the Blood Craze Adrenaline Art.</li>
+			</ul>
+		</description>
+		<sheet alt="Blood Frenzy">
+			<description>While Bloodied (lasts until end of turn if healed above Bloodied):&#13;
+			• Speed increases by 20 feet.&#13;
+			• Attack action grants 3 attacks.&#13;
+			• All HP regained from Jaeger abilities are doubled.&#13;
+			• You can use the Blood Craze Adrenaline Art.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Vital Consumption Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_VITAL_CONSUMPTION" />
+	<element name="Crimson Rage Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_CRIMSON_RAGE" />
+	<element name="Blood Hex Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_BLOOD_HEX" />
+	<element name="Empowered Blood Hex Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_EMPOWERED_BLOOD_HEX" />
+	<element name="Blood Frenzy Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SANGUINE_BLOOD_FRENZY" />
+
+</elements>

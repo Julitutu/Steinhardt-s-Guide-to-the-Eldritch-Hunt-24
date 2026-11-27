@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Jaeger</name>
+		<description>The Jaeger class from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="class-jaeger.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/class-jaeger.xml" />
+		</update>
+	</info>
+
+	<element name="Jaeger" type="Class" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_JAEGER">
+		<description>
+			<p>An unassuming human pounces in the night, his blade and revolver at the ready. A gunshot, followed by the sound of metal against flesh and the splattering of blood over cobblestone. He snickers before plunging his blade anew into his battered prey.</p>
+			<p class="indent">An elegant manikin vaults atop a maddened monster, before putting the barrel of her cannon against its skull and pulling the trigger. She had always loved explosions.</p>
+			<p class="indent">Battleaxe in hand, a massive orc brutally decapitates a beast, then leaps towards another, impaling the silvered weapon in the creature’s chest and ripping a gashing wound from neck to groin.</p>
+			<p class="indent">Jaegers are defined by their efficiency in battle, using their mastery over both steel and gunpowder to lay waste to all who oppose them. More than just soldiers, their skills represent the last wall of defense of a world fated to extinction; they are unstoppable and unbreakable. They strike fear in the heart of their foes, and bring hope to those they protect.</p>
+			<h4>ENGINEERED PERFECTION</h4>
+			<p>In the ease and safety that contemporary advancements bring, city dwellers frequently forget how fortunate their lives are. They have all but forgotten the life of pain that would befall them if the system failed. Which is precisely what took place in Luyarnha.</p>
+			<p class="indent">The urbanites were left defenseless when the scourge swept the streets of the city, snapping like twigs in the face of such ferocity. While the denizens of the town struggled against insurmountable odds, the church and the nobility didn’t remain inert, instead concentrating their efforts to engineer the ideal weapon, something capable of annihilating the beasts plaguing the city. This weapon came to be known as the jaegers.</p>
+			<p class="indent">Jaegers thrive in the savagery of the hunt. Their reflexes more honed than that of mere mortals, jaegers are capable of dodging the most vicious of blows and using that momentum to drive their blade deep into the heart of their prey. A jaeger’s thirst for battle is endless; only in inaction can they experience fatigue. They are the perfect weapon against the nightmarish tides of beasts and the sole reason Luyarnha still stands.</p>
+			<h4>BONDS OF BLOOD</h4>
+			<p>One who hunts beasts is a “hunter”, as they are commonly called by civilized society, but few hunters have the jaeger class. Coming from all walks of life, jaegers blend in with their communities, only unleashing their abilities in times of need. They act as guardians for people who are unable to defend themselves, and they serve as the bloody sword of vengeance in a world that is hell-bent on destroying itself. Life in the city-state of Luyarnha is fraught with peril: gang warfare, infectious madness, and harrowing beasts. Amidst this chaos, jaegers are the first to charge into battle so that their brothers and sisters can survive to live another day.</p>
+			<p class="indent">Jaegers rarely leave their home city of Luyarnha; they would rather die than see it fall to the scourge. Following the jaeger's creed—'survive together, or die together'—they never hunt by themselves unless forced to. The nights can be brutal and the beasts are relentless; against such a ferocious onslaught, only a united front can hope to survive. As a result, jaegers are aware of the importance of teamwork and never charge into battle alone, save to retrieve fallen allies. The bonds formed during the hunts are stronger than those of many families. Blood is thicker than water, and the gods know that blood is shed when the hunt rages on.</p>
+			<p class="indent">Think about the nature of your abilities and what gave rise to them as you construct your jaeger character. Were you one of the numerous orphans whose bodies were experimented on in the jaeger research project? Did you voluntarily join the ranks of hunters, or were you abducted and brainwashed into the ideal soldier? Alternatively, you might have defied the established order and joined the jaegers by a different route, perhaps after finding an eldritch carving and engraving it on your flesh. You might be self-taught—a loner who learned combat skills, tracking, or even a magical connection to the cosmos through the necessity of surviving the hunts. Alternatively, you might have learned from the comrades you now consider family.</p>
+			<p class="indent">What fuels you? Is it a visceral hatred of the beasts that slaughtered your loved ones? Or is it a reflection of your desire to stop these monsters' devastation, committing yourself to reining in their carnage? Is your adventuring career a continuation of your work in annihilating the scourge of beasts, or a significant change? What made you join a band of adventurers? Do you enjoy the break from the hunt that new allies provide, or do you find it difficult to teach them the jaeger ways?</p>
+			<div class="sidebar">
+				<h5>CORE JAEGER TRAITS</h5>
+				<table>
+					<tr><td><b>Primary Ability</b></td><td class="left">Strength or Dexterity</td></tr>
+					<tr><td><b>Hit Point Die</b></td><td class="left">D8 per Jaeger level</td></tr>
+					<tr><td><b>Saving Throw Proficiencies</b></td><td class="left">Dexterity and Intelligence</td></tr>
+					<tr><td><b>Skill Proficiencies</b></td><td class="left"><i>Choose 2:</i> Acrobatics, Arcana, Athletics, History, Investigation, Medicine, Nature, Perception, Religion, Sleight of Hand, Stealth, or Survival</td></tr>
+					<tr><td><b>Weapon Proficiencies</b></td><td class="left">Simple and Martial weapons</td></tr>
+					<tr><td><b>Armor Training</b></td><td class="left">Light and Medium armor and Shields</td></tr>
+					<tr><td><b>Starting Equipment</b></td><td class="left"><i>Choose A, B, or C:</i> (A) Handaxe, Cleaver, Blunderbuss, Pouch of 20 Bullets, Scale Mail, Explorer’s Pack, and 1 GP; (B) Rapier, Scythe, Pistol, Pouch of 20 Bullets, Leather Armor, Dungeoneer’s Pack, and 29 GP; or (C) 115 GP</td></tr>
+				</table>
+			</div>
+			<h4>BECOMING A JAEGER ...</h4>
+			<h5 style="margin-top:-2em">AS A LEVEL 1 JAEGER</h5>
+			<ul style="margin-top:-1em; margin-bottom: 0.5em">
+				<li>Gain all the traits in the Core Jaeger Traits table.</li>
+				<li>Gain the Jaeger’s level 1 features, which are listed in the Jaeger Features table.</li>
+			</ul>
+			<h5 style="margin-top: 0px">AS A MULTICLASS JAEGER</h5>
+			<ul style="margin-top:-1em">
+				<li>Gain the following traits from the Core Jaeger Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light armor and Medium armor and Shields.</li>
+				<li>Gain the Jaeger’s level 1 features, which are listed in the Jaeger Features table.</li>
+			</ul>
+			<h5>JAEGER FEATURES</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td class="col-5">Level</td><td>Proficiency Bonus</td><td>Adrenaline Points</td><td>Momentum Die</td><td class="left">Features</td></tr>
+				</thead>
+				<tr><td> 1</td><td>+2</td><td>1</td><td>—</td><td class="left">Adrenaline, Eldritch Hunter, Flexible Combatant, Weapon Mastery</td></tr>
+				<tr><td> 2</td><td>+2</td><td>2</td><td>1d6</td><td class="left">Fighting Style, Momentum</td></tr>
+				<tr><td> 3</td><td>+2</td><td>2</td><td>1d6</td><td class="left">Jaeger Chapter, Piercing Gaze</td></tr>
+				<tr><td> 4</td><td>+2</td><td>2</td><td>1d6</td><td class="left">Ability Score Improvement, Seasoned Survivor</td></tr>
+				<tr><td> 5</td><td>+3</td><td>3</td><td>1d6</td><td class="left">Extra Attack</td></tr>
+				<tr><td> 6</td><td>+3</td><td>3</td><td>1d6</td><td class="left">Hunter's Pursuit</td></tr>
+				<tr><td> 7</td><td>+3</td><td>3</td><td>1d6</td><td class="left">Jaeger Chapter feature</td></tr>
+				<tr><td> 8</td><td>+3</td><td>3</td><td>1d6</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td> 9</td><td>+4</td><td>4</td><td>1d6</td><td class="left">Evasion</td></tr>
+				<tr><td>10</td><td>+4</td><td>4</td><td>1d6</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td>11</td><td>+4</td><td>4</td><td>1d8</td><td class="left">Lethal Tempo</td></tr>
+				<tr><td>12</td><td>+4</td><td>4</td><td>1d8</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td>13</td><td>+5</td><td>5</td><td>1d8</td><td class="left">Relentless Pursuit</td></tr>
+				<tr><td>14</td><td>+5</td><td>5</td><td>1d8</td><td class="left">Jaeger Chapter feature</td></tr>
+				<tr><td>15</td><td>+5</td><td>5</td><td>1d8</td><td class="left">Inured to Madness</td></tr>
+				<tr><td>16</td><td>+5</td><td>5</td><td>1d8</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td>17</td><td>+6</td><td>6</td><td>1d10</td><td class="left">Jaeger Chapter feature</td></tr>
+				<tr><td>18</td><td>+6</td><td>6</td><td>1d10</td><td class="left">Eternal Watch</td></tr>
+				<tr><td>19</td><td>+6</td><td>6</td><td>1d10</td><td class="left">Epic Boon</td></tr>
+				<tr><td>20</td><td>+6</td><td>6</td><td>1d10</td><td class="left">Always Ready</td></tr>
+			</table>
+			<h4>JAEGER CLASS FEATURES</h4>
+			<p>As a Jaeger, you gain the following class features when you reach the specified Jaeger levels. These features are listed in the Jaeger Features table.</p>
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FLEXIBLE_COMBATANT" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ELDRITCH_HUNTER" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_WEAPON_MASTERY" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FIGHTING_STYLE" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_MOMENTUM" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_JAEGER_CHAPTER" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_PIERCING_GAZE" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ABILITY_SCORE_IMPROVEMENT" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_SEASONED_SURVIVOR" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EXTRA_ATTACK" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_HUNTERS_PURSUIT" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EVASION" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_LETHAL_TEMPO" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_RELENTLESS_PURSUIT" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_INURED_TO_MADNESS" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ETERNAL_WATCH" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EPIC_BOON" />
+			<div element="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ALWAYS_READY" />
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="short">A Relentless Slayer Armed with Steel and Gunpowder</set>
+			<set name="hd">d8</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_LT_SGEH24_MULTICLASS_JAEGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_LT_SGEH24_MULTICLASS_JAEGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE" requirements="!ID_LT_SGEH24_MULTICLASS_JAEGER" />
+			<select type="Proficiency" name="Skill Proficiency (Jaeger)" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="2" requirements="!ID_LT_SGEH24_MULTICLASS_JAEGER" />
+
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE" level="1" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FLEXIBLE_COMBATANT" level="1" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ELDRITCH_HUNTER" level="1" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_WEAPON_MASTERY" level="1" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FIGHTING_STYLE" level="2" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_MOMENTUM" level="2" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_JAEGER_CHAPTER" level="3" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_PIERCING_GAZE" level="3" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ABILITY_SCORE_IMPROVEMENT" level="4" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_SEASONED_SURVIVOR" level="4" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EXTRA_ATTACK" level="5" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_HUNTERS_PURSUIT" level="6" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EVASION" level="9" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_LETHAL_TEMPO" level="11" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_RELENTLESS_PURSUIT" level="13" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_INURED_TO_MADNESS" level="15" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ETERNAL_WATCH" level="18" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EPIC_BOON" level="19" />
+			<grant type="Class Feature" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ALWAYS_READY" level="20" />
+		</rules>
+		<multiclass id="ID_LT_SGEH24_MULTICLASS_JAEGER">
+			<prerequisite>Strength 13 or Dexterity 13</prerequisite>
+			<requirements>([str:13]||[dex:13])||ID_INTERNAL_GRANTS_MULTICLASS_UNLOCKER</requirements>
+			<setters>
+				<set name="multiclass proficiencies">Martial weapons, Light armor, Medium armor, Shields</set>
+			</setters>
+			<rules>
+				<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS" />
+			</rules>
+		</multiclass>
+	</element>
+
+	<element name="Level 1: Adrenaline" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ADRENALINE</requirements>
+		<description>
+			<p>Your focus during battle is razor sharp, letting you keenly use Adrenaline during critical moments. You have 1 Adrenaline Point. You gain additional Adrenaline Points at 2nd, 5th, 9th, 13th, and 17th level, as shown on the Jaeger table. You can expend Adrenaline Points to use Adrenaline Arts. You learn two such Adrenaline Arts: Weapon Parry and Dodge Step.</p>
+			<p class="indent">You learn one additional Adrenaline Art of your choice at 2nd, 7th, 13th, and 17th level. Your Adrenaline Art options are detailed at the end of the class description.</p>
+			<p class="indent">You regain all expended Adrenaline Points when you finish a Short or Long Rest. When you roll a 20 on a saving throw or an attack roll against an enemy, you regain 1 Adrenaline Point. When you roll Initiative and have no Adrenaline Points remaining, you regain 1 Adrenaline Point.</p>
+			<p class="indent"><strong><em>Weapon Parry (Adrenaline Art, Reaction).</em></strong> As a Reaction to being hit by an attack from a creature you can see within range of a weapon you are holding, you can expend 1 Adrenaline Point to reduce the attack's damage. The reduction equals one roll of your weapon's damage dice plus your Strength or Dexterity modifier (your choice) and your Jaeger level.</p>
+			<p class="indent">If you roll the maximum amount of the weapon's damage die and completely block the attack, you can force the attacker to make a Constitution saving throw (DC = 8 + your Proficiency Bonus + your Dexterity or Strength modifier, whichever is higher). On a failed save, the target has the Stunned condition until the start of your next turn.</p>
+			<p class="indent"><strong><em>Dodge Step (Adrenaline Art, Reaction).</em></strong> When an attack roll hits you, if your Speed is not 0, you can expend 1 Adrenaline Point to take a Reaction moving 5 feet without provoking Opportunity Attacks and making a Dexterity saving throw with a DC equal to the attacker's attack roll (including modifiers). On a success, you evade completely and take no damage. On a failure, you halve the attack's damage against you.</p>
+		</description>
+		<sheet alt="Adrenaline" usage="{{adrenaline:points}}/Short Rest">
+			<description>You have {{adrenaline:points}} Adrenaline Points to fuel your Adrenaline Arts. When you roll a 20 on a saving throw or an attack roll against an enemy, you regain 1 Adrenaline Point. When you roll Initiative and have no Adrenaline Points remaining, you regain 1 Adrenaline Point.</description>
+		</sheet>
+		<rules>
+			<stat name="adrenaline:points" value="1" />
+			<stat name="adrenaline:points" value="1" level="2" />
+			<stat name="adrenaline:points" value="1" level="5" />
+			<stat name="adrenaline:points" value="1" level="9" />
+			<stat name="adrenaline:points" value="1" level="13" />
+			<stat name="adrenaline:points" value="1" level="17" />
+
+			<stat name="adrenaline:ability" value="strength:modifier" bonus="ability" />
+			<stat name="adrenaline:ability" value="dexterity:modifier" bonus="ability" />
+			<stat name="adrenaline:dc" value="8" />
+			<stat name="adrenaline:dc" value="proficiency" />
+			<stat name="adrenaline:dc" value="adrenaline:ability" />
+
+			<select type="Class Feature" name="Weapon Parry" supports="SGEH24 Weapon Parry" default="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_WEAPON_PARRY" requirements="!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ADRENALINE_WEAPON_PARRY" />
+			<select type="Class Feature" name="Dodge Step" supports="SGEH24 Dodge Step" default="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_DODGE_STEP" requirements="!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ADRENALINE_DODGE_STEP" />
+			<select type="Class Feature" name="Adrenaline Art (Jaeger 2)" supports="SGEH24 Adrenaline Art" level="2" />
+			<select type="Class Feature" name="Adrenaline Art (Jaeger 7)" supports="SGEH24 Adrenaline Art" level="7" />
+			<select type="Class Feature" name="Adrenaline Art (Jaeger 13)" supports="SGEH24 Adrenaline Art" level="13" />
+			<select type="Class Feature" name="Adrenaline Art (Jaeger 17)" supports="SGEH24 Adrenaline Art" level="17" />
+		</rules>
+	</element>
+	<element name="Weapon Parry" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_WEAPON_PARRY">
+		<supports>SGEH24 Weapon Parry</supports>
+		<compendium display="false" />
+		<description>
+			<p><em>Adrenaline Art, Reaction</em></p>
+			<p>As a Reaction to being hit by an attack from a creature you can see within range of a weapon you are holding, you can expend 1 Adrenaline Point to reduce the attack's damage. The reduction equals one roll of your weapon's damage dice plus your Strength or Dexterity modifier (your choice) and your Jaeger level.</p>
+			<p class="indent">If you roll the maximum amount of the weapon's damage die and completely block the attack, you can force the attacker to make a Constitution saving throw (DC = 8 + your Proficiency Bonus + your Dexterity or Strength modifier, whichever is higher). On a failed save, the target has the Stunned condition until the start of your next turn.</p>
+		</description>
+		<sheet action="Reaction" usage="1 Adrenaline Point">
+			<description>When hit by an attack from a creature you can see within range of a weapon you are holding, reduce the damage by one roll of your weapon's damage dice + {{weapon parry:bonus}}. If you roll the maximum amount on the weapon's damage die and reduce the damage to 0, force the attacker to make a DC{{adrenaline:dc}} Constitution saving throw or be Stunned until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="weapon parry:bonus" value="level:jaeger" />
+			<stat name="weapon parry:bonus" value="adrenaline:ability" />
+		</rules>
+	</element>
+	<element name="Dodge Step" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_DODGE_STEP">
+		<supports>SGEH24 Dodge Step</supports>
+		<compendium display="false" />
+		<description>
+			<p><em>Adrenaline Art, Reaction</em></p>
+			<p>When an attack roll hits you, if your Speed is not 0, you can expend 1 Adrenaline Point to take a Reaction moving 5 feet without provoking Opportunity Attacks and making a Dexterity saving throw with a DC equal to the attacker's attack roll (including modifiers). On a success, you evade completely and take no damage. On a failure, you halve the attack's damage against you.</p>
+		</description>
+		<sheet action="Reaction" usage="1 Adrenaline Point">
+			<description>When hit by an attack while your Speed is not 0, move 5 feet without provoking Opportunity Attacks and make a Dexterity saving throw (DC = attack roll). On a success, you take no damage; on a failure, you take half damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 1: Flexible Combatant" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FLEXIBLE_COMBATANT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_FLEXIBLE_COMBATANT</requirements>
+		<description>
+			<p>You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one, and you can reload weapons with the Loading, Reload, or Barrel properties without a free hand.</p>
+			<p class="indent">Additionally, if you are carrying a one-handed melee weapon in one hand, and a one-handed ranged weapon in the other, you do not have Disadvantage from being within 5 feet of an enemy on attacks made with that ranged weapon.</p>
+		</description>
+		<sheet alt="Flexible Combatant">
+			<description>You can draw or stow two one-handed weapons at once and reload weapons with the Loading, Reload, or Barrel properties without a free hand. While carrying a one-handed melee weapon and a one-handed ranged weapon, you don't have Disadvantage on attacks with that ranged weapon from being within 5 feet of an enemy.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 1: Eldritch Hunter" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ELDRITCH_HUNTER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ELDRITCH_HUNTER</requirements>
+		<description>
+			<p>When you make an ability check to track or identify an Aberration, Celestial, Fiend, Monstrosity, or Undead, you can add your Proficiency Bonus to the ability check. If you are already proficient in the ability check, you can double your Proficiency Bonus.</p>
+		</description>
+		<sheet alt="Eldritch Hunter">
+			<description>You add your Proficiency Bonus (or double your Proficiency Bonus if already proficient) to ability checks made to track or identify an Aberration, Celestial, Fiend, Monstrosity, or Undead.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 1: Weapon Mastery" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_WEAPON_MASTERY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_WEAPON_MASTERY</requirements>
+		<description>
+			<p>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.</p>
+		</description>
+		<sheet alt="Weapon Mastery">
+			<description>Whenever you finish a Long Rest, you can change one of the weapon masteries you have to a different one.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Weapon Mastery (Jaeger 1)" supports="Weapon Mastery" number="2" />
+		</rules>
+	</element>
+
+	<element name="Level 2: Fighting Style" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FIGHTING_STYLE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_FIGHTING_STYLE</requirements>
+		<description>
+			<p>You gain a Fighting Style feat of your choice. Instead of choosing one of those feats, you can choose one of the options below.</p>
+			<p class="indent"><strong><em>Flexible Fighting.</em></strong> When you are carrying a melee weapon in one hand, you don't suffer Disadvantage on ranged weapon attacks made with a weapon held in the other hand. Additionally, you can engage in Two-Weapon Fighting with any weapons that lack the Two-Handed property, even if they do not have the Light property. While wielding two weapons, you gain +1 to the damage rolls of both weapons.</p>
+			<p class="indent"><strong><em>Focused Fighting.</em></strong> You learn an additional Adrenaline Art, and you gain 1 additional Adrenaline Point.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_FIGHTING_STYLE_FEATURE" />
+			<select type="Feat" name="Fighting Style (Jaeger 2)" supports="Fighting Style||SGEH24 Jaeger Fighting Style" />
+		</rules>
+	</element>
+	<element name="Flexible Fighting" type="Feat" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_FEAT_FLEXIBLE_FIGHTING">
+		<supports>SGEH24 Jaeger Fighting Style</supports>
+		<requirements>ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FIGHTING_STYLE||ID_WOTC_PHB24_GRANTS_FEAT_UNLOCKER</requirements>
+		<prerequisite>Jaeger Fighting Style Feature</prerequisite>
+		<description>
+			<p>When you are carrying a melee weapon in one hand, you don't suffer Disadvantage on ranged weapon attacks made with a weapon held in the other hand. Additionally, you can engage in Two-Weapon Fighting with any weapons that lack the Two-Handed property, even if they do not have the Light property. While wielding two weapons, you gain +1 to the damage rolls of both weapons.</p>
+		</description>
+		<sheet>
+			<description>While carrying a melee weapon in one hand, you don't suffer Disadvantage on ranged weapon attacks made with a weapon in the other hand. You can engage in Two-Weapon Fighting with any non-Two-Handed weapons. While wielding two weapons, you gain +1 to damage rolls with both.</description>
+		</sheet>
+	</element>
+	<element name="Focused Fighting" type="Feat" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_FEAT_FOCUSED_FIGHTING">
+		<supports>SGEH24 Jaeger Fighting Style</supports>
+		<requirements>ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FIGHTING_STYLE||ID_WOTC_PHB24_GRANTS_FEAT_UNLOCKER</requirements>
+		<prerequisite>Jaeger Fighting Style Feature</prerequisite>
+		<description>
+			<p>You learn an additional Adrenaline Art, and you gain 1 additional Adrenaline Point.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Class Feature" name="Adrenaline Art (Focused Fighting)" supports="SGEH24 Adrenaline Art" />
+			<stat name="adrenaline:points" value="1" />
+		</rules>
+	</element>
+
+	<element name="Level 2: Momentum" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_MOMENTUM">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_MOMENTUM</requirements>
+		<description>
+			<p>In combat, you can build up Momentum, a force that empowers your strikes and enables brutal finishing moves.</p>
+			<p class="indent"><strong><em>Momentum Dice.</em></strong> Each time you expend an Adrenaline Point, you gain 1 Momentum die. Your Momentum die is a d6, and it increases as you gain Jaeger levels, as shown in the Jaeger Features table. You can hold a maximum number of Momentum dice equal to your Proficiency Bonus + your Strength or Dexterity modifier (whichever is higher).</p>
+			<p class="indent">While you have 1 or more Momentum dice, your Momentum follows the rules below.</p>
+			<p class="indent"><strong><em>Finishers.</em></strong> You can expend all of your Momentum dice to execute a Finisher. You know the Brutal Finisher. You learn one additional Finisher of your choice at 4th, 6th, 8th, and 12th level, and may gain others through Jaeger Chapter features.</p>
+			<p class="indent"><strong><em>Duration.</em></strong> Your Momentum dice last until the end of your next turn. If you still have Momentum dice at the start of your next turn, you can keep them for another round by doing one of the following:</p>
+			<ul>
+				<li>Gain a Momentum die.</li>
+				<li>Make an attack roll against a hostile creature.</li>
+				<li>End your turn within 5 feet of a hostile creature.</li>
+			</ul>
+			<p>Each time your Momentum dice are sustained this way, they last until the end of your next turn.</p>
+			<p class="indent"><strong><em>Brutal Finisher (Finisher, special).</em></strong> When you hit a creature with an attack, you can expend all of your Momentum dice and add them to the damage roll. If you reduce the target to 0 Hit Points with this Finisher, or the target is reduced to 0 Hit Points before the start of your next turn, you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet alt="Momentum" usage="Max {{momentum:max}}d{{momentum:die}}">
+			<description>Each time you expend an Adrenaline Point, you gain 1 Momentum die (1d{{momentum:die}}). Your Momentum dice last until the end of your next turn, and can be sustained each round by gaining a Momentum die, making an attack roll against a hostile creature, or ending your turn within 5 feet of a hostile creature. You can expend all your Momentum dice to execute a Finisher.</description>
+		</sheet>
+		<rules>
+			<stat name="momentum:die" value="6" bonus="base" />
+			<stat name="momentum:die" value="8" level="11" bonus="base" />
+			<stat name="momentum:die" value="10" level="17" bonus="base" />
+			<stat name="momentum:max" value="proficiency" />
+			<stat name="momentum:max" value="adrenaline:ability" />
+
+			<select type="Class Feature" name="Brutal Finisher" supports="SGEH24 Brutal Finisher" default="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_BRUTAL" requirements="!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_FINISHER_BRUTAL" />
+			<select type="Class Feature" name="Finisher (Jaeger 4)" supports="Jaeger Finisher||SGEH24 Jaeger Finisher" level="4" />
+			<select type="Class Feature" name="Finisher (Jaeger 6)" supports="Jaeger Finisher||SGEH24 Jaeger Finisher" level="6" />
+			<select type="Class Feature" name="Finisher (Jaeger 8)" supports="Jaeger Finisher||SGEH24 Jaeger Finisher" level="8" />
+			<select type="Class Feature" name="Finisher (Jaeger 12)" supports="Jaeger Finisher||SGEH24 Jaeger Finisher" level="12" />
+		</rules>
+	</element>
+	<element name="Brutal Finisher" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_BRUTAL">
+		<supports>SGEH24 Brutal Finisher</supports>
+		<compendium display="false" />
+		<description>
+			<p><em>Finisher, special</em></p>
+			<p>When you hit a creature with an attack, you can expend all of your Momentum dice and add them to the damage roll. If you reduce the target to 0 Hit Points with this Finisher, or the target is reduced to 0 Hit Points before the start of your next turn, you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet>
+			<description>When you hit a creature with an attack, expend all your Momentum dice (d{{momentum:die}}) and add them to the damage roll. If the target is reduced to 0 Hit Points with this Finisher or before the start of your next turn, you regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Jaeger Chapter" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_JAEGER_CHAPTER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_JAEGER_CHAPTER</requirements>
+		<description>
+			<p>You choose a Jaeger Chapter that suits the means by which you intend to further your powers. Select one of the following: Absolute Chapter, Heretic Chapter, Marauder Chapter, Salvation Chapter, or Sanguine Chapter.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Archetype" name="Jaeger Chapter" supports="Jaeger Chapter" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Piercing Gaze" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_PIERCING_GAZE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_PIERCING_GAZE</requirements>
+		<description>
+			<p>You gain the ability to activate a magical sight at will (no action required), allowing you to effortlessly pierce the gloom and see what lurks within. For 1 hour, you gain Darkvision out to a range of 60 feet. If you already have Darkvision, its range increases to 120 feet. This vision lets you see normally in Dim Light and Darkness, both magical and nonmagical.</p>
+			<p class="indent">When you reach 7th level the Darkvision granted by this feature becomes permanent, but when activating the feature you gain the effect of <i>See Invisibility</i> for the duration. When you reach 13th level, you additionally gain the effect of <i>True Seeing</i> for the duration when activating the feature.</p>
+			<p class="indent">Once you use this feature, you can’t use it again until you complete a Long Rest.</p>
+		</description>
+		<sheet alt="Piercing Gaze" usage="1/Long Rest">
+			<description>For 1 hour (no action required), you gain Darkvision out to 60 feet (or 120 feet if you already have Darkvision), allowing you to see normally in Dim Light and Darkness, both magical and nonmagical.</description>
+			<description level="7">You have permanent Darkvision (60 feet, or 120 feet if you already had Darkvision) that sees normally in magical and nonmagical Darkness. Additionally, you can activate this feature (no action required) to gain the effect of See Invisibility for 1 hour.</description>
+			<description level="13">You have permanent Darkvision (60 feet, or 120 feet if you already had Darkvision) that sees normally in magical and nonmagical Darkness. Additionally, you can activate this feature (no action required) to gain the effects of See Invisibility and True Seeing for 1 hour.</description>
+			<description level="18" usage="Always Active">You are always under the effects of Piercing Gaze (Darkvision 60/120 ft. through magical and nonmagical Darkness, See Invisibility, and True Seeing).</description>
+		</sheet>
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" level="7" />
+			<stat name="darkvision:range" value="60" bonus="base" level="7" />
+		</rules>
+	</element>
+
+	<element name="Level 4: Ability Score Improvement" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ABILITY_SCORE_IMPROVEMENT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ABILITY_SCORE_IMPROVEMENT</requirements>
+		<compendium display="false" />
+		<description>
+			<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Jaeger levels 8, 10, 12, and 16.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Feat" name="Ability Score Improvement (Jaeger 4)" level="4" />
+			<select type="Feat" name="Ability Score Improvement (Jaeger 8)" level="8" />
+			<select type="Feat" name="Ability Score Improvement (Jaeger 10)" level="10" />
+			<select type="Feat" name="Ability Score Improvement (Jaeger 12)" level="12" />
+			<select type="Feat" name="Ability Score Improvement (Jaeger 16)" level="16" />
+		</rules>
+	</element>
+
+	<element name="Level 4: Seasoned Survivor" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_SEASONED_SURVIVOR">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_SEASONED_SURVIVOR</requirements>
+		<description>
+			<p>At 4th level, you have Advantage checks made to find secret passages, interpret markings or messages left by other creatures on walls or surfaces, or determine the fate of creatures from blood stains and remains.</p>
+		</description>
+		<sheet alt="Seasoned Survivor">
+			<description>You have Advantage on ability checks made to find secret passages, interpret markings or messages left on walls or surfaces, or determine the fate of creatures from blood stains and remains.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 5: Extra Attack" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EXTRA_ATTACK">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_EXTRA_ATTACK</requirements>
+		<description>
+			<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="extra attack:count" value="2" bonus="extra attack" />
+		</rules>
+	</element>
+
+	<element name="Level 6: Hunter's Pursuit" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_HUNTERS_PURSUIT">
+		<requirements>!(ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_HUNTERS_PURSUIT||ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_RELENTLESS_PURSUIT)</requirements>
+		<description>
+			<p>At the start of your turn, you can expend 1 Adrenaline Point to immediately move up to half your Speed without using any of your movement and without provoking Opportunity Attacks.</p>
+		</description>
+		<sheet alt="Hunter's Pursuit" usage="1 Adrenaline Point">
+			<description>At the start of your turn, you can immediately move up to half your Speed without using any of your movement and without provoking Opportunity Attacks.</description>
+			<description level="13">At the start of your turn, you can immediately move up to half your Speed without using any of your movement and without provoking Opportunity Attacks. If you end this movement next to a hostile creature, you regain the expended Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 9: Evasion" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EVASION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_EVASION</requirements>
+		<description>
+			<p>When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail.</p>
+			<p class="indent">You don't benefit from this feature if you have the Incapacitated condition.</p>
+		</description>
+		<sheet alt="Evasion">
+			<description>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage and do not have the Incapacitated condition, you instead take no damage on a success and only half damage on a failure.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 11: Lethal Tempo" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_LETHAL_TEMPO">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_LETHAL_TEMPO</requirements>
+		<description>
+			<p>The first time you hit a creature on your turn, you gain 1 Momentum die. You gain 1 additional Momentum die any time you reduce a creature to 0 Hit Points.</p>
+		</description>
+		<sheet alt="Lethal Tempo">
+			<description>The first time you hit a creature on your turn, you gain 1 Momentum die. You gain 1 additional Momentum die any time you reduce a creature to 0 Hit Points.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 13: Relentless Pursuit" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_RELENTLESS_PURSUIT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_RELENTLESS_PURSUIT</requirements>
+		<description>
+			<p>When you use your Hunter's Pursuit, if you end your movement next to a hostile creature, you regain the expended Adrenaline Point.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 15: Inured to Madness" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_INURED_TO_MADNESS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_INURED_TO_MADNESS</requirements>
+		<description>
+			<p>You gain Advantage on saving throws against the Charmed and Frightened conditions, and against effects that cause Madness. If you fail a saving throw against any of these, you can expend 1 Adrenaline Point to reroll the die. You must use the new roll.</p>
+		</description>
+		<sheet alt="Inured to Madness">
+			<description>You have Advantage on saving throws against Charmed, Frightened, and effects that cause Madness. If you fail a saving throw against any of these, you can expend 1 Adrenaline Point to reroll it and use the new roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Eternal Watch" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ETERNAL_WATCH">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ETERNAL_WATCH</requirements>
+		<description>
+			<p>You are always under the effect of your Piercing Gaze.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Vision" id="ID_VISION_TRUESIGHT" />
+			<stat name="truesight:range" value="120" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 19: Epic Boon" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_EPIC_BOON">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_EPIC_BOON</requirements>
+		<description>
+			<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Feat" name="Epic Boon (Jaeger 19)" level="19" />
+		</rules>
+	</element>
+
+	<element name="Level 20: Always Ready" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ALWAYS_READY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ALWAYS_READY</requirements>
+		<description>
+			<p>Once per round (beginning at the start of each of your turns), you gain one additional Reaction, which you can only use on an Adrenaline Art that requires a Reaction (such as Weapon Parry or Dodge Step). When you expend an Adrenaline Point on this special Reaction, you immediately regain the expended Adrenaline Point.</p>
+		</description>
+		<sheet alt="Always Ready" usage="1/Round">
+			<description>Beginning at the start of each of your turns, you gain one additional Reaction that can only be used on an Adrenaline Art requiring a Reaction. When you expend an Adrenaline Point on this special Reaction, you immediately regain it.</description>
+		</sheet>
+	</element>
+
+	<!-- Feature Replacement Grants -->
+	<element name="Adrenaline Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ADRENALINE" />
+	<element name="Weapon Parry Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ADRENALINE_WEAPON_PARRY" />
+	<element name="Dodge Step Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ADRENALINE_DODGE_STEP" />
+	<element name="Flexible Combatant Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_FLEXIBLE_COMBATANT" />
+	<element name="Eldritch Hunter Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ELDRITCH_HUNTER" />
+	<element name="Weapon Mastery Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_WEAPON_MASTERY" />
+	<element name="Fighting Style Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_FIGHTING_STYLE" />
+	<element name="Momentum Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_MOMENTUM" />
+	<element name="Brutal Finisher Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_FINISHER_BRUTAL" />
+	<element name="Jaeger Chapter Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_JAEGER_CHAPTER" />
+	<element name="Piercing Gaze Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_PIERCING_GAZE" />
+	<element name="Ability Score Improvement Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ABILITY_SCORE_IMPROVEMENT" />
+	<element name="Seasoned Survivor Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_SEASONED_SURVIVOR" />
+	<element name="Extra Attack Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_EXTRA_ATTACK" />
+	<element name="Hunter's Pursuit Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_HUNTERS_PURSUIT" />
+	<element name="Evasion Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_EVASION" />
+	<element name="Lethal Tempo Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_LETHAL_TEMPO" />
+	<element name="Relentless Pursuit Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_RELENTLESS_PURSUIT" />
+	<element name="Inured to Madness Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_INURED_TO_MADNESS" />
+	<element name="Eternal Watch Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ETERNAL_WATCH" />
+	<element name="Epic Boon Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_EPIC_BOON" />
+	<element name="Always Ready Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_JAEGER_ALWAYS_READY" />
+
+	<!-- Adrenaline Arts -->
+	<element name="Aerial Vault" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_AERIAL_VAULT">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, special</em></p>
+			<p>When you make a jump, you can expend 1 Adrenaline Point to double your jumping distance for that jump, and you can ignore Difficult Terrain until the end of your turn. When you use this Adrenaline Art, the maximum distance you can jump isn’t limited by your speed.</p>
+		</description>
+		<sheet usage="1 Adrenaline Point">
+			<description>When you make a jump, double your jumping distance for that jump (not limited by your speed) and ignore Difficult Terrain until the end of your turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Elemental Art" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_ELEMENTAL_ART">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, Bonus Action</em></p>
+			<p>As a Bonus Action, you expend 1 Adrenaline Point and touch a weapon you're carrying. Choose between Acid, Cold, Fire, or Lightning. For 1 minute, the weapon deals that damage type instead of its normal type.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1 Adrenaline Point">
+			<description>Touch a weapon you're carrying and choose Acid, Cold, Fire, or Lightning. For 1 minute, the weapon deals that damage type instead of its normal type.</description>
+		</sheet>
+	</element>
+
+	<element name="Focus Mind" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_FOCUS_MIND">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, Reaction</em></p>
+			<p>As a Reaction to making a saving throw against the Charmed or Frightened conditions, or having your mind read or influenced, you can expend 1 Adrenaline Point to gain Advantage on the roll. If you already have Advantage on the roll, you can reroll one of the dice once.</p>
+		</description>
+		<sheet action="Reaction" usage="1 Adrenaline Point">
+			<description>When making a saving throw against the Charmed or Frightened conditions, or having your mind read or influenced, gain Advantage on the roll. If you already have Advantage, you can reroll one of the dice once.</description>
+		</sheet>
+	</element>
+
+	<element name="Flourish" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_FLOURISH">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, Bonus Action</em></p>
+			<p>As a Bonus Action, you can expend 1 Adrenaline Point and gain 1 additional Momentum die (gaining 2 Momentum dice in total, which includes the die gained through the Momentum feature from expending the Adrenaline Point on Flourish).</p>
+		</description>
+		<sheet action="Bonus Action" usage="1 Adrenaline Point">
+			<description>You gain 1 additional Momentum die (gaining 2 Momentum dice total, including the die gained from expending an Adrenaline Point).</description>
+		</sheet>
+	</element>
+
+	<element name="I Don't Want To Be Eaten Today" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_I_DONT_WANT_TO_BE_EATEN_TODAY">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, Reaction</em></p>
+			<p>As a Reaction to gaining the Grappled or Restrained conditions from an effect that has an escape DC or to making a contested roll against these conditions, you can expend 1 Adrenaline Point to attempt to immediately escape the effect, making an Athletics or Acrobatics check against the escape DC, or to gain Advantage on the contested roll.</p>
+		</description>
+		<sheet action="Reaction" usage="1 Adrenaline Point">
+			<description>When you gain the Grappled or Restrained condition from an effect with an escape DC, immediately make an Athletics or Acrobatics check to escape it; or when making a contested roll against these conditions, gain Advantage on the roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Jaeger's Rush" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_JAEGERS_RUSH">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, Bonus Action</em></p>
+			<p>As a Bonus Action, you can expend 1 Adrenaline Point to take the Dash action.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1 Adrenaline Point">
+			<description>You take the Dash action.</description>
+		</sheet>
+	</element>
+
+	<element name="Jaeger's Assessment" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_ADRENALINE_JAEGERS_ASSESSMENT">
+		<supports>SGEH24 Adrenaline Art</supports>
+		<description>
+			<p><em>Adrenaline Art, Bonus Action</em></p>
+			<p>As a Bonus Action, you can expend 1 Adrenaline Point to make an Investigation check against a creature you can see within 60 feet of you, contested by its Deception check. On success, you learn its creature type, AC, any Resistances or Immunities it has to damage or conditions, and any spells it is under the effect of.</p>
+			<p class="indent">Alternatively, when you take this Bonus Action, you can take the Search action.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1 Adrenaline Point">
+			<description>Make an Investigation check contested by the Deception check of a creature you can see within 60 feet. On a success, you learn its creature type, AC, damage/condition Resistances and Immunities, and active spell effects. Alternatively, you can take the Search action.</description>
+		</sheet>
+	</element>
+
+	<!-- Finishers -->
+	<element name="Breaking Blow" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_BREAKING_BLOW">
+		<supports>SGEH24 Jaeger Finisher</supports>
+		<description>
+			<p><em>Finisher, special</em></p>
+			<p>When you hit a creature with an attack, you can expend all of your Momentum dice to force the target to make a saving throw, suffering a condition for 1 minute on a failure. The DC of the save is 8 + your Strength or Dexterity modifier (your choice) + your Proficiency Bonus. The type of saving throw and the condition depend on the number of Momentum dice you have when you use this Finisher. You can choose to inflict a condition that requires fewer Momentum dice than you expend, but all Momentum dice are expended regardless of the condition selected.</p>
+			<p class="indent">The target can repeat its saving throw against the condition at the end of each of its turns, ending the effect on a success. If the condition inflicted is Prone, they do not need to pass a subsequent save and can end the condition by standing as normal instead. If the target fails its initial save against the effect, you regain 1 Adrenaline Point.</p>
+			<table>
+				<thead>
+					<tr><td>Momentum Dice</td><td>Saving Throw</td><td>Condition</td></tr>
+				</thead>
+				<tr><td>1</td><td>Strength</td><td>Prone</td></tr>
+				<tr><td>2</td><td>Constitution</td><td>Blinded</td></tr>
+				<tr><td>3</td><td>Strength</td><td>Restrained</td></tr>
+				<tr><td>4</td><td>Constitution</td><td>Stunned</td></tr>
+				<tr><td>5+</td><td>Constitution</td><td>Paralyzed</td></tr>
+			</table>
+		</description>
+		<sheet usage="All Momentum Dice">
+			<description>When you hit a creature with an attack, expend all Momentum dice to force a DC{{adrenaline:dc}} save for a condition for 1 minute based on dice expended (or a lower tier): 1: Str (Prone), 2: Con (Blinded), 3: Str (Restrained), 4: Con (Stunned), 5+: Con (Paralyzed). Target repeats the save at the end of each turn (Prone ends by standing). If it fails the initial save, you regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Chasing Finisher" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_CHASING_FINISHER">
+		<supports>SGEH24 Jaeger Finisher</supports>
+		<description>
+			<p><em>Finisher, Bonus Action</em></p>
+			<p>As a Bonus Action, you expend all of your Momentum dice to move 10 feet per die expended before making a melee weapon attack. This movement can be in any direction, including straight up. If nothing is holding you aloft after this attack, you fall. On a hit, add the expended Momentum dice to the attack’s damage roll, and until the end of the target’s next turn, its Speed is reduced by 10 feet per die expended.</p>
+			<p class="indent">If you move at least 30 feet using the Finisher, you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet action="Bonus Action" usage="All Momentum Dice">
+			<description>Move 10 feet per Momentum die expended in any direction (including straight up; you fall afterward if unsupported) before making a melee weapon attack. On a hit, add the Momentum dice (d{{momentum:die}}) to damage and reduce the target's Speed by 10 feet per die until the end of its next turn. If you move at least 30 feet, you regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Hemorrhaging Wound" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_HEMORRHAGING_WOUND">
+		<supports>SGEH24 Jaeger Finisher</supports>
+		<description>
+			<p><em>Finisher, special</em></p>
+			<p>When you hit a creature with an attack, you can expend all of your Momentum dice to rend a vicious bleeding wound. At the end of each of the creature's turns, it loses Hit Points equal to the Momentum dice expended. Each time it takes damage from this effect, the number of dice of damage it takes at the end of its next turn is reduced by 1, and the bleeding stops when the number of dice would be reduced to 0.</p>
+			<p class="indent">Applying a new bleed while the target is still bleeding does not stack, but instead refreshes the number of dice of damage taken from the bleed to the higher of the two values.</p>
+			<p class="indent">If a creature is slain while bleeding from this effect, you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet usage="All Momentum Dice">
+			<description>When you hit a creature with an attack, expend all Momentum dice (d{{momentum:die}}) to cause bleeding. At the end of each of its turns, it loses HP equal to those Momentum dice, reducing the number of dice by 1 after each tick until 0 (reapplying sets it to the higher dice count). If a creature is slain while bleeding, you regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Opportunistic Shot" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_OPPORTUNISTIC_SHOT">
+		<supports>SGEH24 Jaeger Finisher</supports>
+		<description>
+			<p><em>Finisher, Reaction</em></p>
+			<p>As a Reaction when a creature within 30 feet of you becomes Paralyzed, Restrained, or Stunned, you can expend all of your Momentum dice and make a single weapon attack with a firearm you are holding. On a hit, the target takes damage equal to the weapon's damage roll plus the expended Momentum dice, you can inflict the Prone condition on the target, and you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet action="Reaction" usage="All Momentum Dice">
+			<description>When a creature within 30 feet becomes Paralyzed, Restrained, or Stunned, make one attack with a firearm you are holding. On a hit, add the expended Momentum dice (d{{momentum:die}}) to damage, you can knock the target Prone, and you regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Vicious Finisher" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_VICIOUS_FINISHER">
+		<supports>SGEH24 Jaeger Finisher</supports>
+		<description>
+			<p><em>Finisher, Bonus Action</em></p>
+			<p>As a Bonus Action, you expend all of your Momentum dice to warp your hand into a beast claw and make a melee weapon attack with it against a creature within 5 feet of you. You can use your choice of your Strength or Dexterity modifier for the attack and damage rolls of this attack. On a hit, the target takes Slashing damage equal to 1d12 + your Strength modifier + the Momentum dice expended. This attack has a higher Critical Hit range based on the number of Momentum dice expended, reducing the roll needed by 2 for each die, up to a maximum of scoring a critical hit on a 10–20 with 5 Momentum dice.</p>
+			<p class="indent">If the Finisher is a Critical Hit, you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet action="Bonus Action" usage="All Momentum Dice">
+			<description>Make a melee weapon attack with a warped beast claw within 5 feet (using Strength or Dexterity). On a hit, deal 1d12 + {{strength:modifier}} + Momentum dice (d{{momentum:die}}) Slashing damage. The Critical Hit threshold decreases by 2 per Momentum die expended (max 10–20 with 5 dice). On a Critical Hit, regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Volley Finisher" type="Class Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_CLASS_FEATURE_JAEGER_FINISHER_VOLLEY_FINISHER">
+		<supports>SGEH24 Jaeger Finisher</supports>
+		<description>
+			<p><em>Finisher, Bonus Action</em></p>
+			<p>As a Bonus Action while you are holding a firearm, you can expend all of your Momentum dice to reload and fire a spray of shots at blinding speed. Each creature in a 30-foot Cone must make a Dexterity saving throw (DC = 8 + your Dexterity modifier + your Proficiency Bonus). On a failure, a creature takes Piercing damage equal to the Momentum dice expended.</p>
+			<p class="indent">If the Finisher damages 2 or more creatures, you regain 1 Adrenaline Point.</p>
+		</description>
+		<sheet action="Bonus Action" usage="All Momentum Dice">
+			<description>While holding a firearm, reload and fire in a 30-foot Cone. Each creature must make a DC{{volley finisher:dc}} Dexterity saving throw or take Piercing damage equal to the Momentum dice (d{{momentum:die}}) expended. If it damages 2 or more creatures, regain 1 Adrenaline Point.</description>
+		</sheet>
+		<rules>
+			<stat name="volley finisher:dc" value="8" />
+			<stat name="volley finisher:dc" value="proficiency" />
+			<stat name="volley finisher:dc" value="dexterity:modifier" />
+		</rules>
+	</element>
+</elements>

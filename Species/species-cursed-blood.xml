@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Cursed-Blood</name>
+		<description>The Cursed-Blood species from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.1.0">
+			<file name="species-cursed-blood.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Species/species-cursed-blood.xml" />
+		</update>
+	</info>
+	
+	<element name="Cursed-Blood" type="Race" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACE_CURSED_BLOOD">
+		<description>
+			<p>The cursed-blood are so named for their accursed lineage, forever bound by the twisted tethers of their very own blood. From the moment of their birth, they are each adorned with a quiescent mask, sealing their features in a permanent expression of cold, unfeeling marble. Nevertheless, these fated beings find strength in the familial bonds that tie them together, for they must rely on each other to survive the foul scourge that has befallen Luyarnha.</p>
+			<p class="indent">Alas, the cursed-blood are shunned and abhorred throughout the city-state, only finding refuge far from the prying eyes of society, amidst the squalor of the city's slums. In these desolate corners, where madness and scourge ravage the populace, the cursed-blood stand vigilant, ever protective of their own kin, finding solace in their shared bane.</p>
+			<p class="indent">The cursed-bloods’ origins are viewed as a taboo subject not to be spoken of by the populace, to avoid incurring the wrath of those above. According to whispered rumors, the curse was a punishment meted out by vengeful Great Ones, a retribution for sins committed by their forebears. Once, their kin—demons, dragons, and other creatures of flame and brimstone—roamed freely across the world, but they have long since disappeared, banished from existence by the enigmatic beings that lurk in the glacial void beyond. Now, all who share even a drop of their blood are condemned to a wretched existence, their individual origins erased and replaced by the familial bond they forged from the crucible of their affliction.</p>
+			<p class="indent">This curse, wrought from birth, is both tragic and horrific. Each born as conjoined twins, one of them must inevitably perish for the other to live. Although the death of their twin happens in the womb, the cursed-blood can still hear and feel the echoes of their lost sibling's voice within their own soul. This unspeakable atrocity against life twists their flesh and soul, and forces them to carry the remnants of their other half within their chest in the form of a gaping maw, an eye, or some other feature over which they have no control.</p>
+			<h5>CURSED-BLOOD TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Age.</strong> Cursed-bloods develop much faster than humans, reaching maturity after 5 years, and have shorter lifespans, passing after roughly 60 years, though some rare individuals have lived up to 100.</li>
+				<li><strong>Creature Type:</strong> Humanoid</li>
+				<li><strong>Size:</strong> Small (about 2–4 feet tall)</li>
+				<li><strong>Speed:</strong> 25 feet, Climb Speed equal to your Speed. You can't use your Climb Speed while you wear Medium or Heavy armor.</li>
+			</ul>
+			<p>As a Cursed-Blood, you have these special traits.</p>
+			<p class="indent"><strong><em>Together Forever.</em></strong> Your dead twin manifests within your stomach in supernatural ways. Choose a Twin Manifestation from the Twin Manifestations table. You gain the level 1 benefit of that manifestation. When you reach character levels 3 and 5, you gain further abilities. If you learn a spell as part of this trait, you always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the twin).</p>
+			<h5>Twin Manifestations</h5>
+			<table>
+				<thead>
+					<tr><td>Twin</td><td>Level 1</td><td>Level 3</td><td>Level 5</td></tr>
+				</thead>
+				<tr>
+					<td>Hungering Twin</td>
+					<td>Your stomach is bigger on the inside than on the outside. It can hold up to 250 pounds, not exceeding a volume of 32 cubic feet. If you die, you harmlessly regurgitate all objects devoured. Your stomach holds enough air for a creature to breathe 1 minute inside it. Nonmagical items inside your stomach are destroyed by psychic energies after 24 hours.</td>
+					<td>Choose one damage type from among Acid, Cold, Fire, or Poison. Whenever you take damage of that type, you reduce it by an amount equal to your Proficiency Bonus.</td>
+					<td>Nonmagical items inside your stomach are no longer destroyed by psychic energies. In addition, your stomach can hold up to 500 pounds and has a maximum volume of 64 cubic feet.</td>
+				</tr>
+				<tr>
+					<td>Spirit Twin</td>
+					<td>You have telepathy with a range of 5 times your character level. A creature without telepathy that receives your telepathic messages can’t communicate mentally to you. You also know the <i>Mage Hand</i> cantrip.</td>
+					<td>You can turn a Critical Hit scored against you into a normal hit. Once you use this benefit, you can’t do so again until you finish a Short Rest.</td>
+					<td>A creature without telepathy that receives your telepathic messages can communicate with you using a language it knows.</td>
+				</tr>
+				<tr>
+					<td>Watchful Twin</td>
+					<td>You have Darkvision with a range of 120 feet. You also learn the <i>Cosmic Eye</i> cantrip.</td>
+					<td>You also learn the <i>Detect Magic</i> spell.</td>
+					<td>You learn the <i>See Invisibility</i> spell.</td>
+				</tr>
+			</table>
+			<p class="indent"><strong><em>Vigilant.</em></strong> You can’t be surprised. When you roll Initiative, you can add your Proficiency Bonus to the roll.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Cursed-Blood)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<stat name="innate speed" value="25" bonus="base" />
+			<stat name="innate speed:climb" value="innate speed" bonus="base" requirements="![armor:medium],![armor:heavy]" />
+
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Cursed-Blood)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language (Cursed-Blood)" supports="Custom Race Language" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" number="3" />
+
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_TOGETHER_FOREVER" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_VIGILANT" />
+		</rules>
+	</element>
+
+	<element name="Together Forever" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_TOGETHER_FOREVER">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_CURSED_BLOOD_TOGETHER_FOREVER</requirements>
+		<description>
+			<p>Your dead twin manifests within your stomach in supernatural ways. Choose a Twin Manifestation from the Twin Manifestations table. You gain the level 1 benefit of that manifestation. When you reach character levels 3 and 5, you gain further abilities. If you learn a spell as part of this trait, you always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the twin).</p>
+			<h5>Twin Manifestations</h5>
+			<table>
+				<thead>
+					<tr><td>Twin</td><td>Level 1</td><td>Level 3</td><td>Level 5</td></tr>
+				</thead>
+				<tr>
+					<td>Hungering Twin</td>
+					<td>Your stomach is bigger on the inside than on the outside. It can hold up to 250 pounds, not exceeding a volume of 32 cubic feet. If you die, you harmlessly regurgitate all objects devoured. Your stomach holds enough air for a creature to breathe 1 minute inside it. Nonmagical items inside your stomach are destroyed by psychic energies after 24 hours.</td>
+					<td>Choose one damage type from among Acid, Cold, Fire, or Poison. Whenever you take damage of that type, you reduce it by an amount equal to your Proficiency Bonus.</td>
+					<td>Nonmagical items inside your stomach are no longer destroyed by psychic energies. In addition, your stomach can hold up to 500 pounds and has a maximum volume of 64 cubic feet.</td>
+				</tr>
+				<tr>
+					<td>Spirit Twin</td>
+					<td>You have telepathy with a range of 5 times your character level. A creature without telepathy that receives your telepathic messages can’t communicate mentally to you. You also know the <i>Mage Hand</i> cantrip.</td>
+					<td>You can turn a Critical Hit scored against you into a normal hit. Once you use this benefit, you can’t do so again until you finish a Short Rest.</td>
+					<td>A creature without telepathy that receives your telepathic messages can communicate with you using a language it knows.</td>
+				</tr>
+				<tr>
+					<td>Watchful Twin</td>
+					<td>You have Darkvision with a range of 120 feet. You also learn the <i>Cosmic Eye</i> cantrip.</td>
+					<td>You also learn the <i>Detect Magic</i> spell.</td>
+					<td>You learn the <i>See Invisibility</i> spell.</td>
+				</tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Twin Manifestation" supports="Twin Manifestation SGEH24" />
+		</rules>
+	</element>
+
+	<!-- Hungering Twin -->
+	<element name="Hungering Twin" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_HUNGERING_TWIN">
+		<supports>Twin Manifestation SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Your stomach is bigger on the inside than on the outside. It can hold up to 250 pounds, not exceeding a volume of 32 cubic feet. If you die, you harmlessly regurgitate all objects devoured. Your stomach holds enough air for a creature to breathe 1 minute inside it. Nonmagical items inside your stomach are destroyed by psychic energies after 24 hours.</p>
+			<p class="indent">When you reach character level 3, choose one damage type from among Acid, Cold, Fire, or Poison. Whenever you take damage of that type, you reduce it by an amount equal to your Proficiency Bonus.</p>
+			<p class="indent">When you reach character level 5, nonmagical items inside your stomach are no longer destroyed by psychic energies. In addition, your stomach can hold up to 500 pounds and has a maximum volume of 64 cubic feet.</p>
+		</description>
+		<sheet alt="Together Forever (Hungering Twin)">
+			<description>Your stomach can hold up to 250 pounds (up to 32 cubic feet) and holds enough air for a creature to breathe 1 minute inside it. If you die, you harmlessly regurgitate all objects devoured. Nonmagical items inside your stomach are destroyed by psychic energies after 24 hours.</description>
+			<description level="5">Your stomach can hold up to 500 pounds (up to 64 cubic feet) and holds enough air for a creature to breathe 1 minute inside it. If you die, you harmlessly regurgitate all objects devoured. Nonmagical items inside your stomach are no longer destroyed by psychic energies.</description>
+		</sheet>
+		<rules>
+			<select type="Racial Trait" name="Damage Reduction (Hungering Twin)" supports="Hungering Twin Damage SGEH24" level="3" />
+		</rules>
+	</element>
+	<element name="Acid" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_HUNGERING_TWIN_ACID">
+		<supports>Hungering Twin Damage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Whenever you take Acid damage, you reduce it by an amount equal to your Proficiency Bonus.</p>
+		</description>
+		<sheet alt="Hungering Twin (Damage Reduction)">
+			<description>Whenever you take Acid damage, you reduce it by {{proficiency}}.</description>
+		</sheet>
+	</element>
+	<element name="Cold" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_HUNGERING_TWIN_COLD">
+		<supports>Hungering Twin Damage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Whenever you take Cold damage, you reduce it by an amount equal to your Proficiency Bonus.</p>
+		</description>
+		<sheet alt="Hungering Twin (Damage Reduction)">
+			<description>Whenever you take Cold damage, you reduce it by {{proficiency}}.</description>
+		</sheet>
+	</element>
+	<element name="Fire" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_HUNGERING_TWIN_FIRE">
+		<supports>Hungering Twin Damage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Whenever you take Fire damage, you reduce it by an amount equal to your Proficiency Bonus.</p>
+		</description>
+		<sheet alt="Hungering Twin (Damage Reduction)">
+			<description>Whenever you take Fire damage, you reduce it by {{proficiency}}.</description>
+		</sheet>
+	</element>
+	<element name="Poison" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_HUNGERING_TWIN_POISON">
+		<supports>Hungering Twin Damage SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>Whenever you take Poison damage, you reduce it by an amount equal to your Proficiency Bonus.</p>
+		</description>
+		<sheet alt="Hungering Twin (Damage Reduction)">
+			<description>Whenever you take Poison damage, you reduce it by {{proficiency}}.</description>
+		</sheet>
+	</element>
+
+	<!-- Spirit Twin -->
+	<element name="Spirit Twin" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN">
+		<supports>Twin Manifestation SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You have telepathy with a range of 5 times your character level. A creature without telepathy that receives your telepathic messages can’t communicate mentally to you. You also know the <i>Mage Hand</i> cantrip.</p>
+			<p class="indent">When you reach character level 3, you can turn a Critical Hit scored against you into a normal hit. Once you use this benefit, you can’t do so again until you finish a Short Rest.</p>
+			<p class="indent">When you reach character level 5, a creature without telepathy that receives your telepathic messages can communicate with you using a language it knows.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="spirit twin:telepathy" value="level" />
+			<stat name="spirit twin:telepathy" value="level" />
+			<stat name="spirit twin:telepathy" value="level" />
+			<stat name="spirit twin:telepathy" value="level" />
+			<stat name="spirit twin:telepathy" value="level" />
+			<select type="Racial Trait" name="Spellcasting Ability (Spirit Twin)" supports="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_INTELLIGENCE|ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_WISDOM|ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_CHARISMA" />
+			<grant type="Racial Trait" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_CRIT_WARD" level="3" />
+		</rules>
+	</element>
+	<element name="Intelligence" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Intelligence is your spellcasting ability for the Mage Hand cantrip.</p>
+		</description>
+		<sheet alt="Together Forever (Spirit Twin)">
+			<description>You have telepathy with a range of {{spirit twin:telepathy}} feet (creatures without telepathy cannot reply mentally). You know the Mage Hand cantrip, and Intelligence is your spellcasting ability for it.</description>
+			<description level="5">You have telepathy with a range of {{spirit twin:telepathy}} feet (creatures without telepathy can communicate with you using a language they know). You know the Mage Hand cantrip, and Intelligence is your spellcasting ability for it.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_HAND" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Wisdom is your spellcasting ability for the Mage Hand cantrip.</p>
+		</description>
+		<sheet alt="Together Forever (Spirit Twin)">
+			<description>You have telepathy with a range of {{spirit twin:telepathy}} feet (creatures without telepathy cannot reply mentally). You know the Mage Hand cantrip, and Wisdom is your spellcasting ability for it.</description>
+			<description level="5">You have telepathy with a range of {{spirit twin:telepathy}} feet (creatures without telepathy can communicate with you using a language they know). You know the Mage Hand cantrip, and Wisdom is your spellcasting ability for it.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_HAND" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Charisma is your spellcasting ability for the Mage Hand cantrip.</p>
+		</description>
+		<sheet alt="Together Forever (Spirit Twin)">
+			<description>You have telepathy with a range of {{spirit twin:telepathy}} feet (creatures without telepathy cannot reply mentally). You know the Mage Hand cantrip, and Charisma is your spellcasting ability for it.</description>
+			<description level="5">You have telepathy with a range of {{spirit twin:telepathy}} feet (creatures without telepathy can communicate with you using a language they know). You know the Mage Hand cantrip, and Charisma is your spellcasting ability for it.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_HAND" />
+		</rules>
+	</element>
+	<element name="Spirit Twin (Negate Critical)" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_SPIRIT_TWIN_CRIT_WARD">
+		<compendium display="false" />
+		<description>
+			<p>You can turn a Critical Hit scored against you into a normal hit. Once you use this benefit, you can’t do so again until you finish a Short Rest.</p>
+		</description>
+		<sheet alt="Spirit Twin (Negate Critical)" usage="1/Short Rest">
+			<description>You can turn a Critical Hit scored against you into a normal hit.</description>
+		</sheet>
+	</element>
+
+	<!-- Watchful Twin -->
+	<element name="Watchful Twin" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN">
+		<supports>Twin Manifestation SGEH24</supports>
+		<compendium display="false" />
+		<description>
+			<p>You have Darkvision with a range of 120 feet. You also learn the <i>Cosmic Eye</i> cantrip.</p>
+			<p class="indent">When you reach character level 3, you also learn the <i>Detect Magic</i> spell. When you reach character level 5, you learn the <i>See Invisibility</i> spell. You always have these spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="120" bonus="base" />
+			<select type="Racial Trait" name="Spellcasting Ability (Watchful Twin)" supports="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN_INTELLIGENCE|ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN_WISDOM|ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN_CHARISMA" />
+		</rules>
+	</element>
+	<element name="Intelligence" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Intelligence is your spellcasting ability for the spells you cast with the Watchful Twin trait.</p>
+		</description>
+		<sheet alt="Together Forever (Watchful Twin)">
+			<description>You know the Cosmic Eye cantrip. Intelligence is your spellcasting ability for it.</description>
+			<description level="3">You know the Cosmic Eye cantrip, and you can cast the Detect Magic spell once per Long Rest. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Cosmic Eye cantrip, and you can cast the Detect Magic and See Invisibility spells once each per Long Rest. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_COSMIC_EYE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Wisdom is your spellcasting ability for the spells you cast with the Watchful Twin trait.</p>
+		</description>
+		<sheet alt="Together Forever (Watchful Twin)">
+			<description>You know the Cosmic Eye cantrip. Wisdom is your spellcasting ability for it.</description>
+			<description level="3">You know the Cosmic Eye cantrip, and you can cast the Detect Magic spell once per Long Rest. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Cosmic Eye cantrip, and you can cast the Detect Magic and See Invisibility spells once each per Long Rest. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_COSMIC_EYE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_WATCHFUL_TWIN_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Charisma is your spellcasting ability for the spells you cast with the Watchful Twin trait.</p>
+		</description>
+		<sheet alt="Together Forever (Watchful Twin)">
+			<description>You know the Cosmic Eye cantrip. Charisma is your spellcasting ability for it.</description>
+			<description level="3">You know the Cosmic Eye cantrip, and you can cast the Detect Magic spell once per Long Rest. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Cosmic Eye cantrip, and you can cast the Detect Magic and See Invisibility spells once each per Long Rest. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_COSMIC_EYE" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+
+	<element name="Vigilant" type="Racial Trait" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_RACIAL_TRAIT_CURSED_BLOOD_VIGILANT">
+		<requirements>!ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_CURSED_BLOOD_VIGILANT</requirements>
+		<description>
+			<p>You can’t be surprised. When you roll Initiative, you can add your Proficiency Bonus to the roll.</p>
+		</description>
+		<sheet>
+			<description>You can’t be surprised.</description>
+		</sheet>
+		<rules>
+			<stat name="initiative" value="proficiency" bonus="proficiency" />
+		</rules>
+	</element>
+
+	<!-- Racial Trait Replacement Grants -->
+	<element name="Together Forever Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_CURSED_BLOOD_TOGETHER_FOREVER" />
+	<element name="Vigilant Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_RACIAL_TRAIT_REPLACEMENT_CURSED_BLOOD_VIGILANT" />
+
+</elements>

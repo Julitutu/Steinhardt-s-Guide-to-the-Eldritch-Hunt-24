@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Magic Weapons &amp; Moongold</name>
+		<description>Magic weapons and moongold weapons from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<update version="0.0.1">
+			<file name="items-magic-weapons.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/items-magic-weapons.xml" />
+		</update>
+	</info>
+
+	<element name="Sanctified Cannon" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_SANCTIFIED_CANNON">
+		<description>
+			<p><b><i>Charged Shot.</i></b> Once on each of your turns when you take the Attack action, you can replace one of your Cannon attacks with a charged shot. Instead of a regular attack, you let loose a ball of destruction and death. Each creature in a 120-foot-long, 5-foot-wide Line in front of you must succeed on a Dexterity saving throw (DC 8 plus your Strength modifier and your Proficiency Bonus) or take 3d12 Bludgeoning damage and have the Prone condition.</p>
+			<p class="indent">You can use this property only if you haven't moved during your turn, and after you use the property, your Speed is 0 until the end of your turn.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="cannon">Weapon</set>
+			<set name="rarity">Uncommon</set>
+			<set name="weapon">Cannon</set>
+		</setters>
+	</element>
+
+	<element name="Big Bertha" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_BIG_BERTHA">
+		<description>
+			<p class="flavor">Why bother cutting beasts when you can just blow them up</p>
+			<p>This moongold-inlaid Cannon deals an extra 1d4 Bludgeoning damage to any non-Humanoid creatures it hits. Moongold acts as a guiding light in the darkness; creatures holding or wearing moongold have Advantage on saving throws against the Frightened condition and against Madness.</p>
+			<p class="indent">You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.</p>
+			<p class="indent">As a Bonus Action, you can rotate the dials on the cannon to infuse your loaded ammo with violent powers. Your next attack gains one of the following benefits:</p>
+			<ul>
+				<li><b>Forceful Infusion.</b> On a hit, the target takes an extra 1d6 Bludgeoning damage and must succeed on a DC 15 Strength saving throw or be pushed 15 feet away and have the Prone condition. Alternatively, if you are standing on a solid surface and instead fire the Cannon directly at your feet, the explosion pushes you into the air, and you land in a space of your choice within 30 feet of the explosion's origin.</li>
+				<li><b>Incendiary Infusion.</b> On a hit, the target takes an extra 3d4 Fire damage.</li>
+				<li><b>Unstable Infusion.</b> On a hit, the target takes an extra 1d8 Cold damage, and the terrain in a 10-foot Emanation originating from the target is covered in arcane mist, becoming Difficult Terrain for the next minute.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="cannon">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">Cannon</set>
+		</setters>
+	</element>
+
+	<!-- Moongold Weapons & Ammunition -->
+	<element name="Moongold Weapon" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_MOONGOLD_WEAPON">
+		<description>
+			<p>Some monsters are resilient to physical damage but they remain susceptible to moongilded weapons, so cautious adventurers invest extra coin to plate their weapons, magical or not, with moongold.</p>
+			<p class="indent">Moongold gives a 1d4 bonus to damage rolls against nonhumanoid creatures. Moongold acts as a guiding light in the darkness; creatures holding or wearing moongold have Advantage on saving throws against the Frightened condition and Madness.</p>
+			<p class="indent">You can moongild a single weapon or ten pieces of ammunition for 1,000 gp. This cost represents not only the price of the moongold, but the time and expertise needed to add moongold to the weapon without making it less effective. Moongold loses its effectiveness over time; if a moongilded weapon has not been recoated in moongold after 3 months, the coating falls off, ending its effects. Recoating a weapon before it loses its moongilding costs 500 gp and refreshes the duration of the moongold.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">1000</set>
+			<set name="type" addition="any">Weapon</set>
+			<set name="rarity">Mundane</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="name-format">Moongilded {{parent}}</set>
+		</setters>
+	</element>
+
+	<element name="Moongold Ammunition" type="Magic Item" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_MAGIC_ITEM_MOONGOLD_AMMUNITION">
+		<description>
+			<p>Moongold gives a 1d4 bonus to damage rolls against nonhumanoid creatures. Moongold acts as a guiding light in the darkness; creatures holding or wearing moongold have Advantage on saving throws against the Frightened condition and Madness.</p>
+			<p class="indent">You can moongild ten pieces of ammunition for 1,000 gp (100 gp per piece). Moongold loses its effectiveness over time; if moongilded ammunition has not been recoated in moongold after 3 months, the coating falls off, ending its effects. Recoating before it loses its moongilding costs 500 gp per 10 pieces and refreshes the duration.</p>
+		</description>
+		<setters>
+			<set name="category">Ammunition</set>
+			<set name="cost" currency="gp">100</set>
+			<set name="type" addition="any ammunition">Weapon</set>
+			<set name="rarity">Mundane</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+</elements>

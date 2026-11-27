@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Oath of the Eldritch Hunt</name>
+		<description>The Oath of the Eldritch Hunt subclass for the Paladin from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="paladin-eldritchhunt.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/paladin-eldritchhunt.xml" />
+		</update>
+	</info>
+
+	<element name="Oath of the Eldritch Hunt" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_PALADIN_OATH_OF_THE_ELDRITCH_HUNT">
+		<supports>Paladin Subclass</supports>
+		<description>
+			<p>The Oath of the Eldritch Hunt is sworn to the eradication of the unnatural, the aberrant, and the alien. These hunters tread a fine line, enhancing themselves with their prey's powers whilst trying to maintain their own sanity. Unfortunately, this frenzied hunger drives many to madness, and it is no rare occurrence for these Paladins to have to hunt their own.</p>
+			<p class="indent">This oath is found most frequently among Paladins of the Radiant Order. Erroneously nicknamed grey templars, witch hunters, and knights aberrant, these oft-deformed warriors devote themselves to obliterating the Scourge and its creations.</p>
+			<p class="indent"><strong>Tenets of the Eldritch Hunt</strong></p>
+			<ul>
+				<li><strong>Resolve.</strong> Through willpower and tenacity, the strain of the hunt is endured; aching limbs and ailing minds are no reason to fall short.</li>
+				<li><strong>Respect.</strong> Take life only when doing so protects others. Kill only when necessary, lest the bloodshed enamour your soul and hunter becomes beast.</li>
+				<li><strong>Responsibility.</strong> Many rely on your talent to survive the moonlit nights. No matter the circumstances, do not fail them. Sacrifice your own body so that others can retain the sanctity of their own, untainted forms.</li>
+			</ul>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_HUNT_THE_PREY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_SPELLS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_STOLEN_ELDRITCH_GIFT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_SHARPENED_SENSES" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_RELENTLESS_PURSUIT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_PERFECT_HUNTER" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_HUNT_THE_PREY" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_STOLEN_ELDRITCH_GIFT" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_SHARPENED_SENSES" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_RELENTLESS_PURSUIT" level="15" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_PERFECT_HUNTER" level="20" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Hunt The Prey" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_HUNT_THE_PREY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_HUNT_THE_PREY</requirements>
+		<description>
+			<p>As a Bonus Action, you can expend one use of your Channel Divinity to call upon the sanctified hunt. You designate a creature within 60 feet of you as your prey, marking the target for 1 minute. When you use this feature, and as a Bonus Action on subsequent turns, you can magically teleport up to 60 feet to an unoccupied space you can see within 5 feet of the marked target. To teleport in this way, you must be able to see the marked target.</p>
+		</description>
+		<sheet alt="Hunt The Prey" action="Bonus Action" usage="Channel Divinity">
+			<description>Mark a creature within 60 ft for 1 min. When you use this feature, and as a Bonus Action on subsequent turns, you can teleport up to 60 ft to an unoccupied space you can see within 5 ft of the marked target (must see the target).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Oath Spells" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_SPELLS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_SPELLS</requirements>
+		<description>
+			<p>The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the Oath of the Eldritch Hunt Spells table, you thereafter always have the listed spells prepared.</p>
+			<h5>Oath of the Eldritch Hunt Spells</h5>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><em>Faerie Fire, Spectral Slash</em></td></tr>
+				<tr><td style="text-align:center">5</td><td><em>Moonbeam, Hold Person</em></td></tr>
+				<tr><td style="text-align:center">9</td><td><em>Displacing Maw, Spectral Fury</em></td></tr>
+				<tr><td style="text-align:center">13</td><td><em>Black Tentacles, Maiden of Bones</em></td></tr>
+				<tr><td style="text-align:center">17</td><td><em>Contact Other Plane, Hold Monster</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FAERIE_FIRE" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_SPECTRAL_SLASH" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MOONBEAM" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_PERSON" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_DISPLACING_MAW" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_SPECTRAL_FURY" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_EVARDS_BLACK_TENTACLES" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_MAIDEN_OF_BONES" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONTACT_OTHER_PLANE" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_MONSTER" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Stolen Eldritch Gift" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_STOLEN_ELDRITCH_GIFT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_STOLEN_ELDRITCH_GIFT</requirements>
+		<description>
+			<p>Your body is enhanced beyond mortal limits. You can add your Charisma modifier to any Athletics, Perception, and Survival checks that you make.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="athletics:misc" value="charisma:modifier" />
+			<stat name="perception:misc" value="charisma:modifier" />
+			<stat name="survival:misc" value="charisma:modifier" />
+		</rules>
+	</element>
+
+	<element name="Level 7: Sharpened Senses" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_SHARPENED_SENSES">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_SHARPENED_SENSES</requirements>
+		<description>
+			<p>You have learned to read your prey to find their flaws. When a creature is in your Aura of Protection, you learn any Immunities, Resistances, or Vulnerabilities that it has. In addition, you have Blindsight within the range of your Aura of Protection.</p>
+		</description>
+		<sheet alt="Sharpened Senses">
+			<description>You learn the Immunities, Resistances, and Vulnerabilities of creatures in your Aura of Protection, and have Blindsight within your Aura of Protection (10 ft).</description>
+			<description level="18">You learn the Immunities, Resistances, and Vulnerabilities of creatures in your Aura of Protection, and have Blindsight within your Aura of Protection (30 ft).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 15: Relentless Pursuit" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_RELENTLESS_PURSUIT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_RELENTLESS_PURSUIT</requirements>
+		<description>
+			<p>When you hit your marked target with a Melee weapon or an Unarmed Strike immediately after you teleport with the Hunt the Prey feature, you can cast Divine Smite without using a Bonus Action. You expend a spell slot as normal, and you can cast this spell in this way only once per turn.</p>
+		</description>
+		<sheet alt="Relentless Pursuit" usage="1/Turn">
+			<description>When hitting your marked target with a Melee weapon/Unarmed Strike immediately after teleporting via Hunt the Prey, you can cast Divine Smite without using a Bonus Action (expends slot as normal).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 20: Perfect Hunter" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_ELDRITCH_HUNT_PERFECT_HUNTER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_PERFECT_HUNTER</requirements>
+		<description>
+			<p>You are the embodiment of the eldritch hunt; none can get in the way of your kill. As a Bonus Action, you activate the power of the true hunter. For the next 10 minutes, you gain the following benefits:</p>
+			<ul>
+				<li><strong><em>Devour.</em></strong> Your weapon attacks deal an extra 1d8 Necrotic damage. This damage ignores Resistance and Immunity to Necrotic damage.</li>
+				<li><strong><em>Sunder.</em></strong> You are Immune to the Grappled, Paralyzed, and Restrained conditions.</li>
+				<li><strong><em>Vanish.</em></strong> You have the Invisible condition.</li>
+			</ul>
+			<p class="indent">Once you use this feature, you can't use it again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Perfect Hunter" action="Bonus Action" usage="1/Long Rest">
+			<description>For 10 mins:&#13;
+			• Devour: Weapon attacks deal +1d8 Necrotic damage (ignores Resistance and Immunity).&#13;
+			• Sunder: Immune to Grappled, Paralyzed, and Restrained.&#13;
+			• Vanish: You have the Invisible condition.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Hunt The Prey Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_HUNT_THE_PREY" />
+	<element name="Oath Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_SPELLS" />
+	<element name="Stolen Eldritch Gift Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_STOLEN_ELDRITCH_GIFT" />
+	<element name="Sharpened Senses Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_SHARPENED_SENSES" />
+	<element name="Relentless Pursuit Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_RELENTLESS_PURSUIT" />
+	<element name="Perfect Hunter Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_ELDRITCH_HUNT_PERFECT_HUNTER" />
+
+</elements>

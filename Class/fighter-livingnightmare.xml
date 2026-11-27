@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Living Nightmare</name>
+		<description>The Living Nightmare subclass for the Fighter from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="fighter-livingnightmare.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/fighter-livingnightmare.xml" />
+		</update>
+	</info>
+
+	<element name="Living Nightmare" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FIGHTER_LIVING_NIGHTMARE">
+		<supports>Fighter Subclass</supports>
+		<description>
+			<p>First it was an accident, a hunter dying on a battlefield, in dire need of a transplant. The clerics used what they could find and unknowingly grafted accursed flesh onto the dying man, yet, not only did he survive, he rose again stronger than ever before.</p>
+			<p class="indent">It was that day the Radiant Church knew that they found a power rivalling that of the very god they worshipped. They took these experiments further, ordering the Obitus Scholare to harness that power. The desperate fight against the Scourge demanded urgent results; no act was too sacred nor debauched. And so, the accursed Luyarnha gave birth to Living Nightmares, monsters of its own creation.</p>
+			<p class="indent">The experiments have since stopped; indeed, it was far too common to see those grafted with eldritch flesh lose their humanity and turn into the very monsters they were supposed to eradicate. Yet some remain, a few fortunate hunters who retain their sanity, or perhaps, who have yet to awaken their true powers.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_AWAKENED_MUTATION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ELDRITCH_WEAPONRY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_MACABRE_APPETITE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ASCENDED_BEING" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_NIGHTMARISH_WEAPONRY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ELDRITCH_CONTAMINATION" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_AWAKENED_MUTATION" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ELDRITCH_WEAPONRY" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_MACABRE_APPETITE" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ASCENDED_BEING" level="10" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_NIGHTMARISH_WEAPONRY" level="15" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ELDRITCH_CONTAMINATION" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Awakened Mutation" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_AWAKENED_MUTATION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_AWAKENED_MUTATION</requirements>
+		<description>
+			<p>The powers within your eldritch flesh begin to awaken. You forever lose any training with Shields and Heavy armor, as your ever-changing body cannot hold onto them.</p>
+			<p class="indent">Your flesh hardens and your reflexes grow, empowered by otherworldly ichor. While you are not wearing any armor, your Armor Class equals 11 plus your Dexterity modifier and your Constitution modifier.</p>
+		</description>
+		<sheet alt="Awakened Mutation">
+			<description>You lose proficiency with Shields and Heavy armor. While unarmored, your AC equals {{ac:awakened mutation}}.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:awakened mutation" value="11" bonus="base" />
+			<stat name="ac:awakened mutation" value="dexterity:modifier" bonus="primary ability" />
+			<stat name="ac:awakened mutation" value="constitution:modifier" bonus="secondary ability" />
+			<stat name="ac:calculation" value="ac:awakened mutation" bonus="calculation" equipped="[armor:none]" alt="Awakened Mutation (Fighter)" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Eldritch Weaponry" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ELDRITCH_WEAPONRY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_ELDRITCH_WEAPONRY</requirements>
+		<description>
+			<p>As a Bonus Action, you can mutate your body, transforming it into morphable weapons of destruction, or back to normal. They count as Simple Melee weapons for you, and you add your Strength modifier to the attack rolls and damage rolls when you attack with them. When you use these weapons, you drop any items you are holding with those limbs. Each weapon has a mastery property, which is usable only if you use a feature, such as Weapon Mastery, that unlocks the property for you.</p>
+			<p class="indent"><strong><em>Living Nightmare Save DC.</em></strong> If a feature of this subclass requires a saving throw, the DC equals 8 plus your Constitution modifier and Proficiency Bonus.</p>
+			<p class="indent">You choose the weapon's form each time you make an attack roll with it:</p>
+			<p class="indent"><strong><em>Stinger.</em></strong> One of your limbs grows into a razor-sharp blade that deals 1d8 Piercing damage on a hit. When you take the Attack action to attack with it on your turn, you can take a Bonus Action to turn another limb into a Stinger and strike with it, making a single additional attack. The Stinger has the Sap weapon mastery.</p>
+			<p class="indent"><strong><em>Hammer Arm.</em></strong> Your arms turn into a black-tinted bone club. On a hit, it deals 2d6 Bludgeoning damage. The Hammer Arm has the Push weapon mastery.</p>
+			<p class="indent"><strong><em>Tendinous Lash.</em></strong> One of your limbs replaces its bones with tough coiled ligaments, allowing it to stretch a disturbing distance without breaking. It deals 1d4 Slashing damage on a hit and has a reach of 15 feet. The Tendinous Lash has the Topple weapon mastery, and you can use your Living Nightmare save DC for it.</p>
+			<p class="indent">Alternatively, you can transform your limb into a shield:</p>
+			<p class="indent"><strong><em>Sinister Aegis.</em></strong> Whenever you are targeted by an attack that you can see, you can take a Reaction to temporarily turn one of your arms into a fleshy shield, gaining a bonus to your AC equal to one third of your Fighter level (rounded down) until the start of your next turn.</p>
+			<p class="indent">In addition, your eldritch flesh is capable of devouring some magical items to gain their properties. As part of a Short or Long Rest, you can devour the following types of magic items, absorbing their properties:</p>
+			<ul>
+				<li>A Rapier; its properties are added to your Stinger.</li>
+				<li>A Maul; its properties are added to your Hammer Arm.</li>
+				<li>A Whip; its properties are added to your Tendinous Lash.</li>
+				<li>A Shield; its properties are added to your Sinister Aegis.</li>
+			</ul>
+			<p class="indent">If you absorb another magical item of the same type, the previous magic item you absorbed of that type is destroyed.</p>
+		</description>
+		<sheet alt="Eldritch Weaponry" action="Bonus Action">
+			<description>Morph limbs into Simple Melee weapons using Strength (drop held items; Save DC {{living nightmare:dc}}). You can devour 1 magic Rapier, Maul, Whip, and Shield over a Short/Long Rest to absorb their properties:&#13;
+			• Stinger: 1d8+{{strength:modifier}} Piercing (Sap). Bonus Action for 1 extra Stinger attack after taking Attack action with it.&#13;
+			• Hammer Arm: 2d6+{{strength:modifier}} Bludgeoning (Push).&#13;
+			• Tendinous Lash: 1d4+{{strength:modifier}} Slashing, 15 ft reach (Topple, DC{{living nightmare:dc}}).&#13;
+			• Sinister Aegis (Reaction when targeted): +{{sinister aegis:bonus}} AC until start of next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="living nightmare:dc" value="8" bonus="base" />
+			<stat name="living nightmare:dc" value="proficiency" bonus="proficiency" />
+			<stat name="living nightmare:dc" value="constitution:modifier" bonus="ability" />
+			<stat name="sinister aegis:bonus" value="1" bonus="base" />
+			<stat name="sinister aegis:bonus" value="2" bonus="base" level="6" />
+			<stat name="sinister aegis:bonus" value="3" bonus="base" level="9" />
+			<stat name="sinister aegis:bonus" value="4" bonus="base" level="12" />
+			<stat name="sinister aegis:bonus" value="5" bonus="base" level="15" />
+			<stat name="sinister aegis:bonus" value="6" bonus="base" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 7: Macabre Appetite" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_MACABRE_APPETITE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_MACABRE_APPETITE</requirements>
+		<description>
+			<p>You can use the voracious hunger that dwells within your accursed body to devour the corpses of your foes and mend your flesh.</p>
+			<p class="indent">When you stand within 5 feet of the corpse of a creature that has died less than 1 week ago, you can take a Bonus Action to touch it and let your eldritch appendages devour it. You regain a number of Hit Points equal to the creature's CR (minimum of 0, rounded down), and you gain proficiency in a skill with which the creature had proficiency. If you're already proficient in that skill, you gain Expertise instead. In addition, you can take an action to assume the creature's appearance and voice, though none of your game statistics change. You can only take this action if the devoured creature's size is up to one size larger or smaller than you. You can take an action to revert to your true form.</p>
+			<p class="indent">After 24 hours, or if you consume another creature, you lose the inherited proficiency, you revert to your true form, and you can no longer take the appearance of the consumed being.</p>
+		</description>
+		<sheet alt="Macabre Appetite" action="Bonus Action">
+			<description>Devour a corpse within 5 ft (dead &lt;1 week): Regain HP equal to CR (min 0, round down) and gain proficiency (or Expertise) in one of its skills for 24 hrs (or until consuming another). You can use an action to assume its appearance and voice (if within 1 size category).</description>
+			<description level="10">Devour a corpse within 5 ft (dead &lt;1 week): Regain HP equal to CR (min 0, round down), inherit its memories from its last week, and gain proficiency (or Expertise) in one of its skills for 24 hrs (or until consuming another). You can use an action to assume its appearance and voice (if within 1 size category).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 10: Ascended Being" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ASCENDED_BEING">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_ASCENDED_BEING</requirements>
+		<description>
+			<p>Your eldritch powers give you access to powers mortals can only dream of. Whenever you consume a creature with your Macabre Appetite, you also inherit all their memories from the week previous to their death.</p>
+			<p class="indent">In addition, as a Bonus Action, you can grow a pair of eldritch wings, giving yourself a Fly Speed of 30 feet for 10 minutes. Once you use this Bonus Action, you can't do so again until you finish a Long Rest or expend one use of your Second Wind to reuse it.</p>
+		</description>
+		<sheet alt="Ascended Being" action="Bonus Action" usage="1/Long Rest">
+			<description>Grow eldritch wings for 10 mins, gaining a Fly Speed of 30 ft. You can expend a use of Second Wind to reuse this feature.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 15: Nightmarish Weaponry" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_NIGHTMARISH_WEAPONRY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_NIGHTMARISH_WEAPONRY</requirements>
+		<description>
+			<p>Your body enters its next stage of evolution. The weapons you wield now have the power to annihilate all who stand in your way. When you make use of your Eldritch Weaponry, you can strain your body to generate a more violent eldritch power, replacing one of your attacks:</p>
+			<p class="indent"><strong><em>Stinger.</em></strong> You can replace one of your Stinger attacks. Instead, each creature in a 30-foot Cone originating from you must succeed on a Dexterity saving throw or take damage equal to 3 hits from your Stinger.</p>
+			<p class="indent"><strong><em>Hammer Arm.</em></strong> You can replace one of your Hammer Arm attacks. Instead, you smash the ground below you, causing quakes and sending fragments flying. Each creature in a 20-foot Emanation originating from you must make a Dexterity saving throw. On a failed save, a target takes damage equal to 2 hits from your Hammer Arm and has the Prone condition.</p>
+			<p class="indent"><strong><em>Tendinous Lash.</em></strong> You can replace one of your Tendinous Lash attacks, swiping those around you instead. Each creature in a 15-foot Emanation originating from you must make a Strength saving throw. On a failed save, a target takes damage equal to 1 hit from your Lash, is pulled 10 feet in a straight line toward you, and has the Restrained condition until the end of your next turn.</p>
+			<p class="indent">Once you use this feature, you can't use it again until the end of your next turn.</p>
+		</description>
+		<sheet alt="Nightmarish Weaponry" usage="1/2 Turns">
+			<description>Replace one Eldritch Weaponry attack (DC{{living nightmare:dc}}):&#13;
+			• Stinger: 30-ft Cone, Dex save or take 3x Stinger hit damage.&#13;
+			• Hammer Arm: 20-ft Emanation, Dex save or take 2x Hammer Arm hit damage and fall Prone.&#13;
+			• Tendinous Lash: 15-ft Emanation, Str save or take 1x Lash hit damage, pulled 10 ft toward you, and Restrained until end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Eldritch Contamination" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_LIVING_NIGHTMARE_ELDRITCH_CONTAMINATION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_ELDRITCH_CONTAMINATION</requirements>
+		<description>
+			<p>You can temporarily infect creatures with the nightmare that lives within you, turning them into puppets. After you hit a creature with your Eldritch Weaponry, you can cast the Dominate Monster spell targeting them as a Bonus Action, requiring no spell components. Your spellcasting ability for the spell is Constitution. Once a creature fails its saving throw against the spell, you can't cast it again with this feature until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Eldritch Contamination" action="Bonus Action" usage="1/Long Rest (on failed save)">
+			<description>After hitting a creature with Eldritch Weaponry, cast Dominate Monster on it (no components, DC{{living nightmare:dc}}). Expended once a creature fails its save.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DOMINATE_MONSTER" />
+		</rules>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Awakened Mutation Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_AWAKENED_MUTATION" />
+	<element name="Eldritch Weaponry Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_ELDRITCH_WEAPONRY" />
+	<element name="Macabre Appetite Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_MACABRE_APPETITE" />
+	<element name="Ascended Being Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_ASCENDED_BEING" />
+	<element name="Nightmarish Weaponry Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_NIGHTMARISH_WEAPONRY" />
+	<element name="Eldritch Contamination Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_LIVING_NIGHTMARE_ELDRITCH_CONTAMINATION" />
+
+</elements>

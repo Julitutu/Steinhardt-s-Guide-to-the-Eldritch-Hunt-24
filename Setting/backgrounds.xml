@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Steinhardt's Guide to the Eldritch Hunt (2024) Backgrounds</name>
+		<description>Backgrounds from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author>Loot Tavern</author>
+		<update version="0.0.1">
+			<file name="backgrounds.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Setting/backgrounds.xml" />
+		</update>
+	</info>
+
+	<!-- Amnesiac -->
+	<element name="Amnesiac" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_AMNESIAC">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Constitution, Intelligence, Wisdom</li>
+				<li><strong>Feat:</strong> Curious</li>
+				<li><strong>Skill Proficiencies:</strong> Insight and Investigation</li>
+				<li><strong>Tool Proficiency:</strong><i> Choose one kind of Artisan's Tools</i></li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Bedroll, Book (fiction), Traveler’s Clothes, 22 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You woke up one day in the city of Luyarnha with no memory of who you were or where you came from. You're almost certain that this place is not your home, but all the memories of your past life are a haze of indistinct shapes and sounds. Faint images, such as a silver lake or a towering mountain, flash through your mind, but they provide no concrete details of your origin. You know only that you must find the truth at any cost.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_CURIOUS" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Constitution, Intelligence, Wisdom, Curious Feat, Insight and Investigation Skills, an Artisan's Tool</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_CON_INT_WIS" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_CURIOUS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Proficiency" name="Tool Proficiency (Amnesiac)" supports="Tool, Artisan tools" />
+		</rules>
+	</element>
+
+	<!-- Beast Hunter -->
+	<element name="Beast Hunter" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_BEAST_HUNTER">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Strength, Dexterity, Wisdom</li>
+				<li><strong>Feat:</strong> Grizzled</li>
+				<li><strong>Skill Proficiencies:</strong> Athletics and Survival</li>
+				<li><strong>Tool Proficiency:</strong> Herbalism Kit</li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Dagger, Flare, Flask, 20 Firearm Bullets, Healer’s Kit, Herbalism Kit, Traveler’s Clothes, 30 GP; or (B) 50 GP</li>
+			</ul>
+			<p>Growing up, the menacing presence of the Scourge loomed over your life in the city. The beasts terrified you, destroyed your homes, and took away people you loved. Driven by vengeance, fear, or a desire for justice, you chose to become a hunter. The Church, a mentor, or the Radiant Order taught you the ways of the hunt, giving you the knowledge and skills needed to defend your city and yourself. Whether you were once a simple citizen turned protector or a seasoned veteran of the First War hardened by countless battles, you have become an essential line of defense against the darkness.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_GRIZZLED" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Strength, Dexterity, Wisdom, Grizzled Feat, Athletics and Survival Skills, Herbalism Kit</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_DEX_WIS" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_GRIZZLED" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+		</rules>
+	</element>
+
+	<!-- Cult Initiate -->
+	<element name="Cult Initiate" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_CULT_INITIATE">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Constitution, Wisdom, Charisma</li>
+				<li><strong>Feat:</strong> Faithful</li>
+				<li><strong>Skill Proficiencies:</strong> Arcana and Persuasion</li>
+				<li><strong>Tool Proficiency:</strong><i> Choose one kind of Artisan's Tools or Musical Instrument</i></li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Arcane Focus (your choice), art object (worth 10 GP), Artisan’s Tools or Musical Instrument (same as above), Hooded Lantern, Oil (5 flasks), Traveler’s Clothes, 5 GP; or (B) 50 GP.</li>
+			</ul>
+			<p>Whether through your own choice or a twist of fate, you found yourself part of a clandestine and often misunderstood group of individuals—a cult. This may have been a circle focused on the symbiotic relationship of flesh and nature, a scholastic order obsessed with the cosmos, or followers of a prophecy predicting the apocalypse. However, your faith or circumstances have since changed, leading you to leave the confines of the cult. You might still be an active member, or you may have escaped its influence. Either way, your experiences within the cult and the knowledge you've gained have left a deep impact on your life.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_FAITHFUL" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Constitution, Wisdom, Charisma, Faithful Feat, Arcana and Persuasion Skills, an Artisan's Tool or Musical Instrument</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_CON_WIS_CHA" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_FAITHFUL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Proficiency" name="Tool Proficiency (Cult Initiate)" supports="Musical Instrument|Artisan tools" />
+		</rules>
+	</element>
+
+	<!-- Disciple -->
+	<element name="Disciple" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_DISCIPLE">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Intelligence, Wisdom, Charisma</li>
+				<li><strong>Feat:</strong> Faithful</li>
+				<li><strong>Skill Proficiencies:</strong> Persuasion and Religion</li>
+				<li><strong>Tool Proficiency:</strong> Calligrapher’s Supplies</li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Book (prayer), Calligrapher’s Supplies, Fine Clothes, Holy Symbol, 5 GP; or (B) 50 GP</li>
+			</ul>
+			<p>The Radiant Church, a beacon of hope and strength, raised you, training you in the teachings of the Radiant One. As a disciple, you were immersed in the Church's lore, its ideals of benevolence born of resilience and fortitude, and its promise of a prosperous future. You were taught to shine your light into the darkness, to lead the way for others, and to be a pillar of strength in times of adversity. Whether you're an ardent believer, a skeptic questioning your faith, or someone seeking to wield the Church's influence, your time in the Church has undoubtedly shaped your worldview and your identity.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_FAITHFUL" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Intelligence, Wisdom, Charisma, Faithful Feat, Persuasion and Religion Skills, Calligrapher’s Supplies</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_INT_WIS_CHA" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_FAITHFUL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+		</rules>
+	</element>
+
+	<!-- Inquisitor -->
+	<element name="Inquisitor" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_INQUISITOR">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Strength, Wisdom, Charisma</li>
+				<li><strong>Feat:</strong> Faithful</li>
+				<li><strong>Skill Proficiencies:</strong> Intimidation and Religion</li>
+				<li><strong>Tool Proficiency:</strong> Torture Tools</li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Book (prayer), Holy Symbol, Manacles, Torture Tools, Traveler’s Clothes, 3 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You are a steadfast disciple of the Radiant Church, filled with an unwavering faith and a holy zeal that drives you to root out any threats to the Church and its teachings. Your duty might involve questioning potential heretics, investigating signs of corruption within the Church, or combating the enemies of the faith. You walk a fine line, enforcing the laws of the Church and ensuring the purity of its followers.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_FAITHFUL" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Strength, Wisdom, Charisma, Faithful Feat, Intimidation and Religion Skills, Torture Tools</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_WIS_CHA" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_FAITHFUL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<grant type="Proficiency" id="ID_LT_SGEH24_PROFICIENCY_TOOL_PROFICIENCY_TORTURE_TOOLS" />
+		</rules>
+	</element>
+
+	<!-- Investigator -->
+	<element name="Investigator" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_INVESTIGATOR">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Dexterity, Intelligence, Wisdom</li>
+				<li><strong>Feat:</strong> Curious</li>
+				<li><strong>Skill Proficiencies:</strong> Insight and Investigation</li>
+				<li><strong>Tool Proficiency:</strong><i> Choose one kind of Artisan's Tools related to your investigative methods</i></li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Artisan’s Tools (same as above), Paper (10 sheets), Traveler’s Clothes, 32 GP; or (B) 50 GP</li>
+			</ul>
+			<p>As an investigator, your life is a ceaseless pursuit of the elusive truth. You are driven by a profound desire to understand the perplexing enigma that is the Scourge, the inscrutable disappearances happening across the city, the veiled cult activities, the covert dealings within the Church, or the aristocrats' clandestine affairs. Regardless of the specifics, you are a seeker of knowledge and truth, using your keen insight and intellect to unravel the mysteries that plague your world. You might be a former scholar, a detective, or just an average citizen who was personally affected by these events, and you won't stop until you reveal the truth.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_CURIOUS" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Dexterity, Intelligence, Wisdom, Curious Feat, Insight and Investigation Skills, an Artisan's Tool</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_INT_WIS" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_CURIOUS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Proficiency" name="Tool Proficiency (Investigator)" supports="Tool, Artisan tools" />
+		</rules>
+	</element>
+
+	<!-- Marked for Death -->
+	<element name="Marked for Death" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_MARKED_FOR_DEATH">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Strength, Dexterity, Constitution</li>
+				<li><strong>Feat:</strong> Grizzled</li>
+				<li><strong>Skill Proficiencies:</strong> Arcana and Survival</li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Dagger, Flare, Paper (50 sheets), Sacrificial Brand Eldritch Carving (Scarified), Traveler’s Clothes, 44 GP; or (B) Sacrificial Brand Eldritch Carving (Scarified), 50 GP</li>
+			</ul>
+			<p>You once were dead, but the mysterious Blood Moon of Rebirth returned you to life, leaving an indelible Eldritch Carving on your body—the Sacrificial Brand. The mark on your flesh is feared by many, as it is believed to attract the terrible creatures that plague the world. To you, it represents the weight of your past life and the promise that this life will again end violently. Embracing your new life as a symbol of rebirth and sacrifice, you have resolved to use this opportunity, even if it leads to countless brutal struggles.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_GRIZZLED" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Strength, Dexterity, Constitution, Grizzled Feat, Arcana and Survival Skills</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_DEX_CON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_GRIZZLED" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+		</rules>
+	</element>
+
+	<!-- Scion -->
+	<element name="Scion" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_SCION">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Strength, Dexterity, Intelligence</li>
+				<li><strong>Feat:</strong> Curious</li>
+				<li><strong>Skill Proficiencies:</strong> Arcana and Investigation</li>
+				<li><strong>Tool Proficiency:</strong> Tinker’s Tools;<i> Choose one kind of Artisan's Tools</i></li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Artisan’s Tools (same as above), Ink, Ink Pen, Paper (50 sheets), Tinker’s Tools, Traveler’s Clothes, 3 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You are a member of the Scions, a group of brilliant, boundary-pushing scientists working at the fringe of societal norms and scientific understanding. You have seen life breathed into the lifeless, creating living constructs through electrifying science—a practice never seen before. As a member of the Scions, the inventions and creations of your group have earned favor among the city's higher-ups. Yet these same marvels have also given delusions of grandeur to those who wrestle with the godlike power of creation at their fingertips.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_CURIOUS" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Strength, Dexterity, Intelligence, Curious Feat, Arcana and Investigation Skills, Tinker’s Tools and an Artisan's Tool</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_DEX_INT" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_CURIOUS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+			<select type="Proficiency" name="Tool Proficiency (Scion)" supports="Tool, Artisan tools" />
+		</rules>
+	</element>
+
+	<!-- Worthless Husk -->
+	<element name="Worthless Husk" type="Background" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_BACKGROUND_WORTHLESS_HUSK">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Ability Scores:</strong> Dexterity, Constitution, Wisdom</li>
+				<li><strong>Feat:</strong> Worthless</li>
+				<li><strong>Skill Proficiencies:</strong> Stealth and Survival</li>
+				<li><strong>Equipment:</strong><i> Choose A or B:</i> (A) Dagger, sewer grate key, Traveler’s Clothes, 5 GP; or (B) 10 GP</li>
+			</ul>
+			<p>You were born into a world that saw you as utterly worthless, a waste of skin. Deemed talentless and devoid of potential, you were cast aside by those around you. As a worthless husk, you have learned to navigate the treacherous environment of the city, using your wits and endurance to survive. Given the chance to grow—a chance which you may never get—you could prove that even the most overlooked souls can make a difference in this twisted world.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_FEAT_WORTHLESS" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Dexterity, Constitution, Wisdom, Worthless Feat, Stealth and Survival Skills</set>
+		</setters>
+		<rules>
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_CON_WIS" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option" supports="Custom Ability Score Improvement Option" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI,!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Feat" id="ID_LT_SGEH24_FEAT_WORTHLESS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" /> 
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_BACKGROUND_ASI" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI"/>
+		</rules>
+	</element>
+</elements>

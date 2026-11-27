@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Way of the Fire Dancer</name>
+		<description>The Way of the Fire Dancer subclass for the Monk from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="monk-firedancer.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/monk-firedancer.xml" />
+		</update>
+	</info>
+
+	<element name="Way of the Fire Dancer" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_MONK_WAY_OF_THE_FIRE_DANCER">
+		<supports>Monk Subclass</supports>
+		<description>
+			<p>The fire dancers carry an almost extinct tradition. Once a trading group, they considered themselves a family of a single creed: "Those who harm us will bathe in flames." This nomadic group of seasoned warriors welcomed all walks of life, regardless of origin, status, or influence; as long as one conducted oneself with respect towards their fellows, the caravans would open their door. Their ironclad creed and welcoming nature was their downfall.</p>
+			<p class="indent">Upon arriving in Luyarnha, they were accused of bringing the Scourge with them. After all, the dancing flames didn't affect the city before their arrival. This lie, like so many told, carried a kernel of truth that was exploited to bend others to the city's will. For this sin, they were imprisoned, left to starve, and forbidden from practicing their martial arts.</p>
+			<p class="indent">Such a treatment couldn't break their will; to hide their practice of martial arts, the traveling band took the name of fire dancers and hid their powers within their dance. For years they have endured, many escaping the prison with the aid of their fellows, yet the bonds of family entrap more firmly than any chain could. Even those who escape refuse to leave the city until their kin are freed and their name is cleared.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_BLAZING_PERFORMER" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_DANCE_OF_FIRE" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_SCORCHING_VORTEX" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_FLAMES_OF_REDEMPTION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_ONE_WITH_THE_FIRE" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_BLAZING_PERFORMER" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_DANCE_OF_FIRE" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_SCORCHING_VORTEX" level="6" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_FLAMES_OF_REDEMPTION" level="11" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_ONE_WITH_THE_FIRE" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Blazing Performer" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_BLAZING_PERFORMER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_BLAZING_PERFORMER</requirements>
+		<description>
+			<p>You've trained your body to dance through flames. You gain proficiency in your choice of the Acrobatics or Performance skill. You have Expertise in the chosen skill.</p>
+			<p class="indent">In addition, you have Resistance to Fire damage. If you already have this Resistance, you can reduce the Fire damage further. The amount reduced is equal to two rolls of your Martial Arts die (after the Resistance applies).</p>
+		</description>
+		<sheet alt="Blazing Performer">
+			<description>If you already have Fire Resistance, reduce Fire damage by an additional 2d{{martial arts:dice}} after Resistance applies.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Skill &amp; Expertise (Blazing Performer)" supports="Blazing Performer Skill" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+		</rules>
+	</element>
+	<element name="Acrobatics" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_SKILL_ACROBATICS">
+		<supports>Blazing Performer Skill</supports>
+		<compendium display="false" />
+		<description>
+			<p>You gain proficiency and Expertise in the Acrobatics skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" />
+			<stat name="acrobatics:proficiency" value="proficiency" bonus="double" />
+		</rules>
+	</element>
+	<element name="Performance" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_SKILL_PERFORMANCE">
+		<supports>Blazing Performer Skill</supports>
+		<compendium display="false" />
+		<description>
+			<p>You gain proficiency and Expertise in the Performance skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<stat name="performance:proficiency" value="proficiency" bonus="double" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Dance of Fire" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_DANCE_OF_FIRE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_DANCE_OF_FIRE</requirements>
+		<description>
+			<p>You are a master at weaving flames through your use of focus, creating a deadly dance. When you expend a Focus Point on your turn, your Monk weapons and Unarmed Strikes catch fire until the end of your next turn. While on fire, they deal extra Fire damage equal to your Wisdom modifier.</p>
+			<p class="indent">In addition, while your Dance Of Fire is active, when you use your Deflect Attacks Reaction, your aura flashes like a furnace, forcing the attack to recoil. You can reduce the damage of the triggering attack by an additional amount equal to two rolls of your Martial Arts die.</p>
+		</description>
+		<sheet alt="Dance of Fire">
+			<description>When you expend a Focus Point on your turn, your Monk weapons and Unarmed Strikes deal +{{wisdom:modifier}} Fire damage until the end of your next turn. While active, your Deflect Attacks Reaction reduces triggering attack damage by an additional 2d{{martial arts:dice}}.</description>
+			<description level="17">When you expend a Focus Point on your turn, your Monk weapons and Unarmed Strikes deal +{{wisdom:modifier}} Fire damage until the end of your next turn. While active, your Deflect Attacks Reaction reduces triggering attack damage by an additional 2d{{martial arts:dice}}, you have Immunity to Fire damage, and you have Resistance to Bludgeoning, Piercing, and Slashing damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Scorching Vortex" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_SCORCHING_VORTEX">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_SCORCHING_VORTEX</requirements>
+		<description>
+			<p>You learn to entrap your foes in the flames of your dance.</p>
+			<p class="indent">When you expend Focus Points to use Step of the Wind, if you move through each space adjacent to a creature on your turn, you create a vortex of fire around it, and it must make a Dexterity saving throw. On a failed save, the target takes Fire damage equal to two rolls of your Martial Arts die and becomes trapped in a vortex of flames that appears in its space for the next minute. On a successful save, the target takes half damage only.</p>
+			<p class="indent">The vortex is opaque and obstructs line of sight. If the target attempts to move out of the flames, it must first make a Wisdom saving throw. On a failed save, it takes Fire damage equal to one roll of your Martial Arts die and is enthralled by the flames, reducing its Speed to 0 until the start of its next turn, at which point the vortex and its effects end. On a successful save, the target moves through the vortex, ending the effect. These flames don't damage other creatures.</p>
+		</description>
+		<sheet alt="Scorching Vortex">
+			<description>When using Step of the Wind, moving through every space adjacent to a creature creates a fire vortex around it: DC{{monks focus:dc}} Dex save or take 2d{{martial arts:dice}} Fire damage and be trapped for 1 min (half damage on success). The vortex is opaque. Attempting to leave requires a DC{{monks focus:dc}} Wis save: on fail, take 1d{{martial arts:dice}} Fire damage and Speed becomes 0 until start of its next turn, then ends; on success, moves through and ends.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 11: Flames of Redemption" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_FLAMES_OF_REDEMPTION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_FLAMES_OF_REDEMPTION</requirements>
+		<description>
+			<p>Your flames burn away all impurities. You gain new ways to expend your Focus Points.</p>
+			<p class="indent"><strong><em>Radiant Fire.</em></strong> When you roll Initiative, you can expend 2 Focus Points to cast the Divine Favor spell (no action required). Wisdom is your spellcasting ability for it. The spell's effect also applies to your Unarmed Strikes. While the spell is active you can replace any Fire damage you deal with Radiant damage or vice-versa.</p>
+			<p class="indent"><strong><em>Purifying Flames.</em></strong> As an action, you can expend 1 Focus Point to touch a creature and infuse it with your flames. One of the following of the target's choice ends for it: the Charmed condition, the Poisoned condition, or a Short-Term Madness. When you use your Flurry of Blows, you can replace one of the Unarmed Strikes with a use of this feature without expending a Focus Point.</p>
+		</description>
+		<sheet alt="Flames of Redemption">
+			<description>• Radiant Fire (2 Focus Points on Initiative, no action): Cast Divine Favor (applies to Unarmed Strikes; swap Fire and Radiant damage while active).&#13;
+			• Purifying Flames (Action, 1 Focus Point, or replace 1 Flurry of Blows strike for 0 Focus Points): Touch a creature to end Charmed, Poisoned, or Short-Term Madness (target's choice).</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINE_FAVOR" />
+		</rules>
+	</element>
+
+	<element name="Level 17: One With The Fire" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_FIRE_DANCER_ONE_WITH_THE_FIRE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_ONE_WITH_THE_FIRE</requirements>
+		<description>
+			<p>You are a master of the flames. While you are under the effects of Dance of Fire, your body merges with the flames. For the duration, you have Immunity to Fire damage, and you have Resistance to Bludgeoning, Piercing, and Slashing damage.</p>
+			<p class="indent"><em>GM Note: The unfair treatment that some fire dancers have received in their life has created deep resentment, warping their pure nature and the flames they wield. These fire dancers wield a dark flame, said to devour life. If you wish to play such a character, replace any mention of Fire damage, Resistance, or Immunity in the subclass features with Necrotic damage, Resistance, or Immunity, respectively.</em></p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Blazing Performer Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_BLAZING_PERFORMER" />
+	<element name="Dance of Fire Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_DANCE_OF_FIRE" />
+	<element name="Scorching Vortex Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_SCORCHING_VORTEX" />
+	<element name="Flames of Redemption Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_FLAMES_OF_REDEMPTION" />
+	<element name="One With The Fire Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_FIRE_DANCER_ONE_WITH_THE_FIRE" />
+
+</elements>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Heretic Chapter</name>
+		<description>The Heretic Chapter subclass for the Jaeger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="jaeger-heretic.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-heretic.xml" />
+		</update>
+	</info>
+
+	<element name="Heretic Chapter" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_JAEGER_HERETIC_CHAPTER">
+		<supports>Jaeger Chapter</supports>
+		<description>
+			<p>The Heretic Chapter's jaegers are despised by both religious organizations and their adherents. In a world where acts of faith are required to harness divine powers, these jaegers instead rip these powers from the very gods, tearing away their divine fabric. Through blasphemous rituals, strange ingestions, and direct grafting of powers onto their flesh, heretics bind the powers of greater beings to their will. This is a path that calls for a certain madness that is only found in the most ardent of hunters, those who feel the burning need to reach the pinnacle of power and will do anything to achieve it. Some seek such power for its own sake, but most want it to put an end to the nightmare.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_HERETIC_MAGIC" />
+			<h5>Heretic Spellcasting</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td>Heretic Level</td><td>Cantrips Known</td><td>Spells Known</td><td>Spell Slots</td><td>Slot Level</td></tr>
+				</thead>
+				<tr><td>3rd</td><td>2</td><td>2</td><td>1</td><td>1st</td></tr>
+				<tr><td>4th</td><td>2</td><td>2</td><td>1</td><td>1st</td></tr>
+				<tr><td>5th</td><td>2</td><td>2</td><td>2</td><td>1st</td></tr>
+				<tr><td>6th</td><td>2</td><td>3</td><td>2</td><td>1st</td></tr>
+				<tr><td>7th</td><td>2</td><td>3</td><td>2</td><td>2nd</td></tr>
+				<tr><td>8th</td><td>2</td><td>3</td><td>2</td><td>2nd</td></tr>
+				<tr><td>9th</td><td>2</td><td>4</td><td>2</td><td>2nd</td></tr>
+				<tr><td>10th</td><td>3</td><td>4</td><td>2</td><td>2nd</td></tr>
+				<tr><td>11th</td><td>3</td><td>4</td><td>2</td><td>2nd</td></tr>
+				<tr><td>12th</td><td>3</td><td>5</td><td>2</td><td>2nd</td></tr>
+				<tr><td>13th</td><td>3</td><td>5</td><td>2</td><td>3rd</td></tr>
+				<tr><td>14th</td><td>3</td><td>5</td><td>2</td><td>3rd</td></tr>
+				<tr><td>15th</td><td>3</td><td>6</td><td>2</td><td>3rd</td></tr>
+				<tr><td>16th</td><td>3</td><td>6</td><td>2</td><td>3rd</td></tr>
+				<tr><td>17th</td><td>3</td><td>6</td><td>2</td><td>3rd</td></tr>
+				<tr><td>18th</td><td>3</td><td>7</td><td>2</td><td>3rd</td></tr>
+				<tr><td>19th</td><td>3</td><td>7</td><td>2</td><td>4th</td></tr>
+				<tr><td>20th</td><td>3</td><td>7</td><td>2</td><td>4th</td></tr>
+			</table>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_OCCULT_ARTS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_SHROUDED_STEPS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_MYSTICAL_MOMENTUM" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_DARKNESS_WITHIN" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_HERETIC_MAGIC" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_OCCULT_ARTS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_SHROUDED_STEPS" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_MYSTICAL_MOMENTUM" level="14" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_DARKNESS_WITHIN" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Heretic Magic" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_HERETIC_MAGIC">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_HERETIC_MAGIC</requirements>
+		<description>
+			<p>You bend dark powers to your service through blasphemous occult rituals, making them your own. You gain the ability to cast spells.</p>
+			<p class="indent"><strong><em>Cantrips.</em></strong> You learn two Cantrips of your choice from the Warlock spell list. You learn an additional Warlock Cantrip of your choice at level 10.</p>
+			<p class="indent"><strong><em>Spell Slots.</em></strong> The Heretic Spellcasting table shows how many spell slots you have, as well as the level of those spell slots. All of your spell slots are of the same level. To cast one of your warlock spells of level 1 or higher, you must expend a spell slot. You regain all expended spell slots when you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Prepared Spells of Level 1+.</em></strong> You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 spells from the Warlock spell list.</p>
+			<p class="indent">The number of spells on your list increases as you gain Jaeger levels, as shown in the Prepared Spells column of the Heretic Spellcasting table. Whenever that number increases, choose additional spells from the Warlock spell list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 7 Jaeger, your list of prepared spells can include five Warlock spells of levels 1 and 2 in any combination.</p>
+			<p class="indent"><strong><em>Changing your Prepared Spells.</em></strong> Whenever you gain a Jaeger level, you can replace one spell on your list with another Warlock spell for which you have spell slots.</p>
+			<p class="indent"><strong><em>Spellcasting Ability.</em></strong> Intelligence is your spellcasting ability for your Warlock spells.</p>
+			<p class="indent"><strong><em>Spellcasting Focus.</em></strong> You can use an Arcane Focus as a Spellcasting Focus for your Warlock spells.</p>
+		</description>
+		<sheet alt="Heretic Magic">
+			<description>You regain all expended Heretic spell slots on a Short or Long Rest. Whenever you gain a Jaeger level, you can replace one prepared spell with another Warlock spell for which you have spell slots.</description>
+		</sheet>
+		<spellcasting name="Heretic" ability="Intelligence" allowReplace="true">
+			<list>Warlock</list>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_SPELLCASTING_FEATURE" />
+			<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_THIRD" requirements="ID_INTERNAL_GRANT_MULTICLASS" />
+
+			<stat name="heretic:spellcasting:slots:1" value="1" level="3" />
+			<stat name="heretic:spellcasting:slots:1" value="1" level="5" />
+			<stat name="heretic:spellcasting:slots:1" value="-2" level="7" />
+			<stat name="heretic:spellcasting:slots:2" value="2" level="7" />
+			<stat name="heretic:spellcasting:slots:2" value="-2" level="13" />
+			<stat name="heretic:spellcasting:slots:3" value="2" level="13" />
+			<stat name="heretic:spellcasting:slots:3" value="-2" level="19" />
+			<stat name="heretic:spellcasting:slots:4" value="2" level="19" />
+
+			<select type="Spell" name="Cantrip (Heretic Magic)" supports="$(spellcasting:list), 0" number="2" spellcasting="Heretic" />
+			<select type="Spell" name="Cantrip (Heretic Magic)" supports="$(spellcasting:list), 0" level="10" spellcasting="Heretic" />
+
+			<select type="Spell" name="Spell (Heretic Magic)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="Heretic" />
+			<select type="Spell" name="Spell (Heretic Magic)" supports="$(spellcasting:list), 1" level="6" spellcasting="Heretic" />
+			<select type="Spell" name="Spell (Heretic Magic)" supports="$(spellcasting:list), (1||2)" level="9" spellcasting="Heretic" />
+			<select type="Spell" name="Spell (Heretic Magic)" supports="$(spellcasting:list), (1||2)" level="12" spellcasting="Heretic" />
+			<select type="Spell" name="Spell (Heretic Magic)" supports="$(spellcasting:list), (1||2||3)" level="15" spellcasting="Heretic" />
+			<select type="Spell" name="Spell (Heretic Magic)" supports="$(spellcasting:list), (1||2||3)" level="18" spellcasting="Heretic" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Occult Arts" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_OCCULT_ARTS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_OCCULT_ARTS</requirements>
+		<description>
+			<p><strong><em>Eldritch Invocation.</em></strong> You learn one Eldritch Invocation of your choice from the Warlock's list of Eldritch Invocation Options. If an invocation refers to Charisma, you use your Intelligence instead.</p>
+			<p class="indent">At higher levels, you learn additional Eldritch Invocations, and your effective Warlock level for invocation prerequisites increases, as shown below.</p>
+			<ul>
+				<li><strong>Level 7:</strong> You learn one additional Eldritch Invocation. You are considered a level 2 Warlock for invocation prerequisites.</li>
+				<li><strong>Level 14:</strong> You learn one additional Eldritch Invocation. You are considered a level 5 Warlock for invocation prerequisites.</li>
+				<li><strong>Level 17:</strong> You learn one additional Eldritch Invocation. Whenever you gain a level in the Jaeger class, you can replace one Eldritch Invocation you know with another one for which you meet the prerequisites.</li>
+			</ul>
+			<p class="indent"><strong><em>Spell Flurry.</em></strong> You also learn the Spell Flurry Adrenaline Art. This does not count against your total Adrenaline Arts known.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_SPELL_FLURRY" />
+			</div>
+		</description>
+		<sheet alt="Occult Arts">
+			<description>You learn Eldritch Invocations (using Intelligence instead of Charisma). Effective Warlock level for prerequisites: 2 at level 7, 5 at level 14. From level 17, you can replace one invocation whenever you gain a Jaeger level.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Eldritch Invocation (Occult Arts)" supports="PHB24 Eldritch Invocation||Eldritch Invocation" />
+			<select type="Class Feature" name="Eldritch Invocation (Occult Arts)" supports="PHB24 Eldritch Invocation||Eldritch Invocation" level="7" />
+			<select type="Class Feature" name="Eldritch Invocation (Occult Arts)" supports="PHB24 Eldritch Invocation||Eldritch Invocation" level="14" />
+			<select type="Class Feature" name="Eldritch Invocation (Occult Arts)" supports="PHB24 Eldritch Invocation||Eldritch Invocation" level="17" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_SPELL_FLURRY" />
+		</rules>
+	</element>
+
+	<element name="Spell Flurry" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_SPELL_FLURRY">
+		<compendium display="false" />
+		<description>
+			<p><em>Adrenaline Art, Bonus Action</em></p>
+			<p>When you cast a Cantrip or a spell of 1st level or higher, you can expend 1 Adrenaline Point to make a single weapon attack as a Bonus Action.</p>
+		</description>
+		<sheet alt="Spell Flurry (Adrenaline Art)" action="Bonus Action" usage="1 Adrenaline Point">
+			<description>When you cast a Cantrip or a level 1+ spell, you can make a single weapon attack.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 7: Shrouded Steps" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_SHROUDED_STEPS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_SHROUDED_STEPS</requirements>
+		<description>
+			<p>When you use a Jaeger feature that allows you to move without spending your movement (such as Jaeger's Rush or Chasing Finisher), you can teleport the distance moved instead. When you do so for Dodge Step, you automatically succeed on the saving throw to evade the attack.</p>
+		</description>
+		<sheet alt="Shrouded Steps">
+			<description>When a Jaeger feature lets you move without spending movement, you can teleport that distance instead. Doing so with Dodge Step causes you to automatically succeed on the saving throw to evade the attack.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Mystical Momentum" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_MYSTICAL_MOMENTUM">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_MYSTICAL_MOMENTUM</requirements>
+		<description>
+			<p>When you expend a spell slot, you gain a number of Momentum dice equal to the level of the spell slot expended.</p>
+		</description>
+		<sheet alt="Mystical Momentum">
+			<description>When you expend a spell slot, you gain Momentum dice equal to the spell slot's level.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 17: Darkness Within" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_HERETIC_DARKNESS_WITHIN">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_DARKNESS_WITHIN</requirements>
+		<description>
+			<p>You can unleash the twisted powers you've bound to your soul as a Bonus Action. For 1 minute, you become wreathed in darkness. You gain the following effects:</p>
+			<ul>
+				<li>The area in a 10-foot Emanation centered on you dims. Bright Light becomes Dim Light, and Dim Light becomes Darkness.</li>
+				<li>You are heavily obscured by swirling shadows.</li>
+				<li>You gain a Flying Speed of 30 feet.</li>
+				<li>You have Resistance to Bludgeoning, Piercing, and Slashing damage. Whenever you take Radiant damage you lose these Resistances until the start of your next turn.</li>
+			</ul>
+			<p class="indent">These effects end early if you become Incapacitated, or end this feature early as a Bonus Action. Once you use this feature, you can't use it again until you complete a Long Rest.</p>
+		</description>
+		<sheet alt="Darkness Within" action="Bonus Action" usage="1/Long Rest">
+			<description>For 1 min (ends if Incapacitated or via Bonus Action):&#13;
+			• 10-ft Emanation dims light (Bright to Dim, Dim to Darkness).&#13;
+			• You are heavily obscured by swirling shadows.&#13;
+			• Fly Speed 30 feet.&#13;
+			• Resistance to Bludgeoning, Piercing, and Slashing damage (lost until start of next turn if you take Radiant damage).</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Heretic Magic Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_HERETIC_MAGIC" />
+	<element name="Occult Arts Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_OCCULT_ARTS" />
+	<element name="Shrouded Steps Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_SHROUDED_STEPS" />
+	<element name="Mystical Momentum Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_MYSTICAL_MOMENTUM" />
+	<element name="Darkness Within Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_HERETIC_DARKNESS_WITHIN" />
+
+</elements>

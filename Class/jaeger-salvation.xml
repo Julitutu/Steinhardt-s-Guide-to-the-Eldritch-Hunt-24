@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Salvation Chapter</name>
+		<description>The Salvation Chapter subclass for the Jaeger from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="jaeger-salvation.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/jaeger-salvation.xml" />
+		</update>
+	</info>
+
+	<element name="Salvation Chapter" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_JAEGER_SALVATION_CHAPTER">
+		<supports>Jaeger Chapter</supports>
+		<description>
+			<p>A divine force endows jaegers of the Salvation Chapter with the ability to defend the world from the horrors, purging evil with one hand while saving the innocent with the other. Favorites of the Radiant Church, they are the light of hope in the darkness where evil dwells. Members of the Salvation Chapter know that prevention is always better than cure, and that murder is the most effective method of prevention. In their zealous righteousness, they offer hope of sanity and sanctuary to those that stand with them in their war against the tides of madness.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_ART_OF_SALVATION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_SAVIORS_FOCUS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_SANCTIFYING_LIGHT" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_PURIFYING_SALVATION" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_LIGHT_OF_HOPE" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_ART_OF_SALVATION" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_SAVIORS_FOCUS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_SANCTIFYING_LIGHT" level="7" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_PURIFYING_SALVATION" level="14" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_LIGHT_OF_HOPE" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Art of Salvation" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_ART_OF_SALVATION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_ART_OF_SALVATION</requirements>
+		<description>
+			<p>You learn the Prayer of Salvation Adrenaline Art. This does not count against your Adrenaline Arts known.</p>
+			<div class="reference">
+				<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_PRAYER_OF_SALVATION" />
+			</div>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_PRAYER_OF_SALVATION" />
+		</rules>
+	</element>
+
+	<element name="Prayer of Salvation" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_PRAYER_OF_SALVATION">
+		<compendium display="false" />
+		<description>
+			<p><em>Adrenaline Art, Bonus Action</em></p>
+			<p>As a Bonus Action, you expend 1 Adrenaline Point. You and one creature of your choice you can see within 60 feet of you each regain 1d6 hit points and gain an equal number of temporary hit points.</p>
+		</description>
+		<sheet alt="Prayer of Salvation (Adrenaline Art)" action="Bonus Action" usage="1 Adrenaline Point">
+			<description>You and 1 creature you can see within 60 ft each regain 1d6 HP and gain an equal number of THP.</description>
+			<description level="14">You and up to 2 creatures you can see within 60 ft each regain 1d12 HP and gain an equal number of THP. You can also end Charmed, Frightened, Poisoned, or Short-Term Madness on any of the targets.</description>
+			<description level="17">You and up to 2 creatures you can see within 60 ft each regain 1d12 HP and gain an equal number of THP. You can also end Charmed, Frightened, Poisoned, or Short-Term Madness on any of the targets. (While Light of Hope is active, regain the expended Adrenaline Point).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Savior's Focus" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_SAVIORS_FOCUS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_SAVIORS_FOCUS</requirements>
+		<description>
+			<p>You find new strength in the most desperate hours. When an allied creature you can see or hear is reduced to 0 Hit Points, you regain 1 Adrenaline Point. Once you use this feature, you can't do so again for 1 minute.</p>
+		</description>
+		<sheet alt="Savior's Focus" usage="1/Minute">
+			<description>When an allied creature you can see or hear drops to 0 HP, you regain 1 Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 7: Sanctifying Light" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_SANCTIFYING_LIGHT">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_SANCTIFYING_LIGHT</requirements>
+		<description>
+			<p>When you expend an Adrenaline Point, you can choose to emit a glow of divine light until the end of your next turn. The area in a 20-foot Emanation centered on you is Bright Light, and Dim Light an additional 20 feet beyond that. The light is Sunlight. Any allied creature that enters the Bright Light for the first time on a turn or starts its turn there gains Hit Points equal to 1d6 + your Proficiency Bonus. This light is extinguished early if you become Incapacitated.</p>
+		</description>
+		<sheet alt="Sanctifying Light">
+			<description>When you spend an Adrenaline Point, emit a 20-ft Emanation of Bright Sunlight (+20 ft Dim) until end of your next turn (ends if Incapacitated). Allies entering for the first time on a turn or starting their turn in the Bright Light regain 1d6+{{proficiency}} HP.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Purifying Salvation" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_PURIFYING_SALVATION">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_PURIFYING_SALVATION</requirements>
+		<description>
+			<p>Starting at 14th level, your Prayer of Salvation Adrenaline Art can target an additional creature, and the number of Hit Points it restores and Temporary Hit Points it grants increases to 1d12.</p>
+			<p class="indent">Additionally, if any of the targets have the Charmed, Frightened or Poisoned condition, or suffer from a Short-Term Madness, you can cleanse the condition from them, ending it.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 17: Light of Hope" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SALVATION_LIGHT_OF_HOPE">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_LIGHT_OF_HOPE</requirements>
+		<description>
+			<p>As a Bonus Action, you can unleash a blinding light from within for 1 minute, illuminating the darkness. You gain the following benefits for the duration:</p>
+			<ul>
+				<li>The Emanation of your Sanctifying Light increases to 30 feet of Bright Light and 30 feet of Dim Light beyond it. Each creature of your choice (including yourself) within the Bright Light are under the effect of Bless. Creatures in the Bright Light have Advantage on Death Saving Throws, do not die at three failed saves, and become stable with three successful saves, even if they have three or more failed saves. A creature that is no longer within the Bright Light of this effect and is not stable dies if they have failed three or more death saving throws.</li>
+				<li>When you use Prayer of Salvation, you immediately regain the expended Adrenaline Point.</li>
+			</ul>
+			<p class="indent">These benefits end early if you become Incapacitated, or end this feature early as a Bonus Action. Once you use this feature, you can't use it again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Light of Hope" action="Bonus Action" usage="1/Long Rest">
+			<description>For 1 min (ends if Incapacitated or via Bonus Action):&#13;
+			• Sanctifying Light becomes 30 ft Bright Light / 30 ft Dim Light. Chosen creatures in Bright Light gain the effect of Bless, Advantage on Death Saves, don't die at 3 failed saves, and stabilize on 3 successes (die if leaving Bright Light unstable with 3+ fails).&#13;
+			• Prayer of Salvation immediately refunds the expended Adrenaline Point.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Art of Salvation Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_ART_OF_SALVATION" />
+	<element name="Savior's Focus Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_SAVIORS_FOCUS" />
+	<element name="Sanctifying Light Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_SANCTIFYING_LIGHT" />
+	<element name="Purifying Salvation Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_PURIFYING_SALVATION" />
+	<element name="Light of Hope Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SALVATION_LIGHT_OF_HOPE" />
+
+</elements>

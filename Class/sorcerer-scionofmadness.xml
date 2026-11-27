@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Scion of Madness</name>
+		<description>The Scion of Madness subclass for the Sorcerer from Steinhardt's Guide to the Eldritch Hunt (2024).</description>
+		<author url="https://www.monkeydm.com/">MonkeyDM</author>
+		<update version="0.0.1">
+			<file name="sorcerer-scionofmadness.xml" url="https://raw.githubusercontent.com/Julitutu/Steinhardt-s-Guide-to-the-Eldritch-Hunt-24/refs/heads/main/Class/sorcerer-scionofmadness.xml" />
+		</update>
+	</info>
+
+	<element name="Scion of Madness" type="Archetype" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_SORCERER_SCION_OF_MADNESS">
+		<supports>Sorcerer Subclass</supports>
+		<description>
+			<p>The eldritch powers that lurk beyond the veil of the moon have plunged the world into chaos. This chaos is what gives you might; there isn't any form of power more pure nor more potent than this eldritch insanity. You might have endured nightmarish experiments, possibly a higher being has taken an interest in you, or maybe you're a mere pawn in an outer god's scheme. Perhaps you were blessed by powers that shouldn't be, or one of your parents was under an eldritch curse. Whatever the case may be, this insanity consumes you, and it will be unleashed on the world, for better or atrociously worse.</p>
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_SPELLS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_MIND_OF_MADNESS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_SPREAD_OF_CHAOS" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_DEPTHS_OF_DEPRAVITY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_POWERS_OF_INSANITY" />
+			<div element="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_MADDENING_HUNGER" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_MIND_OF_MADNESS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_SPREAD_OF_CHAOS" level="3" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_DEPTHS_OF_DEPRAVITY" level="6" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_POWERS_OF_INSANITY" level="14" />
+			<grant type="Archetype Feature" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_MADDENING_HUNGER" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Madness Spells" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_SPELLS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_SPELLS</requirements>
+		<description>
+			<p>When you reach a Sorcerer level specified in the Madness Spells table, you thereafter always have the listed spells prepared.</p>
+			<h5>Madness Spells</h5>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><em>Bludgeoning Horror, Dissonant Whispers, Otherworldly Gaze, Hideous Laughter</em></td></tr>
+				<tr><td style="text-align:center">5</td><td><em>Malicious Rancor, Radiant Slaughter</em></td></tr>
+				<tr><td style="text-align:center">7</td><td><em>Compulsion, Dread Scarecrow</em></td></tr>
+				<tr><td style="text-align:center">9</td><td><em>Contact Other Plane, Divine Order: Reveal</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_BLUDGEONING_HORROR" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DISSONANT_WHISPERS" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_OTHERWORLDLY_GAZE" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TASHAS_HIDEOUS_LAUGHTER" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_MALICIOUS_RANCOR" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_RADIANT_SLAUGHTER" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPULSION" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_DREAD_SCARECROW" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONTACT_OTHER_PLANE" level="9" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_LT_SGEH24_SPELL_DIVINE_ORDER_REVEAL" level="9" spellcasting="Sorcerer" prepared="true" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Mind of Madness" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_MIND_OF_MADNESS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_MIND_OF_MADNESS</requirements>
+		<description>
+			<p>The depraved insanity that lurks within you is always torturing your mind, yet in this chaos you find power. Whenever you gain a Madness, you can choose to reroll on the appropriate table, gaining the new effect instead.</p>
+			<p class="indent">In addition, when a creature attempts to read your thoughts or scry on you, it can only witness the insanity that ravages you. It takes Psychic damage equal to your Sorcerer level, the attempt fails, and it must succeed on a Wisdom saving throw against your spell save DC or gain a Short-Term Madness.</p>
+		</description>
+		<sheet alt="Mind of Madness">
+			<description>Whenever you gain a Madness, you can reroll on the table and take the new effect. If a creature attempts to read your thoughts or scry on you, the attempt fails, it takes {{level:sorcerer}} Psychic damage, and it must make a DC{{sorcerer:spellcasting:dc}} Wis save or gain a Short-Term Madness.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Spread of Chaos" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_SPREAD_OF_CHAOS">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_SPREAD_OF_CHAOS</requirements>
+		<description>
+			<p>You can infuse your magic with your eldritch insanity. When you cast a spell of level 1 or higher that doesn't have a range of Self, you can cause each creature affected by the spell to make a Wisdom saving throw against your spell save DC. On a failed save, a target gains a Short-Term Madness and has the Incapacitated condition until the start of its next turn.</p>
+			<p class="indent">If your spell targets more than one creature, you must make a Charisma saving throw against a DC equal to 10 plus the spell level plus the number of creatures targeted by the spell. On a failed save, the spell fails and you gain one Short-Term Madness, but you do not expend the spell slot nor the use of this feature. On a successful save, each target is affected as normal. Once you use this feature, you must cast a Sorcerer spell with a spell slot or finish a Long Rest before you can use this feature again.</p>
+			<p class="indent">If you do cast a Sorcerer spell with a spell slot before you finish a Long Rest, you automatically roll on the Short-Term Madness table. If the spell requires Concentration, you maintain it even if you gained the Stunned condition (and thus the Incapacitated condition) as a result of rolling on the Short-Term Madness table.</p>
+		</description>
+		<sheet alt="Spread of Chaos" usage="1/Long Rest">
+			<description>When casting a level 1+ spell (range not Self), force affected creatures to make a DC{{sorcerer:spellcasting:dc}} Wis save or gain Short-Term Madness and Incapacitated until the start of their next turn. If targeting &gt;1 creature, make a Cha save (DC 10 + spell level + # targets) or spell fails and you gain Short-Term Madness (slot &amp; use not expended).&#13;
+			After using this, casting a Sorcerer spell with a spell slot before a Long Rest restores your use, and you auto-roll on the Short-Term Madness table (maintaining Concentration even if Stunned/Incapacitated by that roll).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Depths of Depravity" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_DEPTHS_OF_DEPRAVITY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_DEPTHS_OF_DEPRAVITY</requirements>
+		<description>
+			<p>You can let the insanity within you warp the magic of the world. When a creature that you can see within 120 feet of yourself makes a saving throw, if you are affected by at least one Madness, you can take a Reaction to add insanity to the magic, giving the creature Disadvantage on the saving throw. If the creature fails the saving throw, you feed on the ensuing chaos; you regain a number of expended Sorcery Points equal to the number of Madnesses affecting you, and can choose to end any number of those Madnesses.</p>
+			<p class="indent">Once you use this feature to regain Sorcery Points, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Depths of Depravity" action="Reaction" usage="1/Short Rest">
+			<description>While affected by 1+ Madness, give a creature you see within 120 ft Disadvantage on a saving throw. If it fails, regain Sorcery Points equal to the number of Madnesses affecting you and end any number of them (expends feature use on Sorcery Point regain).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Powers of Insanity" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_POWERS_OF_INSANITY">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_POWERS_OF_INSANITY</requirements>
+		<description>
+			<p>Where insanity rots the mind and body of most, it only serves to strengthen you. Whenever you roll on a Madness Table and roll a d10 to determine which specific aspect of the Madness overtakes you, you can roll a second d10 and choose the lower result of the two. In addition, gaining a Madness doesn't cause you to have the Stunned condition.</p>
+		</description>
+		<sheet alt="Powers of Insanity">
+			<description>When rolling a d10 on a Madness Table, roll twice and choose the lower result. Gaining a Madness doesn't cause you to have the Stunned condition.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Maddening Hunger" type="Archetype Feature" source="Steinhardt's Guide to the Eldritch Hunt (2024)" id="ID_LT_SGEH24_ARCHETYPE_FEATURE_SCION_MADNESS_MADDENING_HUNGER">
+		<requirements>!ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_MADDENING_HUNGER</requirements>
+		<description>
+			<p>Your magic feeds on the insanity of this world. Whenever you gain a Madness, you regain expended Sorcery Points: Short-Term Madness, 1d4 Sorcery Points; Long-Term Madness, 2d4 Sorcery Points; and Indefinite Madness, 4d4 Sorcery Points.</p>
+		</description>
+		<sheet alt="Maddening Hunger">
+			<description>Whenever you gain a Madness, regain Sorcery Points: 1d4 (Short-Term), 2d4 (Long-Term), or 4d4 (Indefinite).</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Madness Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_SPELLS" />
+	<element name="Mind of Madness Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_MIND_OF_MADNESS" />
+	<element name="Spread of Chaos Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_SPREAD_OF_CHAOS" />
+	<element name="Depths of Depravity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_DEPTHS_OF_DEPRAVITY" />
+	<element name="Powers of Insanity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_POWERS_OF_INSANITY" />
+	<element name="Maddening Hunger Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_SGEH24_FEATURE_REPLACEMENT_SCION_MADNESS_MADDENING_HUNGER" />
+
+</elements>
